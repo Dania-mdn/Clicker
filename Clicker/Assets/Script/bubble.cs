@@ -1,34 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class bubble : MonoBehaviour
+public class Bubble : MonoBehaviour
 {
-    float i;
-    SpriteRenderer sprite;
-    void Start()
+    private SpriteRenderer _spriteRenderer;
+
+    private float _lineOfWater = -1.85f;
+    private int _swimm = 2;
+    private float _idl = 0.5f;
+
+    private void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
-        sprite.color = new Color(1f, 1f, 1f, Random.Range(0.1f, 0.5f));
-        i = Random.Range(0.3f, 0.6f);
-        this.transform.localScale = new Vector3(i, i, 1);
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer.color = new Color(1f, 1f, 1f, Random.Range(0.1f, 0.5f));
+
+        float random = Random.Range(0.3f, 0.6f);
+        transform.localScale = new Vector3(random, random, 1);
     }
-    void Update()
+    private void Update()
     {
-        if (this.transform.position.y < -1.85f)
+        if (transform.position.y < _lineOfWater)
         {
             if (PlayerPrefs.HasKey("action"))
             {
-                this.transform.position = new Vector3(this.transform.position.x - 2 * Time.deltaTime, this.transform.position.y + Random.Range(0.2f, 0.4f) * Time.deltaTime, this.transform.position.z);
+                Swimm(_swimm);
             }
             else
             {
-                this.transform.position = new Vector3(this.transform.position.x - 0.5f * Time.deltaTime, this.transform.position.y + Random.Range(0.2f, 0.4f) * Time.deltaTime, this.transform.position.z);
+                Swimm(_idl);
             }
         }
         else
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
+    }
+    private void Swimm(float state)
+    {
+        float _climb = Random.Range(0.2f, 0.4f);
+        transform.position = new Vector2(transform.position.x - state * Time.deltaTime, transform.position.y + _climb * Time.deltaTime);
     }
 }

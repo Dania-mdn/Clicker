@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Language : MonoBehaviour
@@ -22,11 +20,11 @@ public class Language : MonoBehaviour
                 PlayerPrefs.SetInt("Lanqaqe", 0);
             }
         }
-        translator.Select_Language(PlayerPrefs.GetInt("Lanqaqe"));
+        Translator.Select_Language(PlayerPrefs.GetInt("Lanqaqe"));
     }
     public void Language_change(int LanguageID)
     {
         PlayerPrefs.SetInt("Lanqaqe", LanguageID);
-        translator.Select_Language(PlayerPrefs.GetInt("Lanqaqe"));
+        Translator.Select_Language(PlayerPrefs.GetInt("Lanqaqe"));
     }
 }

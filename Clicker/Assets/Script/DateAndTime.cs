@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using UnityEngine;
 
-public static class Utils
+public static class DateAndTime
 {
     public static void SetDateTime (string key, DateTime value)
     {

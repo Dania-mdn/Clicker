@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Fish : MonoBehaviour
 {
-    float i;
-    float y;
-    float coef;
-    SpriteRenderer sprite;
+    private SpriteRenderer _spriteRenderer;
+
+    private float _speed;
+
+    private float i;
+    private float y;
     private void Start()
     {
-        coef = Random.Range(0.3f, 0.5f);
-        sprite = GetComponent<SpriteRenderer>();
-        sprite.color = new Color(1f, 1f, 1f, Random.Range(0.25f, 0.85f));
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer.color = new Color(1, 1, 1, Random.Range(0.25f, 0.85f));
+
+        _speed = Random.Range(0.3f, 0.5f);
+
         y = Random.Range(0.2f, -0.2f);
         if (this.transform.position.x > 0)
         {
@@ -21,77 +23,81 @@ public class Fish : MonoBehaviour
                 int a = Random.Range(1, 3);
                 if(a == 1)
                 {
-                    sprite.flipX = true;
+                    _spriteRenderer.flipX = true;
                     i = 0.7f;
                     transform.right = new Vector2(i, y);
                 }
                 else
                 {
-                    sprite.flipX = false;
+                    _spriteRenderer.flipX = false;
                     i = -0.7f;
                     transform.right = new Vector2(-i, -y);
                 }
             }
             else
             {
-                sprite.flipX = false;
+                _spriteRenderer.flipX = false;
                 i = -0.7f;
                 transform.right = new Vector2(-i, -y);
             }
         }
         else
         {
-            sprite.flipX = true;
+            _spriteRenderer.flipX = true;
             i = 0.7f;
             transform.right = new Vector2(i, y);
         }
     }
-    void Update()
+    private void Update()
     {
-        if (this.transform.position.y < -2.2f && this.transform.position.y > -5.7f && this.transform.position.x > -4.2f && this.transform.position.x < 4.2f)
+        if (transform.position.y < -2.2f && transform.position.y > -5.7f && transform.position.x > -4.2f && transform.position.x < 4.2f)
         {
             if (PlayerPrefs.HasKey("action"))
             {
-                this.transform.position = new Vector3(this.transform.position.x - 0.04f + i * coef * Time.deltaTime, this.transform.position.y + y * coef * Time.deltaTime, this.transform.position.z);
+                Swimm(0.04f, i, y, _speed);
             }
             else
             {
-                this.transform.position = new Vector3(this.transform.position.x - 0.01f + i * coef * Time.deltaTime, this.transform.position.y + y * coef * Time.deltaTime, this.transform.position.z);
+                Swimm(0.01f, i, y, _speed);
             }
         }
-        else if(this.transform.position.y >= -2.2f)
+        else if(transform.position.y >= -2.2f)
         {
             y = -0.5f;
             if (PlayerPrefs.HasKey("action"))
             {
-                if (sprite.flipX == true)
+                if (_spriteRenderer.flipX == true)
                 {
                     transform.right = new Vector2(i, y);
-                    this.transform.position = new Vector3(this.transform.position.x - 0.04f + i * Time.deltaTime, this.transform.position.y + y * Time.deltaTime, this.transform.position.z);
+                    Swimm(0.04f, i, y);
                 }
                 else
                 {
                     transform.right = new Vector2(-i, -y);
-                    this.transform.position = new Vector3(this.transform.position.x - 0.04f + i * Time.deltaTime, this.transform.position.y + y * Time.deltaTime, this.transform.position.z);
+                    Swimm(0.04f, i, y);
                 }
             }
             else
             {
-                if (sprite.flipX == true)
+                if (_spriteRenderer.flipX == true)
                 {
                     transform.right = new Vector2(i, y);
-                    this.transform.position = new Vector3(this.transform.position.x - 0.01f + i * Time.deltaTime, this.transform.position.y + y * Time.deltaTime, this.transform.position.z);
+                    Swimm(0.01f, i, y);
                 }
                 else
                 {
                     transform.right = new Vector2(-i, -y);
-                    this.transform.position = new Vector3(this.transform.position.x - 0.01f + i * Time.deltaTime, this.transform.position.y + y * Time.deltaTime, this.transform.position.z);
+                    Swimm(0.01f, i, y);
                 }
             }
         }
         else
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
+    }
+    private void Swimm(float s, float i, float y, float speed = 1)
+    {
+        transform.position = new Vector3(transform.position.x - s + i * speed * Time.deltaTime, transform.position.y + y * speed * Time.deltaTime, transform.position.z);
     }
 }

@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         i_fuel = 1;
         //деньги накопившиеся офлайн
-        DateTime LastSaveTime = Utils.GetDateTime(key: "lastSaveTime", DateTime.UtcNow);
+        DateTime LastSaveTime = DateAndTime.GetDateTime(key: "lastSaveTime", DateTime.UtcNow);
         TimeSpan timePassed = DateTime.UtcNow - LastSaveTime;
         int secondPassed = (int)timePassed.TotalSeconds;
         Maney_offline = (pass_income + PlayerPrefs.GetFloat("Money_sec")) * secondPassed;
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             Money_box.text = (PlayerPrefs.GetFloat("Money_box") / 1000000).ToString("0.00") + "M";
         }
         Money_sec.text = PlayerPrefs.GetFloat("Money_sec").ToString("0.0") + "/s";
-        Utils.SetDateTime("lastSaveTime", System.DateTime.UtcNow);
+        DateAndTime.SetDateTime("lastSaveTime", System.DateTime.UtcNow);
 
         //работа с заработанными деньгами
         Maney_in_second = PlayerPrefs.GetFloat("Money_box") + ((pass_income + PlayerPrefs.GetFloat("Money_sec")) * coef_pass * coef_all) * Time.deltaTime;

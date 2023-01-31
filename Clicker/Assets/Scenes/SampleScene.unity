@@ -1060,7 +1060,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1907193267}
         m_TargetAssemblyTypeName: Optiuns, Assembly-CSharp
-        m_MethodName: music_off
+        m_MethodName: MusicEnable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7106,8 +7106,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1672883487}
   m_HandleRect: {fileID: 1672883486}
   m_Direction: 2
-  m_Value: 1.0002713
-  m_Size: 0.9993925
+  m_Value: 1
+  m_Size: 0.99939245
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10006,7 +10006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -872.65063, y: 0}
+  m_AnchoredPosition: {x: -872.64954, y: 0}
   m_SizeDelta: {x: 1684, y: 1435.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &728793479
@@ -17080,7 +17080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -28.59961}
+  m_AnchoredPosition: {x: 0, y: -28.599365}
   m_SizeDelta: {x: 0, y: 4538.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &900490134
@@ -17565,7 +17565,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1907193267}
         m_TargetAssemblyTypeName: Optiuns, Assembly-CSharp
-        m_MethodName: sounf_off
+        m_MethodName: SounfEnable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24189,7 +24189,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1508021760
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27417,8 +27417,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 334477131}
   m_HandleRect: {fileID: 334477130}
   m_Direction: 2
-  m_Value: 1.0000153
-  m_Size: 0.994599
+  m_Value: 0.99998474
+  m_Size: 0.99459887
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -28747,7 +28747,7 @@ MonoBehaviour:
   - {fileID: 2633966419449031169, guid: 162f009284f23e64cb03dbbd68a6c626, type: 3}
   - {fileID: 643903694465667649, guid: 378667d59f7969c45a6d0ef5a7320dd0, type: 3}
   timer_fish: 100
-  gull: {fileID: 2777224174325598170, guid: 56a9b758577d4934883eeda5e26297b2, type: 3}
+  seagulls: {fileID: 2777224174325598170, guid: 56a9b758577d4934883eeda5e26297b2, type: 3}
   timer_gull: 300
   bacground:
   - {fileID: 8766506726565041940, guid: 4c38516e111e9994785caed2d23765c1, type: 3}
@@ -31134,7 +31134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02852c1e920d17d4a83c94a2ebd83702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 24300002, guid: 709b1b0086ae75645b80e6f0ddd4135b, type: 2}
+  Mixer: {fileID: 24300002, guid: 709b1b0086ae75645b80e6f0ddd4135b, type: 2}
   Music: {fileID: 40290576}
   Sound: {fileID: 935841208}
 --- !u!114 &1907193268

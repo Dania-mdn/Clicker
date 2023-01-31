@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 8664970356933020618}
   - component: {fileID: 9206970956697262188}
   m_Layer: 0
-  m_Name: gull
+  m_Name: seagulls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

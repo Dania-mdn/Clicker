@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Fish_and_Bubbl : MonoBehaviour
@@ -10,7 +8,7 @@ public class Fish_and_Bubbl : MonoBehaviour
     public GameObject[] fish;
     public int timer_fish;
     float f;
-    public GameObject gull;
+    public GameObject seagulls;
     public int timer_gull;
     float g;
     public GameObject[] bacground;
@@ -120,8 +118,8 @@ public class Fish_and_Bubbl : MonoBehaviour
         else
         {
             g = timer_gull;
-            Instantiate(gull, new Vector3(-4f, Random.Range(-1.3f, 4.5f), 0), Quaternion.identity);
-            Instantiate(gull, new Vector3(4f, Random.Range(-1.3f, 4.5f), 0), Quaternion.identity);
+            Instantiate(seagulls, new Vector3(-4f, Random.Range(-1.3f, 4.5f), 0), Quaternion.identity);
+            Instantiate(seagulls, new Vector3(4f, Random.Range(-1.3f, 4.5f), 0), Quaternion.identity);
         }
         //задний фон
         if (z > 0)

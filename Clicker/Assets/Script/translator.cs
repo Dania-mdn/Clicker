@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class translator : MonoBehaviour
+public class Translator : MonoBehaviour
 {
     private static int LanguageID;
     private static List<TransleteblText> ListId = new List<TransleteblText>();
@@ -134,24 +132,24 @@ public class translator : MonoBehaviour
     };
     #endregion
 
-    static public void Select_Language(int id) //выбор языка
+    static public void Select_Language(int id)
     {
         LanguageID = id;
         Update_texts();
     }
-    static public string Get_text(int textKey) //получаем айди текста из текущего языка
+    static public string Get_text(int textKey)
     {
         return LineText[LanguageID, textKey];
     }
-    static public void Add(TransleteblText idtext) //добавляем в список
+    static public void Add(TransleteblText idtext)
     {
         ListId.Add(idtext);
     }
-    static public void Delete(TransleteblText idtext) //удаляем из списка
+    static public void Delete(TransleteblText idtext)
     {
         ListId.Remove(idtext);
     }
-    static public void Update_texts() //Меняем тексты согласно переводу
+    static public void Update_texts()
     {
         for(int i = 0; i < ListId.Count; i++)
         {
