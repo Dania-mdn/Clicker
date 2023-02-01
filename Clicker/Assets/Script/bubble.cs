@@ -4,9 +4,9 @@ public class Bubble : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
 
-    private float _lineOfWater = -1.85f;
-    private int _swimm = 2;
-    private float _idl = 0.5f;
+    private const float _lineOfWater = -1.85f;
+    private const int _swimm = 2;
+    private const float _idl = 0.5f;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class Bubble : MonoBehaviour
     {
         if (transform.position.y < _lineOfWater)
         {
-            if (PlayerPrefs.HasKey("action"))
+            if (PlayerPrefs.HasKey("tap"))
             {
                 Swimm(_swimm);
             }

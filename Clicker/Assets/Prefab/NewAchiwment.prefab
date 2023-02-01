@@ -161,10 +161,10 @@ GameObject:
   - component: {fileID: 5121485820703655041}
   - component: {fileID: 4877885003322928044}
   - component: {fileID: 7550505170997425727}
-  - component: {fileID: 2968696272549695982}
   - component: {fileID: 4024962860549201197}
+  - component: {fileID: 2304031312897090886}
   m_Layer: 5
-  m_Name: New_achiwment
+  m_Name: NewAchiwment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,21 +232,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2968696272549695982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635541061465781216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fd3bb03ec966be428407764880dccb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chto_sdelal_txt: {fileID: 3723319583206063894}
-  Skolko_poluchil: {fileID: 4133222726526872637}
-  i: 0
 --- !u!82 &4024962860549201197
 AudioSource:
   m_ObjectHideFlags: 0
@@ -343,6 +328,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2304031312897090886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3635541061465781216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5269f85484f571d45940de2e2264eb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AchivName: {fileID: 3723319583206063894}
+  Reward: {fileID: 4133222726526872637}
+  i: 0
 --- !u!1 &4133222726526872627
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 4133222726526872638}
   - component: {fileID: 4133222726526872637}
   m_Layer: 5
-  m_Name: poluchil
+  m_Name: Reward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 1248148734640524387}
   - component: {fileID: 3723319583206063894}
   m_Layer: 5
-  m_Name: chto_delal
+  m_Name: AchivName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 3510098968990864267}
   - component: {fileID: 7638527130429801908}
   m_Layer: 5
-  m_Name: button
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,21 +736,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2968696272549695982}
-        m_TargetAssemblyTypeName: new_achiw, Assembly-CSharp
-        m_MethodName: clik
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2968696272549695982}
-        m_TargetAssemblyTypeName: new_achiw, Assembly-CSharp
-        m_MethodName: audact
+      - m_Target: {fileID: 2304031312897090886}
+        m_TargetAssemblyTypeName: CreateNewAchiw, Assembly-CSharp
+        m_MethodName: TakeReward
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -773,7 +761,7 @@ GameObject:
   - component: {fileID: 9082752831066328752}
   - component: {fileID: 4078638825721349315}
   m_Layer: 5
-  m_Name: Name
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -14,7 +12,7 @@ public class TransleteblText : MonoBehaviour
     }
     private void OnEnable()
     {
-        Translator.Update_texts();
+        Translator.UpdateTexts();
     }
     private void OnDestroy()
     {

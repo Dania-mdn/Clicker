@@ -45,49 +45,49 @@ public class Achiwment : MonoBehaviour
             {
                 trigger();
                 achiw_count[0] = Instantiate(achiw);
-                achiw_count[0].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[0] + " " + 1.ToString("0");
-                achiw_count[0].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[0].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[0].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[0] + " " + 1.ToString("0");
+                achiw_count[0].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[0].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if(PlayerPrefs.GetInt("dolfi") == 5)
             {
                 trigger();
                 achiw_count[1] = Instantiate(achiw);
-                achiw_count[1].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[0] + " " + 5.ToString("0");
-                achiw_count[1].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[1].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[1].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[0] + " " + 5.ToString("0");
+                achiw_count[1].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[1].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("dolfi") == 10)
             {
                 trigger();
                 achiw_count[2] = Instantiate(achiw);
-                achiw_count[2].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[0] + " " + 10.ToString("0");
-                achiw_count[2].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[2].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[2].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[0] + " " + 10.ToString("0");
+                achiw_count[2].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[2].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("dolfi") == 20)
             {
                 trigger();
                 achiw_count[3] = Instantiate(achiw);
-                achiw_count[3].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[0] + " " + 20.ToString("0");
-                achiw_count[3].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[3].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[3].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[0] + " " + 20.ToString("0");
+                achiw_count[3].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[3].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("dolfi") == 30)
             {
                 trigger();
                 achiw_count[4] = Instantiate(achiw);
-                achiw_count[4].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[0] + " " + 30.ToString("0");
-                achiw_count[4].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[4].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[4].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[0] + " " + 30.ToString("0");
+                achiw_count[4].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[4].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("dolfi") == 40)
             {
                 trigger();
                 achiw_count[5] = Instantiate(achiw);
-                achiw_count[5].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[0] + " " + 40.ToString("0");
-                achiw_count[5].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[5].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[5].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[0] + " " + 40.ToString("0");
+                achiw_count[5].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[5].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             PlayerPrefs.DeleteKey("dolfi_trigger");
         }
@@ -99,49 +99,49 @@ public class Achiwment : MonoBehaviour
             {
                 trigger();
                 achiw_count[6] = Instantiate(achiw);
-                achiw_count[6].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[1] + " " + 1.ToString("0");
-                achiw_count[6].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[6].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[6].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[1] + " " + 1.ToString("0");
+                achiw_count[6].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[6].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("Ship") == 2)
             {
                 trigger();
                 achiw_count[7] = Instantiate(achiw);
-                achiw_count[7].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[1] + " " + 2.ToString("0");
-                achiw_count[7].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[7].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[7].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[1] + " " + 2.ToString("0");
+                achiw_count[7].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[7].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("Ship") == 3)
             {
                 trigger();
                 achiw_count[8] = Instantiate(achiw);
-                achiw_count[8].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[1] + " " + 3.ToString("0");
-                achiw_count[8].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[8].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[8].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[1] + " " + 3.ToString("0");
+                achiw_count[8].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[8].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("Ship") == 4)
             {
                 trigger();
                 achiw_count[9] = Instantiate(achiw);
-                achiw_count[9].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[1] + " " + 4.ToString("0");
-                achiw_count[9].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[9].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[9].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[1] + " " + 4.ToString("0");
+                achiw_count[9].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[9].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("Ship") == 5)
             {
                 trigger();
                 achiw_count[10] = Instantiate(achiw);
-                achiw_count[10].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[1] + " " + 5.ToString("0");
-                achiw_count[10].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[10].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[10].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[1] + " " + 5.ToString("0");
+                achiw_count[10].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[10].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("Ship") == 6)
             {
                 trigger();
                 achiw_count[11] = Instantiate(achiw);
-                achiw_count[11].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[1] + " " + 6.ToString("0");
-                achiw_count[11].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[11].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[11].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[1] + " " + 6.ToString("0");
+                achiw_count[11].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[11].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             PlayerPrefs.DeleteKey("Ship_Trigger");
         }
@@ -153,49 +153,49 @@ public class Achiwment : MonoBehaviour
             {
                 trigger();
                 achiw_count[12] = Instantiate(achiw);
-                achiw_count[12].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[2] + " " + 1.ToString("0");
-                achiw_count[12].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[12].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[12].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[2] + " " + 1.ToString("0");
+                achiw_count[12].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[12].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_p") == 3)
             {
                 trigger();
                 achiw_count[13] = Instantiate(achiw);
-                achiw_count[13].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[2] + " " + 3.ToString("0");
-                achiw_count[13].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[13].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[13].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[2] + " " + 3.ToString("0");
+                achiw_count[13].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[13].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_p") == 6)
             {
                 trigger();
                 achiw_count[14] = Instantiate(achiw);
-                achiw_count[14].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[2] + " " + 6.ToString("0");
-                achiw_count[14].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[14].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[14].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[2] + " " + 6.ToString("0");
+                achiw_count[14].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[14].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_p") == 12)
             {
                 trigger();
                 achiw_count[14] = Instantiate(achiw);
-                achiw_count[14].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[2] + " " + 12.ToString("0");
-                achiw_count[14].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[14].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[14].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[2] + " " + 12.ToString("0");
+                achiw_count[14].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[14].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_p") == 20)
             {
                 trigger();
                 achiw_count[15] = Instantiate(achiw);
-                achiw_count[15].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[2] + " " + 20.ToString("0");
-                achiw_count[15].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[15].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[15].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[2] + " " + 20.ToString("0");
+                achiw_count[15].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[15].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_p") == 30)
             {
                 trigger();
                 achiw_count[16] = Instantiate(achiw);
-                achiw_count[16].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[2] + " " + 30.ToString("0");
-                achiw_count[16].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[16].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[16].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[2] + " " + 30.ToString("0");
+                achiw_count[16].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[16].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             PlayerPrefs.DeleteKey("adss_pass");
         } 
@@ -207,49 +207,49 @@ public class Achiwment : MonoBehaviour
             {
                 trigger();
                 achiw_count[17] = Instantiate(achiw);
-                achiw_count[17].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[3] + " " + 1.ToString("0");
-                achiw_count[17].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[17].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[17].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[3] + " " + 1.ToString("0");
+                achiw_count[17].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[17].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_t") == 3)
             {
                 trigger();
                 achiw_count[18] = Instantiate(achiw);
-                achiw_count[18].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[3] + " " + 3.ToString("0");
-                achiw_count[18].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[18].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[18].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[3] + " " + 3.ToString("0");
+                achiw_count[18].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[18].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_t") == 6)
             {
                 trigger();
                 achiw_count[19] = Instantiate(achiw);
-                achiw_count[19].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[3] + " " + 6.ToString("0");
-                achiw_count[19].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[19].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[19].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[3] + " " + 6.ToString("0");
+                achiw_count[19].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[19].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_t") == 12)
             {
                 trigger();
                 achiw_count[20] = Instantiate(achiw);
-                achiw_count[20].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[3] + " " + 12.ToString("0");
-                achiw_count[20].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[20].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[20].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[3] + " " + 12.ToString("0");
+                achiw_count[20].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[20].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_t") == 20)
             {
                 trigger();
                 achiw_count[21] = Instantiate(achiw);
-                achiw_count[21].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[3] + " " + 20.ToString("0");
-                achiw_count[21].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[21].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[21].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[3] + " " + 20.ToString("0");
+                achiw_count[21].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[21].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_t") == 30)
             {
                 trigger();
                 achiw_count[22] = Instantiate(achiw);
-                achiw_count[22].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[3] + " " + 30.ToString("0");
-                achiw_count[22].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[22].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[22].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[3] + " " + 30.ToString("0");
+                achiw_count[22].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[22].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             PlayerPrefs.DeleteKey("adss_tap");
         }
@@ -261,49 +261,49 @@ public class Achiwment : MonoBehaviour
             {
                 trigger();
                 achiw_count[23] = Instantiate(achiw);
-                achiw_count[23].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[4] + " " + 1.ToString("0");
-                achiw_count[23].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[23].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[23].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[4] + " " + 1.ToString("0");
+                achiw_count[23].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[23].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_G") == 3)
             {
                 trigger();
                 achiw_count[24] = Instantiate(achiw);
-                achiw_count[24].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[4] + " " + 3.ToString("0");
-                achiw_count[24].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[24].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[24].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[4] + " " + 3.ToString("0");
+                achiw_count[24].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[24].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_G") == 6)
             {
                 trigger();
                 achiw_count[25] = Instantiate(achiw);
-                achiw_count[25].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[4] + " " + 6.ToString("0");
-                achiw_count[25].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[25].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[25].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[4] + " " + 6.ToString("0");
+                achiw_count[25].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[25].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_G") == 12)
             {
                 trigger();
                 achiw_count[26] = Instantiate(achiw);
-                achiw_count[26].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[4] + " " + 12.ToString("0");
-                achiw_count[26].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[26].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[26].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[4] + " " + 12.ToString("0");
+                achiw_count[26].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[26].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_G") == 20)
             {
                 trigger();
                 achiw_count[27] = Instantiate(achiw);
-                achiw_count[27].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[4] + " " + 20.ToString("0");
-                achiw_count[27].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[27].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[27].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[4] + " " + 20.ToString("0");
+                achiw_count[27].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[27].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("adss_G") == 30)
             {
                 trigger();
                 achiw_count[28] = Instantiate(achiw);
-                achiw_count[28].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[4] + " " + 30.ToString("0");
-                achiw_count[28].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[28].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[28].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[4] + " " + 30.ToString("0");
+                achiw_count[28].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[28].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             PlayerPrefs.DeleteKey("adss_Gift");
         }
@@ -315,49 +315,49 @@ public class Achiwment : MonoBehaviour
             {
                 trigger();
                 achiw_count[29] = Instantiate(achiw);
-                achiw_count[29].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[5] + " " + 1.ToString("0");
-                achiw_count[29].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[29].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[29].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[5] + " " + 1.ToString("0");
+                achiw_count[29].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[29].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("x10") == 3)
             {
                 trigger();
                 achiw_count[30] = Instantiate(achiw);
-                achiw_count[30].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[5] + " " + 3.ToString("0");
-                achiw_count[30].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[30].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[30].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[5] + " " + 3.ToString("0");
+                achiw_count[30].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[30].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("x10") == 6)
             {
                 trigger();
                 achiw_count[31] = Instantiate(achiw);
-                achiw_count[31].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[5] + " " + 6.ToString("0");
-                achiw_count[31].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[31].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[31].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[5] + " " + 6.ToString("0");
+                achiw_count[31].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[31].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("x10") == 12)
             {
                 trigger();
                 achiw_count[32] = Instantiate(achiw);
-                achiw_count[32].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[5] + " " + 12.ToString("0");
-                achiw_count[32].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[32].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[32].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[5] + " " + 12.ToString("0");
+                achiw_count[32].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[32].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("x10") == 20)
             {
                 trigger();
                 achiw_count[33] = Instantiate(achiw);
-                achiw_count[33].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[5] + " " + 20.ToString("0");
-                achiw_count[33].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[33].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[33].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[5] + " " + 20.ToString("0");
+                achiw_count[33].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[33].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("x10") == 30)
             {
                 trigger();
                 achiw_count[34] = Instantiate(achiw);
-                achiw_count[34].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[5] + " " + 30.ToString("0");
-                achiw_count[34].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[34].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[34].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[5] + " " + 30.ToString("0");
+                achiw_count[34].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[34].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             PlayerPrefs.DeleteKey("adss_x10");
         }
@@ -369,49 +369,49 @@ public class Achiwment : MonoBehaviour
             {
                 trigger();
                 achiw_count[35] = Instantiate(achiw);
-                achiw_count[35].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[6] + " " + 1.ToString("0");
-                achiw_count[35].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[35].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[35].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[6] + " " + 1.ToString("0");
+                achiw_count[35].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[35].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("G") == 3)
             {
                 trigger();
                 achiw_count[36] = Instantiate(achiw);
-                achiw_count[36].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[6] + " " + 3.ToString("0");
-                achiw_count[36].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[36].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[36].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[6] + " " + 3.ToString("0");
+                achiw_count[36].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[36].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("G") == 6)
             {
                 trigger();
                 achiw_count[37] = Instantiate(achiw);
-                achiw_count[37].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[6] + " " + 6.ToString("0");
-                achiw_count[37].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[37].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[37].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[6] + " " + 6.ToString("0");
+                achiw_count[37].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[37].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("G") == 12)
             {
                 trigger();
                 achiw_count[38] = Instantiate(achiw);
-                achiw_count[38].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[6] + " " + 12.ToString("0");
-                achiw_count[38].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[38].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[38].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[6] + " " + 12.ToString("0");
+                achiw_count[38].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[38].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("G") == 20)
             {
                 trigger();
                 achiw_count[39] = Instantiate(achiw);
-                achiw_count[39].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[6] + " " + 20.ToString("0");
-                achiw_count[39].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[39].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[39].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[6] + " " + 20.ToString("0");
+                achiw_count[39].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[39].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             else if (PlayerPrefs.GetInt("G") == 30)
             {
                 trigger();
                 achiw_count[40] = Instantiate(achiw);
-                achiw_count[40].GetComponent<new_achiw>().chto_sdelal_txt.text = chto_sdelal[6] + " " + 30.ToString("0");
-                achiw_count[40].GetComponent<new_achiw>().Skolko_poluchil.text = PlayerPrefs.GetFloat("Gift").ToString("0");
-                achiw_count[40].GetComponent<new_achiw>().i = PlayerPrefs.GetFloat("Gift");
+                achiw_count[40].GetComponent<CreateNewAchiw>().AchivName.text = chto_sdelal[6] + " " + 30.ToString("0");
+                achiw_count[40].GetComponent<CreateNewAchiw>().Reward.text = PlayerPrefs.GetFloat("Gift").ToString("0");
+                achiw_count[40].GetComponent<CreateNewAchiw>().i = PlayerPrefs.GetFloat("Gift");
             }
             PlayerPrefs.DeleteKey("Gift1");
         }

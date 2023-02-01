@@ -132,10 +132,10 @@ public class Translator : MonoBehaviour
     };
     #endregion
 
-    static public void Select_Language(int id)
+    static public void SelectLanguage(int id)
     {
         LanguageID = id;
-        Update_texts();
+        UpdateTexts();
     }
     static public string Get_text(int textKey)
     {
@@ -149,7 +149,7 @@ public class Translator : MonoBehaviour
     {
         ListId.Remove(idtext);
     }
-    static public void Update_texts()
+    static public void UpdateTexts()
     {
         for(int i = 0; i < ListId.Count; i++)
         {

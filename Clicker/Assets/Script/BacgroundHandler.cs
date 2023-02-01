@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BacgroundHandler : MonoBehaviour
 {
-    private int _leftBorder = -6;
+    private const int _leftBorder = -6;
     private float _swimm;
     private float _idl;
     [SerializeField] private bool _deep;
@@ -23,7 +23,7 @@ public class BacgroundHandler : MonoBehaviour
     {
         if (this.transform.position.x > _leftBorder)
         {
-            if (PlayerPrefs.HasKey("action"))
+            if (PlayerPrefs.HasKey("tap"))
             {
                 OffsetBacground(_swimm);
             }

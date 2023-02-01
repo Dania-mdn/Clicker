@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Manager_button : MonoBehaviour
+public class ManagerButton : MonoBehaviour
 {
     public GameObject imj_Achiwment;
     public GameObject imj_ship;

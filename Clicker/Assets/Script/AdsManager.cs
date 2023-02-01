@@ -1,15 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.Events;
-using GoogleMobileAds.Common;
 using System;
 using GoogleMobileAds.Api;
 using UnityEngine.UI;
 
-public class Ads_Manager : MonoBehaviour
+public class AdsManager : MonoBehaviour
 {
+    //private BannerView bannerView;
     float second_hour_1 = 6;
     float second_hour_2 = 7;
     float second_hour_3 = 8;
@@ -62,14 +59,14 @@ public class Ads_Manager : MonoBehaviour
     GameObject gg;
     AudioSource Audio;
     public int ads_dan = 0;
-    public Ads_Manager ads_manager;
     public RewardedAd rewardedAd;
     //настоящий ca-app-pub-9999092264265801/7556372806
     //тест ca-app-pub-3940256099942544/5224354917
     private const string RewardedUnitID = "ca-app-pub-9999092264265801/7556372806";
     void Start()
     {
-
+        //MobileAds.Initialize(InitStatus => { });
+        //this.ReqestBanner();
         i = 30;
         Audio = GetComponent<AudioSource>();
         isoffline = false;
@@ -393,6 +390,36 @@ public class Ads_Manager : MonoBehaviour
         {
             this.rewardedAd.Show();
         }
+    }
+    //private void ReqestBanner()
+    //{
+    //    //настоящий ca-app-pub-9999092264265801/8715796832
+    //    //тест ca-app-pub-3940256099942544/5224354917
+    //    string BannerID = "ca-app-pub-9999092264265801/8715796832";
+    //    this.bannerView = new BannerView(BannerID, AdSize.Banner, AdPosition.Top);
+    //    AdRequest adRequest = new AdRequest.Builder().Build();
+    //    this.bannerView.LoadAd(adRequest);
+    //    bannerView.Show();
+    //    // Called when an ad request has successfully loaded.
+    //    this.bannerView.OnAdLoaded += this.HandleOnAdLoaded;
+    //    // Called when an ad request failed to load.
+    //    this.bannerView.OnAdFailedToLoad += this.HandleOnAdFailedToLoad;
+    //    // Called when an ad is clicked.
+    //    this.bannerView.OnAdOpening += this.HandleOnAdOpened;
+    //}
+    //public void HandleOnAdLoaded(object sender, EventArgs args)
+    //{
+    //    MonoBehaviour.print("HandleAdLoaded event received");
+    //}
+    //public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+    //{
+    //    MonoBehaviour.print("HandleFailedToReceiveAd event received with message: "
+    //                        + args.LoadAdError.GetMessage());
+    //}
+
+    public void HandleOnAdOpened(object sender, EventArgs args)
+    {
+        MonoBehaviour.print("HandleAdOpened event received");
     }
     public void HandleUserEarnedReward(object sender, Reward args)
     {

@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     float i_fuel;
     public Animation anim_Money;
     bool isparticle;
-    public Manager_button MB;
+    public ManagerButton MB;
 
     public int[] price_0;
     public int[] price_1;

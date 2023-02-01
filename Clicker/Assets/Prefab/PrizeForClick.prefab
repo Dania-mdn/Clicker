@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3082418195762713361}
   - component: {fileID: 7283412750684091039}
   m_Layer: 5
-  m_Name: dolfi_spawn
+  m_Name: PrizeForClick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

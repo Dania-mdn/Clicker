@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class scroll_horizontal : MonoBehaviour
+public class ScrollHorizontal : MonoBehaviour
 {
     [Range(1, 50)]
     [Header("Controllers")]
@@ -21,7 +19,7 @@ public class scroll_horizontal : MonoBehaviour
     public GameObject[] panPrefab;
     public ScrollRect scrollRect;
 
-    public Manager_button MB;
+    public ManagerButton MB;
     private GameObject[] instPans;
     private Vector2[] pansPos;
     private Vector2[] pansScale;

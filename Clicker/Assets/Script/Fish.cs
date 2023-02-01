@@ -18,7 +18,7 @@ public class Fish : MonoBehaviour
         y = Random.Range(0.2f, -0.2f);
         if (this.transform.position.x > 0)
         {
-            if (PlayerPrefs.HasKey("action"))
+            if (PlayerPrefs.HasKey("tap"))
             {
                 int a = Random.Range(1, 3);
                 if(a == 1)
@@ -52,7 +52,7 @@ public class Fish : MonoBehaviour
     {
         if (transform.position.y < -2.2f && transform.position.y > -5.7f && transform.position.x > -4.2f && transform.position.x < 4.2f)
         {
-            if (PlayerPrefs.HasKey("action"))
+            if (PlayerPrefs.HasKey("tap"))
             {
                 Swimm(0.04f, i, y, _speed);
             }
@@ -64,7 +64,7 @@ public class Fish : MonoBehaviour
         else if(transform.position.y >= -2.2f)
         {
             y = -0.5f;
-            if (PlayerPrefs.HasKey("action"))
+            if (PlayerPrefs.HasKey("tap"))
             {
                 if (_spriteRenderer.flipX == true)
                 {

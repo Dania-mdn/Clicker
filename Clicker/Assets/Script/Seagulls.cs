@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Seagulls : MonoBehaviour
 {
-    private float _scaleMin = 0.1f;
-    private float _scaleMax = 0.5f;
+    private const float _scaleMin = 0.1f;
+    private const float _scaleMax = 0.5f;
     private float _seagullsScale;
 
-    private float _randomValue = 0.6f;
+    private readonly float _randomValue = 0.6f;
     private float _randomVertical;
 
     private int _direction;

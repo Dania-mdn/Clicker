@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Language : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
         if(PlayerPrefs.HasKey("Lanqaqe") == false)
         {
@@ -20,11 +20,11 @@ public class Language : MonoBehaviour
                 PlayerPrefs.SetInt("Lanqaqe", 0);
             }
         }
-        Translator.Select_Language(PlayerPrefs.GetInt("Lanqaqe"));
+        Translator.SelectLanguage(PlayerPrefs.GetInt("Lanqaqe"));
     }
-    public void Language_change(int LanguageID)
+    public void LanguageChange(int LanguageID)
     {
         PlayerPrefs.SetInt("Lanqaqe", LanguageID);
-        Translator.Select_Language(PlayerPrefs.GetInt("Lanqaqe"));
+        Translator.SelectLanguage(PlayerPrefs.GetInt("Lanqaqe"));
     }
 }

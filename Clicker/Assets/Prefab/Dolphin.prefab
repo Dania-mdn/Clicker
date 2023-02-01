@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 4145262998223890470}
   - component: {fileID: 415836677253084294}
   m_Layer: 0
-  m_Name: Fish1_B
+  m_Name: Dolphin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
