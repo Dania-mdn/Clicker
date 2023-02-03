@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2886376914847811366}
   - component: {fileID: 790323755703268435}
   m_Layer: 5
-  m_Name: tap
+  m_Name: UpgradeClick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,9 +241,9 @@ MonoBehaviour:
   UpgradePassive: {fileID: 1316933529511611511}
   ProgressSlider: {fileID: 5741987557113240321}
   GameManager: {fileID: 0}
-  t: 0
-  p: 0
-  ID: 31
+  DefaultValueUpgradeClick: 0
+  DefaultValueUpgradePassiv: 0
+  IdModul: 0
   stringmodul: []
 --- !u!82 &5552855674242686955
 AudioSource:
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 7919383799624792476}
   - component: {fileID: 1316933529511611511}
   m_Layer: 5
-  m_Name: pas
+  m_Name: UpgradePassive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 4750334390730097728}
   - component: {fileID: 8547913865627897678}
   m_Layer: 5
-  m_Name: pas (1)
+  m_Name: TitlePassive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -790,7 +790,7 @@ GameObject:
   - component: {fileID: 6698302629188462285}
   - component: {fileID: 4326343694728474948}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 4976917171873462727}
   - component: {fileID: 7113851833454683550}
   m_Layer: 5
-  m_Name: tap (1)
+  m_Name: TittleClick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1112,7 +1112,7 @@ GameObject:
   - component: {fileID: 4977754226622436254}
   - component: {fileID: 3575000223719377744}
   m_Layer: 5
-  m_Name: Image
+  m_Name: TittleImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1189,7 +1189,7 @@ GameObject:
   - component: {fileID: 5138681634062566901}
   - component: {fileID: 6112631590526712293}
   m_Layer: 5
-  m_Name: Name
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1339,7 +1339,7 @@ GameObject:
   - component: {fileID: 714462937440590030}
   - component: {fileID: 6007054097332408049}
   m_Layer: 5
-  m_Name: button
+  m_Name: BuyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1471,7 +1471,7 @@ GameObject:
   - component: {fileID: 498818255453990141}
   - component: {fileID: 5741987557113240321}
   m_Layer: 5
-  m_Name: progress
+  m_Name: Progress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1563,7 +1563,7 @@ GameObject:
   - component: {fileID: 869456467660646139}
   - component: {fileID: 3186203724031622242}
   m_Layer: 5
-  m_Name: lvl
+  m_Name: LevelUpgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
