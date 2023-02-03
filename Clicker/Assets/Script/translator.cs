@@ -137,18 +137,9 @@ public class Translator : MonoBehaviour
         LanguageID = id;
         UpdateTexts();
     }
-    static public string Get_text(int textKey)
-    {
-        return LineText[LanguageID, textKey];
-    }
-    static public void Add(TransleteblText idtext)
-    {
-        ListId.Add(idtext);
-    }
-    static public void Delete(TransleteblText idtext)
-    {
-        ListId.Remove(idtext);
-    }
+    static public string Get_text(int textKey) => (LineText[LanguageID, textKey]);
+    static public void Add(TransleteblText idtext) => ListId.Add(idtext);
+    static public void Delete(TransleteblText idtext) => ListId.Remove(idtext);
     static public void UpdateTexts()
     {
         for(int i = 0; i < ListId.Count; i++)

@@ -10,12 +10,6 @@ public class TransleteblText : MonoBehaviour
         UItext = GetComponent<TextMeshProUGUI>();
         Translator.Add(this);
     }
-    private void OnEnable()
-    {
-        Translator.UpdateTexts();
-    }
-    private void OnDestroy()
-    {
-        Translator.Delete(this);
-    }
+    private void OnEnable() => Translator.UpdateTexts();
+    private void OnDestroy() => Translator.Delete(this);
 }

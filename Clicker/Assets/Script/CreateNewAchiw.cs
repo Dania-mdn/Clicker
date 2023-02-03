@@ -3,18 +3,18 @@ using TMPro;
 
 public class CreateNewAchiw : MonoBehaviour
 {
-    private GameObject Clicket;
+    private GameObject _clicket;
     public TextMeshProUGUI AchivName;
     public TextMeshProUGUI Reward;
     public float i;
 
     private void Start()
     {
-        Clicket = GameObject.Find("MainClicket");
+        _clicket = GameObject.FindWithTag("MainClicket");
     }
     public void TakeReward()
     {
-        Clicket.GetComponent<GameManager>().achivment(i);
+        _clicket.GetComponent<GameManager>().achivment(i);
         PlayerPrefs.SetInt("Achiwment", PlayerPrefs.GetInt("Achiwment") - 1);
         Destroy(this.gameObject);
     }

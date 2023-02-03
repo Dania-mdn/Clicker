@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ads
   - admin
+  - MainClicket
   layers:
   - Default
   - TransparentFX

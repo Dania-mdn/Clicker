@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -8,52 +9,44 @@ public class Optiuns : MonoBehaviour
     private readonly int _off = -80;
 
     public AudioMixerGroup Mixer;
-    public Toggle Music;
-    public Toggle Sound;
-    
-    void Start()
+    public AudioMixerGroup Music;
+    public AudioMixerGroup Sound;
+    public Toggle ToggleMusic;
+    public Toggle ToggleSound;
+    private Func<string, float, bool> MixerSetVolume;
+
+
+    private void Start()
     {
-        if (PlayerPrefs.HasKey("musika"))
+        MixerSetVolume = Mixer.audioMixer.SetFloat;
+
+        if (PlayerPrefs.HasKey(Music.name))
         {
-            Mixer.audioMixer.SetFloat("music", PlayerPrefs.GetInt("musika"));
-            if (PlayerPrefs.GetInt("musika") == _off)
-            {
-                Music.isOn = true;
-            }
+            LoadVoice(Music, ToggleMusic);
         }
-        if (PlayerPrefs.HasKey("zvuki"))
+        if (PlayerPrefs.HasKey(Sound.name))
         {
-            Mixer.audioMixer.SetFloat("sound", PlayerPrefs.GetInt("zvuki"));
-            if (PlayerPrefs.GetInt("zvuki") == _off)
-            {
-                Sound.isOn = true;
-            }
+            LoadVoice(Sound, ToggleSound);
         }
     }
-    public void MusicEnable()
+    public void Enable(Toggle Toggle)
     {
-        if (Music.isOn == true)
+        if (Toggle.isOn == true)
         {
-            PlayerPrefs.SetInt("musika", _off);
-            Mixer.audioMixer.SetFloat("music", PlayerPrefs.GetInt("musika"));
+            PlayerPrefs.SetInt(Toggle.name, _off);
         }
         else
         {
-            PlayerPrefs.SetInt("musika", _on);
-            Mixer.audioMixer.SetFloat("music", PlayerPrefs.GetInt("musika"));
+            PlayerPrefs.SetInt(Toggle.name, _on);
         }
+        MixerSetVolume(Toggle.name, PlayerPrefs.GetInt(Toggle.name));
     }
-    public void SounfEnable()
+    private void LoadVoice(AudioMixerGroup AudioMixer, Toggle toggle)
     {
-        if (Sound.isOn == true)
+        MixerSetVolume(AudioMixer.name, PlayerPrefs.GetInt(AudioMixer.name));
+        if (PlayerPrefs.GetInt(AudioMixer.name) == _off)
         {
-            PlayerPrefs.SetInt("zvuki", _off);
-            Mixer.audioMixer.SetFloat("sound", PlayerPrefs.GetInt("zvuki"));
-        }
-        else
-        {
-            PlayerPrefs.SetInt("zvuki", _on);
-            Mixer.audioMixer.SetFloat("sound", PlayerPrefs.GetInt("zvuki"));
+            toggle.isOn = true;
         }
     }
 

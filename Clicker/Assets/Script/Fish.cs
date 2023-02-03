@@ -3,92 +3,34 @@ using UnityEngine;
 public class Fish : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
+    private const float _lineOfWater = -2.22f;
 
-    private float _speed;
-
-    private float i;
-    private float y;
+    private float _directionHorizontal;
+    private float _directionVertical;
+    private float _boostSpeed;
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.color = new Color(1, 1, 1, Random.Range(0.25f, 0.85f));
 
-        _speed = Random.Range(0.3f, 0.5f);
+        _directionVertical = Random.Range(0.2f, -0.2f);
 
-        y = Random.Range(0.2f, -0.2f);
-        if (this.transform.position.x > 0)
-        {
-            if (PlayerPrefs.HasKey("tap"))
-            {
-                int a = Random.Range(1, 3);
-                if(a == 1)
-                {
-                    _spriteRenderer.flipX = true;
-                    i = 0.7f;
-                    transform.right = new Vector2(i, y);
-                }
-                else
-                {
-                    _spriteRenderer.flipX = false;
-                    i = -0.7f;
-                    transform.right = new Vector2(-i, -y);
-                }
-            }
-            else
-            {
-                _spriteRenderer.flipX = false;
-                i = -0.7f;
-                transform.right = new Vector2(-i, -y);
-            }
-        }
-        else
-        {
-            _spriteRenderer.flipX = true;
-            i = 0.7f;
-            transform.right = new Vector2(i, y);
-        }
+        DirectionOfMov(Random.Range(1, 3));
     }
     private void Update()
     {
-        if (transform.position.y < -2.2f && transform.position.y > -5.7f && transform.position.x > -4.2f && transform.position.x < 4.2f)
+        if (IsZone())
         {
+            Swimm(_boostSpeed, _directionHorizontal, _directionVertical);
+
             if (PlayerPrefs.HasKey("tap"))
-            {
-                Swimm(0.04f, i, y, _speed);
-            }
+                _boostSpeed = 0.04f;
             else
+                _boostSpeed = 0.01f;
+
+            if (transform.position.y >= _lineOfWater)
             {
-                Swimm(0.01f, i, y, _speed);
-            }
-        }
-        else if(transform.position.y >= -2.2f)
-        {
-            y = -0.5f;
-            if (PlayerPrefs.HasKey("tap"))
-            {
-                if (_spriteRenderer.flipX == true)
-                {
-                    transform.right = new Vector2(i, y);
-                    Swimm(0.04f, i, y);
-                }
-                else
-                {
-                    transform.right = new Vector2(-i, -y);
-                    Swimm(0.04f, i, y);
-                }
-            }
-            else
-            {
-                if (_spriteRenderer.flipX == true)
-                {
-                    transform.right = new Vector2(i, y);
-                    Swimm(0.01f, i, y);
-                }
-                else
-                {
-                    transform.right = new Vector2(-i, -y);
-                    Swimm(0.01f, i, y);
-                }
+                _directionVertical = -0.1f;
             }
         }
         else
@@ -96,8 +38,24 @@ public class Fish : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void Swimm(float s, float i, float y, float speed = 1)
+    private void DirectionOfMov(int random)
     {
-        transform.position = new Vector3(transform.position.x - s + i * speed * Time.deltaTime, transform.position.y + y * speed * Time.deltaTime, transform.position.z);
+        if (random == 1)
+        {
+            _directionHorizontal = 1;
+        }
+        else
+        {
+            _spriteRenderer.flipY = true;
+            _directionHorizontal = -0.7f;
+        }
+        transform.right = new Vector2(_directionHorizontal, _directionVertical);
+    }
+    private bool IsZone() => transform.position.x < 4.2f && transform.position.x > -4.2f && transform.position.y < -2 && transform.position.y > -5.7f;
+    private void Swimm(float boostSpeed, float directionHorizontal, float directionVertical)
+    {
+        float positionX = this.transform.position.x - boostSpeed + directionHorizontal * Time.deltaTime;
+        float positionY = this.transform.position.y + directionVertical * Time.deltaTime;
+        transform.position = new Vector3(positionX, positionY, transform.position.z);
     }
 }

@@ -24,35 +24,9 @@ public class Seagulls : MonoBehaviour
     }
     private void Update()
     {
-        if (IsZone())
-        {
-            transform.position = new Vector2(transform.position.x + _positionx, transform.position.y + _positiony);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (IsZone()) transform.position = new Vector2(transform.position.x + _positionx, transform.position.y + _positiony);
+        else Destroy(gameObject);
     }
-    private bool IsZone()
-    {
-        if (transform.position.y > -1.4f && transform.position.y < 4.6f && transform.position.x > -4.2f && transform.position.x < 4.2f)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    private int HandlerDirection()
-    {
-        if (transform.position.x > 0)
-        {
-            return  -1;
-        }
-        else
-        {
-            return  1;
-        }
-    }
+    private bool IsZone() => transform.position.y > -1.4f && transform.position.y < 4.6f && transform.position.x > -4.2f && transform.position.x < 4.2f;
+    private int HandlerDirection() => transform.position.x > 0 ? -1: 1;
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Fish_and_Bubbl : MonoBehaviour
+public class GenerationEnviroment : MonoBehaviour
 {
     public GameObject bubbl;
     public int timer_bubbl;
@@ -98,8 +98,7 @@ public class Fish_and_Bubbl : MonoBehaviour
         else
         {
             f = timer_fish;
-            Instantiate(fish[Random.Range(0, fish.Length)], new Vector3(-4f, Random.Range(-2.1f, -5), 0), Quaternion.identity); 
-            if (PlayerPrefs.HasKey("action"))
+            if (PlayerPrefs.HasKey("tap"))
             {
                 Instantiate(fish[Random.Range(0, fish.Length)], new Vector3(4f, Random.Range(-2.1f, -5), 0), Quaternion.identity);
                 Instantiate(fish[Random.Range(0, fish.Length)], new Vector3(4f, Random.Range(-2.1f, -5), 0), Quaternion.identity);
