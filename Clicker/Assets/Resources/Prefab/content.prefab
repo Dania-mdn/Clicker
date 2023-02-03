@@ -234,13 +234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f50e54c41df1af46825a60c07e010c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 714462937440590030}
-  price_button: {fileID: 4326343694728474948}
-  lvl: {fileID: 3186203724031622242}
-  tap_incom: {fileID: 790323755703268435}
-  pass_incom: {fileID: 1316933529511611511}
-  slider: {fileID: 5741987557113240321}
-  tap: {fileID: 0}
+  ButtonSprite: {fileID: 714462937440590030}
+  PriceButton: {fileID: 4326343694728474948}
+  LevelUpgrade: {fileID: 3186203724031622242}
+  UpgradeClick: {fileID: 790323755703268435}
+  UpgradePassive: {fileID: 1316933529511611511}
+  ProgressSlider: {fileID: 5741987557113240321}
+  GameManager: {fileID: 0}
   t: 0
   p: 0
   ID: 31

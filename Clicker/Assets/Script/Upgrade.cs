@@ -1,59 +1,58 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Upgrade : MonoBehaviour
+public abstract class Upgrade: MonoBehaviour
 {
-    public Image sprite;
-    public TextMeshProUGUI price_button;
-    public TextMeshProUGUI lvl;
-    public TextMeshProUGUI tap_incom;
-    public TextMeshProUGUI pass_incom;
-    public Slider slider;
-    public GameManager tap;
-    AudioSource aud;
-    private int[] price;
-    public int t;
-    int it;
-    public int p;
-    int ip;
-    int i;
+    public Image ButtonSprite;
+    public TextMeshProUGUI PriceButton;
+    public TextMeshProUGUI LevelUpgrade;
+    public TextMeshProUGUI UpgradeClick;
+    public TextMeshProUGUI UpgradePassive;
+    public Slider ProgressSlider;
+    public GameManager GameManager;
+    private AudioSource _audioSource;
+    private int[] _price;
+    public int DefaultValueUpgradeClick;
+    private int _valueUpgradeClick;
+    public int DefaultValueUpgradePassiv;
+    private int _ValueUpgradePassive;
+    private int i;
     public int ID;
     private string modul;
     public string[] stringmodul;
-    bool is_dostup = false;
-    private void Start()
+    private bool is_dostup = false;
+    public virtual void Start()
     {
-        aud = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
         PlayerPrefs.DeleteKey((ID / 10).ToString("0"));
+
         //добавление характеристик
         if (PlayerPrefs.HasKey("tap_income" + ID))
         {
-            it = PlayerPrefs.GetInt("tap_income" + ID);
-            tap_incom.text = "+ " + it.ToString("0") + "%";
+            _valueUpgradeClick = PlayerPrefs.GetInt("tap_income" + ID);
+            UpgradeClick.text = "+ " + _valueUpgradeClick.ToString("0") + "%";
         }
         else
         {
-            it = t;
-            tap.tap_income = tap.tap_income + (it * 0.01f);
-            tap_incom.text = "+ " + it.ToString("0") + "%";
+            _valueUpgradeClick = DefaultValueUpgradeClick;
+            GameManager.tap_income = GameManager.tap_income + (_valueUpgradeClick * 0.01f);
+            UpgradeClick.text = "+ " + _valueUpgradeClick.ToString("0") + "%";
         }
 
         if (PlayerPrefs.HasKey("pass_income" + ID))
         {
-            ip = PlayerPrefs.GetInt("pass_income" + ID);
-            pass_incom.text = "+ " + ip.ToString("0") + "%";
+            _ValueUpgradePassive = PlayerPrefs.GetInt("pass_income" + ID);
+            UpgradePassive.text = "+ " + _ValueUpgradePassive.ToString("0") + "%";
         }
         else
         {
-            ip = p;
-            tap.pass_income = tap.pass_income + (ip * 0.01f);
-            pass_incom.text = "+ " + ip.ToString("0") + "%";
+            _ValueUpgradePassive = DefaultValueUpgradePassiv;
+            GameManager.pass_income = GameManager.pass_income + (_ValueUpgradePassive * 0.01f);
+            UpgradePassive.text = "+ " + _ValueUpgradePassive.ToString("0") + "%";
         }
     }
-    private void Update()
+    public virtual void Update()
     {
         //добавление i
         if (PlayerPrefs.HasKey("i" + ID + PlayerPrefs.GetInt("num_ship")))
@@ -70,53 +69,53 @@ public class Upgrade : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("num_ship") == 0)
             {
-                price = tap.price_0;
+                _price = GameManager.price_0;
                 modul = stringmodul[0];
             }
             else if (PlayerPrefs.GetInt("num_ship") == 1)
             {
-                price = tap.price_1;
+                _price = GameManager.price_1;
                 modul = stringmodul[1];
             }
             else if (PlayerPrefs.GetInt("num_ship") == 2)
             {
-                price = tap.price_2;
+                _price = GameManager.price_2;
                 modul = stringmodul[2];
             }
             else if (PlayerPrefs.GetInt("num_ship") == 3)
             {
-                price = tap.price_3;
+                _price = GameManager.price_3;
                 modul = stringmodul[3];
             }
             else if (PlayerPrefs.GetInt("num_ship") == 4)
             {
-                price = tap.price_4;
+                _price = GameManager.price_4;
                 modul = stringmodul[4];
             }
             else if (PlayerPrefs.GetInt("num_ship") == 5)
             {
-                price = tap.price_5;
+                _price = GameManager.price_5;
                 modul = stringmodul[5];
             }
             else if (PlayerPrefs.GetInt("num_ship") == 6)
             {
-                price = tap.price_6;
+                _price = GameManager.price_6;
                 modul = stringmodul[6];
             }
         }
         else
         {
-            price = tap.price_0;
+            _price = GameManager.price_0;
             modul = stringmodul[0];
         }
 
-        if (i < price.Length)
+        if (i < _price.Length)
         {
-            if (price[i] < PlayerPrefs.GetFloat("Money_box"))
+            if (_price[i] < PlayerPrefs.GetFloat("Money_box"))
             {
-                sprite.color = new Color(0f, 1f, 0.168f);
-                price_button.text = price[i].ToString("0");
-                if(is_dostup == false)
+                ButtonSprite.color = new Color(0f, 1f, 0.168f);
+                PriceButton.text = _price[i].ToString("0");
+                if (is_dostup == false)
                 {
                     PlayerPrefs.SetInt((ID / 10).ToString("0"), PlayerPrefs.GetInt((ID / 10).ToString("0")) + 1);
                     is_dostup = true;
@@ -124,8 +123,8 @@ public class Upgrade : MonoBehaviour
             }
             else
             {
-                sprite.color = new Color(1f, 1f, 1f);
-                price_button.text = price[i].ToString("0");
+                ButtonSprite.color = new Color(1f, 1f, 1f);
+                PriceButton.text = _price[i].ToString("0");
                 if (is_dostup == true)
                 {
                     PlayerPrefs.SetInt((ID / 10).ToString("0"), PlayerPrefs.GetInt((ID / 10).ToString("0")) - 1);
@@ -135,54 +134,54 @@ public class Upgrade : MonoBehaviour
         }
         else
         {
-            sprite.color = new Color(1f, 1f, 1f); 
-            price_button.text = "MAX".ToString();
-            tap_incom.text = "MAX".ToString();
-            pass_incom.text = "MAX".ToString();
+            ButtonSprite.color = new Color(1f, 1f, 1f);
+            PriceButton.text = "MAX".ToString();
+            UpgradeClick.text = "MAX".ToString();
+            UpgradePassive.text = "MAX".ToString();
             if (is_dostup == true)
             {
                 PlayerPrefs.SetInt((ID / 10).ToString("0"), PlayerPrefs.GetInt((ID / 10).ToString("0")) - 1);
                 is_dostup = false;
             }
         }
-        lvl.text = "lvl " + PlayerPrefs.GetInt("i" + ID + PlayerPrefs.GetInt("num_ship")).ToString("0");
+        LevelUpgrade.text = "lvl " + PlayerPrefs.GetInt("i" + ID + PlayerPrefs.GetInt("num_ship")).ToString("0");
         if (PlayerPrefs.HasKey("slider" + ID + PlayerPrefs.GetInt("num_ship")))
         {
-            slider.value = PlayerPrefs.GetFloat("slider" + ID + PlayerPrefs.GetInt("num_ship"));
-            if (slider.value > 0.9)
+            ProgressSlider.value = PlayerPrefs.GetFloat("slider" + ID + PlayerPrefs.GetInt("num_ship"));
+            if (ProgressSlider.value > 0.9)
             {
-                slider.value = 0;
+                ProgressSlider.value = 0;
             }
         }
         else
         {
-            slider.value = 0;
+            ProgressSlider.value = 0;
         }
     }
-    public void income()
+    public virtual void income()
     {
-        if (i < price.Length && price[i] < PlayerPrefs.GetFloat("Money_box"))
+        if (i < _price.Length && _price[i] < PlayerPrefs.GetFloat("Money_box"))
         {
-            aud.Play();
+            _audioSource.Play();
             //забрать денег
-            PlayerPrefs.SetFloat("Money_box", PlayerPrefs.GetFloat("Money_box") - price[i]);
+            PlayerPrefs.SetFloat("Money_box", PlayerPrefs.GetFloat("Money_box") - _price[i]);
             //добавить характеристик
 
             //1
-            it = it + t;
-            tap.tap_income = tap.tap_income + (t * 0.01f);
-            PlayerPrefs.SetInt("tap_income" + ID, it);
-            tap_incom.text = "+ " + it.ToString("0") + "%";
+            _valueUpgradeClick = _valueUpgradeClick + DefaultValueUpgradeClick;
+            GameManager.tap_income = GameManager.tap_income + (DefaultValueUpgradeClick * 0.01f);
+            PlayerPrefs.SetInt("tap_income" + ID, _valueUpgradeClick);
+            UpgradeClick.text = "+ " + _valueUpgradeClick.ToString("0") + "%";
 
             //1
-            ip = ip + p;
-            tap.pass_income = tap.pass_income + (p * 0.01f);
-            PlayerPrefs.SetInt("pass_income" + ID, ip);
-            pass_incom.text = "+ " + ip.ToString("0") + "%";
+            _ValueUpgradePassive = _ValueUpgradePassive + DefaultValueUpgradePassiv;
+            GameManager.pass_income = GameManager.pass_income + (DefaultValueUpgradePassiv * 0.01f);
+            PlayerPrefs.SetInt("pass_income" + ID, _ValueUpgradePassive);
+            UpgradePassive.text = "+ " + _ValueUpgradePassive.ToString("0") + "%";
 
             //сохранить изменения
-            PlayerPrefs.SetFloat("tap_income", tap.tap_income);
-            PlayerPrefs.SetFloat("pass_income", tap.pass_income);
+            PlayerPrefs.SetFloat("tap_income", GameManager.tap_income);
+            PlayerPrefs.SetFloat("pass_income", GameManager.pass_income);
             //перейти на новый уровень цены
             i = i + 1;
             if (modul != null && i % 5 == 0)
@@ -193,10 +192,10 @@ public class Upgrade : MonoBehaviour
                 PlayerPrefs.SetInt(modul, number);
             }
             PlayerPrefs.SetInt("i" + ID + PlayerPrefs.GetInt("num_ship"), PlayerPrefs.GetInt("i" + ID + PlayerPrefs.GetInt("num_ship")) + 1);
-            slider.value = slider.value + 0.2f;
-            PlayerPrefs.SetFloat("slider" + ID + PlayerPrefs.GetInt("num_ship"), slider.value);
+            ProgressSlider.value = ProgressSlider.value + 0.2f;
+            PlayerPrefs.SetFloat("slider" + ID + PlayerPrefs.GetInt("num_ship"), ProgressSlider.value);
         }
-        if (i >= price.Length)
+        if (i >= _price.Length)
         {
             if (ID == 21 || ID == 22 || ID == 14)
             {
