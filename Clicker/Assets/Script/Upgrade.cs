@@ -22,8 +22,11 @@ public abstract class Upgrade: MonoBehaviour
     private string _modul;
     public string[] stringmodul;
     private bool _available = false;
+    //public string ttt;
     public virtual void Start()
     {
+        //ttt = SaveAndLoad.Singleton.item.name;
+
         _audioSource = GetComponent<AudioSource>();
         PlayerPrefs.DeleteKey((IdModul / 10).ToString("0"));
 
@@ -160,6 +163,8 @@ public abstract class Upgrade: MonoBehaviour
     }
     public virtual void income()
     {
+        //SaveAndLoad.Singleton.item.name = ttt;
+        SaveAndLoad.Singleton.SaveField();
         if (_numberShip < _price.Length && _price[_numberShip] < PlayerPrefs.GetFloat("Money_box"))
         {
             _audioSource.Play();

@@ -23,15 +23,10 @@ public class Fish : MonoBehaviour
         {
             Swimm(_boostSpeed, _directionHorizontal, _directionVertical);
 
-            if (PlayerPrefs.HasKey("tap"))
-                _boostSpeed = 0.04f;
-            else
-                _boostSpeed = 0.01f;
+            _boostSpeed = PlayerPrefs.HasKey("tap") ? 0.04f : 0.01f;
 
             if (transform.position.y >= _lineOfWater)
-            {
                 _directionVertical = -0.1f;
-            }
         }
         else
         {

@@ -24,13 +24,9 @@ public class BacgroundHandler : MonoBehaviour
         if (this.transform.position.x > _leftBorder)
         {
             if (PlayerPrefs.HasKey("tap"))
-            {
                 OffsetBacground(_swimm);
-            }
             else
-            {
                 OffsetBacground(_idl);
-            }
         }
         else
         {
@@ -38,5 +34,8 @@ public class BacgroundHandler : MonoBehaviour
         }
     }
 
-    private void OffsetBacground(float offset) => transform.position = new Vector2(transform.position.x - offset * Time.deltaTime, transform.position.y);
+    private void OffsetBacground(float offset)
+    {
+        transform.position = new Vector2(transform.position.x - offset * Time.deltaTime, transform.position.y);
+    }
 }

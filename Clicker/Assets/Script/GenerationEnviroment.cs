@@ -44,14 +44,7 @@ public class GenerationEnviroment : MonoBehaviour
         //Дельфин
         if (zf > 0)
         {
-            if (PlayerPrefs.HasKey("tap"))
-            {
-                zf = zf - 100 * Time.deltaTime;
-            }
-            else
-            {
-                zf = zf - 20 * Time.deltaTime;
-            }
+            zf = PlayerPrefs.HasKey("tap") ? zf - 100 * Time.deltaTime : zf - 20 * Time.deltaTime;
         }
         else
         {
@@ -62,14 +55,7 @@ public class GenerationEnviroment : MonoBehaviour
         //Бутыль
         if (but > 0)
         {
-            if (PlayerPrefs.HasKey("tap"))
-            {
-                but = but - 100 * Time.deltaTime;
-            }
-            else
-            {
-                but = but - 20 * Time.deltaTime;
-            }
+            but = PlayerPrefs.HasKey("tap") ? but - 100 * Time.deltaTime : but - 20 * Time.deltaTime;
         }
         else
         {

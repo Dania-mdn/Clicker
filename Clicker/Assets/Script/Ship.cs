@@ -46,25 +46,6 @@ public class Ship : MonoBehaviour
     }
     private void Update()
     {
-        if (PlayerPrefs.HasKey(Engine))
-        {
-            if (PlayerPrefs.GetInt(Engine) == 1)
-            {
-                PlayerPrefs.SetFloat("speed", 2f);
-            }
-            else if (PlayerPrefs.GetInt(Engine) == 2)
-            {
-                PlayerPrefs.SetFloat("speed", 2.7f);
-            }
-            else if (PlayerPrefs.GetInt(Engine) == 3)
-            {
-                PlayerPrefs.SetFloat("speed", 3.5f);
-            }
-        }
-        else
-        {
-            PlayerPrefs.DeleteKey("speed");
-        }
         if (PlayerPrefs.HasKey("tap"))
         {
             if(aud == false)
@@ -148,18 +129,6 @@ public class Ship : MonoBehaviour
                 }
                 engine.sprite = sprite_engine[PlayerPrefs.GetInt(Engine)];
                 engine.color = new Color(e, e, e);
-                if(PlayerPrefs.GetInt(Engine) == 1)
-                {
-                    PlayerPrefs.SetFloat("speed", 2);
-                }
-                else if (PlayerPrefs.GetInt(Engine) == 2)
-                {
-                    PlayerPrefs.SetFloat("speed", 2.5f);
-                }
-                else if (PlayerPrefs.GetInt(Engine) == 3)
-                {
-                    PlayerPrefs.SetFloat("speed", 3f);
-                }
             }
         }
     }
