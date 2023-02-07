@@ -246,7 +246,7 @@ public class GameManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
     public void OnPointerDown(PointerEventData pointerEventData)
     {
-        MB.clous_all();
+        MB.CloseAllButton();
         tap = true;
         PlayerPrefs.SetInt("tap", 1);
     }

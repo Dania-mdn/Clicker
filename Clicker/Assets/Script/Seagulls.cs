@@ -17,7 +17,7 @@ public class Seagulls : MonoBehaviour
         _seagullsScale = Random.Range(_scaleMin, _scaleMax);
         _randomVertical = Random.Range(_randomValue, -_randomValue);
         _direction = HandlerDirection();
-        transform.localScale = new Vector3(_seagullsScale, _seagullsScale, 1);
+        transform.localScale = new Vector2(_seagullsScale, _seagullsScale);
 
         _positionx =  _direction * _seagullsScale * Time.deltaTime;
         _positiony = _randomVertical * _seagullsScale * Time.deltaTime;

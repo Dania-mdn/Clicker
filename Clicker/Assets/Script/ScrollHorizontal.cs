@@ -214,7 +214,7 @@ public class ScrollHorizontal : MonoBehaviour
             {
                 if (PlayerPrefs.GetFloat("Money_box") - price_ship[index] >= 0)
                 {
-                    MB.clous_all();
+                    MB.CloseAllButton();
                     PlayerPrefs.SetInt("Ship_Trigger", 1);
                     for (int c = 0; c < instPans[index].transform.childCount; c++)
                     {
@@ -237,7 +237,7 @@ public class ScrollHorizontal : MonoBehaviour
         }
         else
         {
-            MB.clous_all();
+            MB.CloseAllButton();
             for (int c = 0; c < instPans[index].transform.childCount; c++)
             {
                 Image[] img = instPans[index].GetComponentsInChildren<Image>();

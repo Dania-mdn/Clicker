@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 19286624}
   - component: {fileID: 19286625}
   m_Layer: 5
-  m_Name: AvailableCount
+  m_Name: AvailableShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -827,8 +827,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: open_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: OpenButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1246619048}
@@ -1218,8 +1218,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: clous_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 900490132}
@@ -4124,8 +4124,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: open_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: OpenButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 935744858}
@@ -4663,8 +4663,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: clous_all
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseAllButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5032,7 +5032,7 @@ GameObject:
   - component: {fileID: 405546003}
   - component: {fileID: 405546002}
   m_Layer: 5
-  m_Name: Value
+  m_Name: ValueShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5316,8 +5316,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: clous_all
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseAllButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6763,8 +6763,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: open_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: OpenButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1405266627}
@@ -7127,6 +7127,7 @@ GameObject:
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
   - component: {fileID: 519420035}
+  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7327,6 +7328,22 @@ MonoBehaviour:
   AdsManager: {fileID: 691825417}
   GameManager: {fileID: 1792346878}
   PrizeForClick: {fileID: 720176371328302576, guid: d25bf020328c8c54794836377892e6c9, type: 3}
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5320d043077d8d544b3a0afff1a358ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    NameItem: Bow
+    Level: 2
+    Damage: 020000000400000008000000
 --- !u!1 &523485181
 GameObject:
   m_ObjectHideFlags: 0
@@ -8910,8 +8927,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: clous_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1405266627}
@@ -9830,7 +9847,7 @@ GameObject:
   - component: {fileID: 741949447}
   - component: {fileID: 741949448}
   m_Layer: 5
-  m_Name: AvailableCount
+  m_Name: AvailableCrew
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9886,7 +9903,7 @@ GameObject:
   - component: {fileID: 746024193}
   - component: {fileID: 746024194}
   m_Layer: 5
-  m_Name: Value
+  m_Name: ValueConstruction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15997,8 +16014,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: clous_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1581308075}
@@ -18061,8 +18078,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: open_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: OpenButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1983966139}
@@ -19786,7 +19803,7 @@ GameObject:
   - component: {fileID: 1235595857}
   - component: {fileID: 1235595858}
   m_Layer: 5
-  m_Name: AvailableCount
+  m_Name: AvailableConstruction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19842,7 +19859,7 @@ GameObject:
   - component: {fileID: 1241401109}
   - component: {fileID: 1241401108}
   m_Layer: 5
-  m_Name: Value
+  m_Name: ValueCrew
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20440,7 +20457,7 @@ GameObject:
   - component: {fileID: 1282241972}
   - component: {fileID: 1282241971}
   m_Layer: 5
-  m_Name: Value
+  m_Name: ValueAchivment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20648,8 +20665,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: chenge_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: ChengeButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1497047839}
@@ -21416,8 +21433,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: chenge_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: ChengeButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 868668544}
@@ -21800,8 +21817,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: clous_all
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseAllButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23478,8 +23495,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: clous_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 935744858}
@@ -24366,8 +24383,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: clous_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 641055343}
@@ -25545,8 +25562,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: clous_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1246619048}
@@ -25965,8 +25982,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: open_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: OpenButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 641055343}
@@ -26205,8 +26222,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Canvas, Assembly-CSharp
-        m_MethodName: open_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: OpenButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 900490132}
@@ -27097,7 +27114,7 @@ GameObject:
   - component: {fileID: 1700739226}
   - component: {fileID: 1700739227}
   m_Layer: 5
-  m_Name: Value
+  m_Name: ValueEngine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28421,8 +28438,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Canvas, Assembly-CSharp
-        m_MethodName: open_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: OpenButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1792346873}
@@ -29187,8 +29204,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: clous_all
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseAllButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29521,8 +29538,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: clous_all
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: ClousAllButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30162,8 +30179,9 @@ GameObject:
   - component: {fileID: 1907193264}
   - component: {fileID: 1907193263}
   - component: {fileID: 1907193262}
-  - component: {fileID: 1907193266}
   - component: {fileID: 1907193270}
+  - component: {fileID: 1907193266}
+  - component: {fileID: 1907193271}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -30275,16 +30293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a216c021b7b054d8c6cc528964addb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imj_Achiwment: {fileID: 1860720211}
-  imj_ship: {fileID: 19286623}
-  imj_engine: {fileID: 2069855322}
-  imj_korpus: {fileID: 1235595856}
-  imj_crew: {fileID: 741949446}
-  num_Achiwment: {fileID: 1282241971}
-  num_ship: {fileID: 405546002}
-  num_engine: {fileID: 1700739227}
-  num_korpus: {fileID: 746024194}
-  num_crew: {fileID: 1241401108}
   Button:
   - {fileID: 900490132}
   - {fileID: 1581308075}
@@ -30293,7 +30301,7 @@ MonoBehaviour:
   - {fileID: 1246619048}
   - {fileID: 641055343}
   - {fileID: 1983966139}
-  Button_upgrade:
+  ButtonUpgrade:
   - {fileID: 1110011927}
   - {fileID: 1497047839}
   - {fileID: 56589464}
@@ -30394,6 +30402,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1907193271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907193261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ba69e29ced74146b00e24d97a5fe6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Available:
+  - {fileID: 1860720211}
+  - {fileID: 19286623}
+  - {fileID: 2069855322}
+  - {fileID: 1235595856}
+  - {fileID: 741949446}
 --- !u!1 &1916910091
 GameObject:
   m_ObjectHideFlags: 0
@@ -30682,8 +30708,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: chenge_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: ChengeButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 56589464}
@@ -31272,8 +31298,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1907193266}
-        m_TargetAssemblyTypeName: Manager_button, Assembly-CSharp
-        m_MethodName: chenge_button
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: ChengeButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1110011927}
@@ -32727,7 +32753,7 @@ GameObject:
   - component: {fileID: 2069855323}
   - component: {fileID: 2069855324}
   m_Layer: 5
-  m_Name: AvailableCount
+  m_Name: AvailableEngine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32782,7 +32808,7 @@ GameObject:
   - component: {fileID: 2070212161}
   - component: {fileID: 2070212162}
   m_Layer: 5
-  m_Name: AvailableCount
+  m_Name: AvailableAchiwment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
