@@ -28,7 +28,6 @@ public class AdsManager : MonoBehaviour
     public TextMeshProUGUI Time_Pass;
     public TextMeshProUGUI Time_Tap;
     public TextMeshProUGUI Time_All;
-    public GameManager GameManager;
 
     //картинки для кнопок
     public Sprite[] sprite;
@@ -118,7 +117,7 @@ public class AdsManager : MonoBehaviour
             isoffline = true;
         }
         //работа с картинками
-        if (GameManager.second_hour >= 0)
+        if (MonneyHandler.singleton.second_hour >= 0)
         {
             imj_pass.sprite = sprite[1];
         }
@@ -126,7 +125,7 @@ public class AdsManager : MonoBehaviour
         {
             imj_pass.sprite = sprite[0];
         }
-        if (GameManager.tap_hour >= 0)
+        if (MonneyHandler.singleton.tap_hour >= 0)
         {
             imj_tap.sprite = sprite[3];
         }
@@ -134,7 +133,7 @@ public class AdsManager : MonoBehaviour
         {
             imj_tap.sprite = sprite[2];
         }
-        if (GameManager.all_Time >= 0)
+        if (MonneyHandler.singleton.all_Time >= 0)
         {
             imj_all.sprite = sprite[5];
         }
@@ -425,35 +424,35 @@ public class AdsManager : MonoBehaviour
     {
         if (ads_dan == 1)
         {
-            GameManager.bank_x2();
+            MonneyHandler.singleton.bank_x2();
             ads_dan = 0;
             gg.SetActive(false);
         }
         if (ads_dan == 2)
         {
             PlayerPrefs.SetInt("adss_pass", 1);
-            GameManager.second_hour = GameManager.second_hour + 3600;
+            MonneyHandler.singleton.second_hour = MonneyHandler.singleton.second_hour + 3600;
             gg.SetActive(false);
             ads_dan = 0;
         }
         if (ads_dan == 3)
         {
             PlayerPrefs.SetInt("adss_tap", 1);
-            GameManager.tap_hour = GameManager.tap_hour + 3600;
+            MonneyHandler.singleton.tap_hour = MonneyHandler.singleton.tap_hour + 3600;
             gg.SetActive(false);
             ads_dan = 0;
         }
         if (ads_dan == 4)
         {
             PlayerPrefs.SetInt("adss_Gift", 1);
-            GameManager.gift();
+            MonneyHandler.singleton.gift();
             gg.SetActive(false);
             ads_dan = 0;
         }
         if (ads_dan == 5)
         {
             PlayerPrefs.SetInt("adss_x10", 1);
-            GameManager.all_Time = 10;
+            MonneyHandler.singleton.all_Time = 10;
             gg.SetActive(false);
             ads_dan = 0;
         }
@@ -497,7 +496,7 @@ public class AdsManager : MonoBehaviour
     {
         aud_Play();
         PlayerPrefs.SetInt("Gift1", 1);
-        GameManager.gift_free();
+        MonneyHandler.singleton.gift_free();
         g.SetActive(false);
     }
 }

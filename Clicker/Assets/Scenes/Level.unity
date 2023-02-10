@@ -1313,13 +1313,13 @@ RectTransform:
   - {fileID: 349331870}
   - {fileID: 1758665299}
   - {fileID: 1127899986}
-  m_Father: {fileID: 1907193265}
-  m_RootOrder: 9
+  m_Father: {fileID: 1880038672}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -7359, y: 2484}
-  m_SizeDelta: {x: -210.8, y: 2093.6}
+  m_SizeDelta: {x: 1849.2, y: 2093.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56589466
 MonoBehaviour:
@@ -1584,6 +1584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: screw replacement
       objectReference: {fileID: 0}
+    - target: {fileID: 803929362653903013, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316933529511611511, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_margin.x
       value: 461.1582
@@ -1619,11 +1623,23 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: tap
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveAndLoad
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -1660,6 +1676,18 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u0417\u0430\u043C\u0456\u043D\u0430 \u0433\u0432\u0438\u043D\u0442\u0430\n"
       objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: MonneyHandler
+      value: 
+      objectReference: {fileID: 446032078}
     - target: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1840,9 +1868,9 @@ MonoBehaviour:
   cistern: {fileID: 790323756165567705}
   slider: {fileID: 5741987556694784907}
   maxValue_slider: {fileID: 1228598041}
-  tap: {fileID: 1792346878}
+  tap: {fileID: 0}
   b: 10
-  ID: 15
+  ID: 5
 --- !u!1 &106611822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3492,6 +3520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hull skin
       objectReference: {fileID: 0}
+    - target: {fileID: 803929362653903013, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316933529511611511, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_margin.x
       value: 460.3209
@@ -3547,15 +3579,27 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: tap
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: modul
       value: korpus_1
       objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveAndLoad
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: p.Array.size
       value: 15
@@ -3709,6 +3753,14 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: DefaultValueUpgradeClick
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: DefaultValueUpgradePassiv
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: stringmodul.Array.data[0]
       value: korpus_0
       objectReference: {fileID: 0}
@@ -3748,6 +3800,18 @@ PrefabInstance:
       propertyPath: textID
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: MonneyHandler
+      value: 
+      objectReference: {fileID: 446032078}
     - target: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5926,6 +5990,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textID: 31
   UItext: {fileID: 0}
+--- !u!1 &446032076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 446032077}
+  - component: {fileID: 446032078}
+  m_Layer: 5
+  m_Name: MonneyHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &446032077
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446032076}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1907193265}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000030518, y: -66.65503}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &446032078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446032076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cdbcb9366434e24abd61a699a42fd24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameManager: {fileID: 1792346878}
+  MonneyCount: {fileID: 161347835}
+  MoneyInSec: {fileID: 22402913}
+  ClickIncome: 3
+  PassiveIncome: 1
+  MaxMonneyOfline: 1000
+  tap_hour: 2
+  second_hour: 3
+  all_Time: 0
+  anim_Money: {fileID: 2073683100}
+  price_0: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  price_1: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
+  price_2: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+  price_3: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  price_4: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  price_5: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  price_6: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &453819873
 GameObject:
   m_ObjectHideFlags: 0
@@ -6859,6 +6989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: electromechanic
       objectReference: {fileID: 0}
+    - target: {fileID: 803929362653903013, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316933529511611511, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_margin.x
       value: 459.7773
@@ -6906,11 +7040,23 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: tap
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveAndLoad
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -6951,6 +7097,18 @@ PrefabInstance:
       propertyPath: textID
       value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: MonneyHandler
+      value: 
+      objectReference: {fileID: 446032078}
     - target: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7127,7 +7285,6 @@ GameObject:
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
   - component: {fileID: 519420035}
-  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7326,22 +7483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AdsManager: {fileID: 691825417}
-  GameManager: {fileID: 1792346878}
   PrizeForClick: {fileID: 720176371328302576, guid: d25bf020328c8c54794836377892e6c9, type: 3}
---- !u!114 &519420036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5320d043077d8d544b3a0afff1a358ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item:
-    name: 
 --- !u!1 &523485181
 GameObject:
   m_ObjectHideFlags: 0
@@ -7424,6 +7566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boatswain
       objectReference: {fileID: 0}
+    - target: {fileID: 803929362653903013, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316933529511611511, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_margin.x
       value: 459.7774
@@ -7471,11 +7617,23 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: tap
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveAndLoad
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -7516,6 +7674,18 @@ PrefabInstance:
       propertyPath: textID
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: MonneyHandler
+      value: 
+      objectReference: {fileID: 446032078}
     - target: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7639,7 +7809,7 @@ RectTransform:
   - {fileID: 1926804137}
   - {fileID: 1344452256}
   m_Father: {fileID: 1907193265}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -7856,6 +8026,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529296073}
   m_CullTransparentMesh: 1
+--- !u!1 &539873629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 539873630}
+  - component: {fileID: 539873631}
+  m_Layer: 5
+  m_Name: SaveSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &539873630
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539873629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1907193265}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &539873631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539873629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5320d043077d8d544b3a0afff1a358ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SaveContain:
+    ClickIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    PassIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    LevelUpgrade: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    ProgressSlider:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    _shipNumber: 1
 --- !u!1 &569417899
 GameObject:
   m_ObjectHideFlags: 0
@@ -8716,7 +8955,7 @@ RectTransform:
   - {fileID: 1516784138}
   - {fileID: 2032312959}
   m_Father: {fileID: 1907193265}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9359,7 +9598,6 @@ MonoBehaviour:
   Time_Pass: {fileID: 881189956}
   Time_Tap: {fileID: 243487697}
   Time_All: {fileID: 1381748070}
-  GameManager: {fileID: 1792346878}
   sprite:
   - {fileID: -424550667, guid: 3232307123de4134abb2da5a85d896ee, type: 3}
   - {fileID: -965496577, guid: 3232307123de4134abb2da5a85d896ee, type: 3}
@@ -10193,6 +10431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: navigator
       objectReference: {fileID: 0}
+    - target: {fileID: 803929362653903013, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316933529511611511, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_margin.x
       value: 464.73364
@@ -10240,11 +10482,23 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: tap
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveAndLoad
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -10285,6 +10539,18 @@ PrefabInstance:
       propertyPath: textID
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: MonneyHandler
+      value: 
+      objectReference: {fileID: 446032078}
     - target: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10383,7 +10649,7 @@ GameObject:
   - component: {fileID: 771118613}
   - component: {fileID: 771118612}
   m_Layer: 5
-  m_Name: ManeyOnCursor
+  m_Name: Cursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10402,7 +10668,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1907193265}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15999,7 +16265,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792346878}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: bank_x1
         m_Mode: 1
@@ -16257,13 +16523,13 @@ RectTransform:
   - {fileID: 417343972}
   - {fileID: 397660464}
   - {fileID: 1814358926}
-  m_Father: {fileID: 1907193265}
-  m_RootOrder: 10
+  m_Father: {fileID: 1880038672}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -5075.9995, y: -27.899902}
-  m_SizeDelta: {x: -210.8, y: 2093.6}
+  m_SizeDelta: {x: 1849.2, y: 2093.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &868668546
 MonoBehaviour:
@@ -16882,7 +17148,7 @@ RectTransform:
   - {fileID: 16668024}
   - {fileID: 2088933334}
   m_Father: {fileID: 1907193265}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -18942,13 +19208,13 @@ RectTransform:
   - {fileID: 684108516}
   - {fileID: 1845147781}
   - {fileID: 1882193458}
-  m_Father: {fileID: 1907193265}
-  m_RootOrder: 7
+  m_Father: {fileID: 1880038672}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -7327.4995, y: -27.899902}
-  m_SizeDelta: {x: -147.8, y: 2093.6}
+  m_SizeDelta: {x: 1912.2, y: 2093.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1110011929
 MonoBehaviour:
@@ -19710,7 +19976,7 @@ GameObject:
   - component: {fileID: 1228598040}
   - component: {fileID: 1228598041}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: ProgressSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22225,7 +22491,7 @@ RectTransform:
   - {fileID: 1012023448}
   - {fileID: 691825416}
   m_Father: {fileID: 1907193265}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -22380,6 +22646,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: motor housing replacement
       objectReference: {fileID: 0}
+    - target: {fileID: 803929362653903013, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316933529511611511, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_margin.x
       value: 464.92572
@@ -22435,15 +22705,27 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: tap
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: modul
       value: engine_1
       objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveAndLoad
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: p.Array.size
       value: 15
@@ -22653,6 +22935,18 @@ PrefabInstance:
       propertyPath: textID
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: MonneyHandler
+      value: 
+      objectReference: {fileID: 446032078}
     - target: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -23222,6 +23516,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wiring replacement
       objectReference: {fileID: 0}
+    - target: {fileID: 803929362653903013, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316933529511611511, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_margin.x
       value: 464.01593
@@ -23277,11 +23575,23 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: tap
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveAndLoad
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -23322,6 +23632,18 @@ PrefabInstance:
       propertyPath: textID
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: MonneyHandler
+      value: 
+      objectReference: {fileID: 446032078}
     - target: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -23588,13 +23910,13 @@ RectTransform:
   - {fileID: 1370237916}
   - {fileID: 53334994}
   - {fileID: 106611823}
-  m_Father: {fileID: 1907193265}
-  m_RootOrder: 8
+  m_Father: {fileID: 1880038672}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -3118, y: 2772}
-  m_SizeDelta: {x: -210.8, y: 2093.6}
+  m_SizeDelta: {x: 1849.2, y: 2093.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497047841
 MonoBehaviour:
@@ -23818,7 +24140,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1907193265}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -23870,20 +24192,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1792346878}
-        m_TargetAssemblyTypeName: Tap, Assembly-CSharp
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Delete_Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 519420036}
-        m_TargetAssemblyTypeName: SaveAndLoad, Assembly-CSharp
-        m_MethodName: SaveField
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24630,15 +24940,31 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: tap
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: modul
       value: rubka_1
       objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: AllSaves
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveAndLoad
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: p.Array.size
       value: 15
@@ -25212,6 +25538,14 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: DefaultValueUpgradeClick
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: DefaultValueUpgradePassiv
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: stringmodul.Array.data[0]
       value: rubka_0
       objectReference: {fileID: 0}
@@ -25251,6 +25585,18 @@ PrefabInstance:
       propertyPath: textID
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: MonneyHandler
+      value: 
+      objectReference: {fileID: 446032078}
     - target: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -25652,6 +25998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shipboy
       objectReference: {fileID: 0}
+    - target: {fileID: 803929362653903013, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316933529511611511, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_margin.x
       value: 461.42944
@@ -25699,11 +26049,23 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: tap
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveAndLoad
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -25744,6 +26106,18 @@ PrefabInstance:
       propertyPath: textID
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: MonneyHandler
+      value: 
+      objectReference: {fileID: 446032078}
     - target: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -28377,7 +28751,7 @@ GameObject:
   - component: {fileID: 1792346875}
   - component: {fileID: 1792346878}
   m_Layer: 5
-  m_Name: MainClicket
+  m_Name: GameManager
   m_TagString: MainClicket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28506,29 +28880,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1792346873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 339b160478ad61b448050987426ff4a4, type: 3}
+  m_Script: {fileID: 11500000, guid: ae5b82fe38cfe42488051cbf176e5471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor: {fileID: 771118613}
-  Money_box: {fileID: 161347835}
-  Money_sec: {fileID: 22402913}
-  tap_income: 3
-  pass_income: 1
-  slider: {fileID: 1228598041}
-  Max_ofline: 1000
-  second_hour: 0
-  tap_hour: 0
-  all_Time: 0
-  Fuel: {fileID: 1012023447}
-  anim_Money: {fileID: 2073683100}
-  MB: {fileID: 1907193266}
-  price_0: 1e000000320000004b000000640000007d00000096000000af000000c8000000e1000000fa000000130100002c010000450100005e01000077010000
-  price_1: f40100000d020000260200003f02000058020000710200008a020000a3020000bc020000d5020000ee02000007030000200300003903000052030000
-  price_2: e80300001a0400004c0400007e040000b0040000e2040000140500004605000078050000aa050000dc0500000e0600004006000072060000a4060000
-  price_3: d00700003408000098080000fc08000060090000c4090000280a00008c0a0000f00a0000540b0000b80b00001c0c0000800c0000e40c0000480d0000
-  price_4: d80e00003c0f0000a00f00000410000068100000cc1000003011000094110000f81100005c120000c01200002413000088130000ec13000050140000
-  price_5: e0150000441600000c170000d41700009c180000641900002c1a0000f41a0000bc1b0000841c00004c1d0000141e0000dc1e0000a41f00006c200000
-  price_6: 282300005424000080250000ac260000d827000004290000302a00005c2b0000882c0000b42d0000e02e00000c30000038310000c8320000983a0000
+  ManagerButton: {fileID: 1907193266}
+  Cursor: {fileID: 771118613}
+  FuelProgressSlider: {fileID: 1228598041}
+  TransformFuel: {fileID: 1012023448}
+  _isPointerDown: 0
 --- !u!1 &1793352918
 GameObject:
   m_ObjectHideFlags: 0
@@ -29623,6 +29982,46 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
   m_PrefabInstance: {fileID: 1580154425}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1880038671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1880038672}
+  m_Layer: 5
+  m_Name: UpgradePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1880038672
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880038671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1110011928}
+  - {fileID: 1497047840}
+  - {fileID: 56589465}
+  - {fileID: 868668545}
+  m_Father: {fileID: 1907193265}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1882193457
 GameObject:
   m_ObjectHideFlags: 0
@@ -29803,6 +30202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pour oil
       objectReference: {fileID: 0}
+    - target: {fileID: 803929362653903013, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316933529511611511, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_margin.x
       value: 461.11646
@@ -29842,11 +30245,23 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: tap
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveAndLoad
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -29887,6 +30302,18 @@ PrefabInstance:
       propertyPath: textID
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: MonneyHandler
+      value: 
+      objectReference: {fileID: 446032078}
     - target: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -30273,16 +30700,15 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1792346874}
+  - {fileID: 446032077}
+  - {fileID: 539873630}
   - {fileID: 1508021760}
   - {fileID: 771118611}
   - {fileID: 659301548}
   - {fileID: 1415060379}
   - {fileID: 524615097}
   - {fileID: 900490133}
-  - {fileID: 1110011928}
-  - {fileID: 1497047840}
-  - {fileID: 56589465}
-  - {fileID: 868668545}
+  - {fileID: 1880038672}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32578,6 +33004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Captain
       objectReference: {fileID: 0}
+    - target: {fileID: 803929362653903013, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316933529511611511, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_margin.x
       value: 461.4295
@@ -32621,11 +33051,23 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: tap
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
-      objectReference: {fileID: 1792346878}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveAndLoad
+      value: 
+      objectReference: {fileID: 539873631}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -32666,6 +33108,18 @@ PrefabInstance:
       propertyPath: textID
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: IdModul
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: SaveSystem
+      value: 
+      objectReference: {fileID: 539873631}
+    - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
+      propertyPath: MonneyHandler
+      value: 
+      objectReference: {fileID: 446032078}
     - target: {fileID: 9101497854597500868, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -33212,7 +33666,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792346878}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: add_manney
         m_Mode: 1
@@ -36918,9 +37372,9 @@ MonoBehaviour:
   lvl: {fileID: 3186203723972882315}
   cistern: {fileID: 790323754721781690}
   slider: {fileID: 5741987558010833128}
-  tap: {fileID: 1792346878}
+  tap: {fileID: 0}
   Maney: 15000
-  ID: 23
+  ID: 8
 --- !u!82 &9101497853985152047
 AudioSource:
   m_ObjectHideFlags: 0

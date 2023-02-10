@@ -55,7 +55,7 @@ public class ScrollHorizontal : MonoBehaviour
             }
         }
         //добавление корабля
-        Ship_Scene = Instantiate(Ship[PlayerPrefs.GetInt("num_ship")], new Vector3(0.43f, -0.98f, 0), Quaternion.identity);
+        Ship_Scene = Instantiate(Ship[1/*SaveAndLoad.Singleton.item.ShipNumber*/], new Vector3(0.43f, -0.98f, 0), Quaternion.identity);
         //скролл
         contentRect = GetComponent<RectTransform>();
         instPans = new GameObject[panCount];
@@ -85,7 +85,7 @@ public class ScrollHorizontal : MonoBehaviour
         {
             if (price_ship[i] > 0 && price_ship[i] <= PlayerPrefs.GetFloat("Money_box"))
             {
-                if (PlayerPrefs.HasKey("Unloc " + 14) && PlayerPrefs.HasKey("Unloc " + 21) && PlayerPrefs.HasKey("Unloc " + 22))
+                if (PlayerPrefs.HasKey("Unloc " + 1) && PlayerPrefs.HasKey("Unloc " + 6) && PlayerPrefs.HasKey("Unloc " + 7))
                 {
                     PlayerPrefs.SetInt("0", 1);
                     break;
@@ -100,7 +100,7 @@ public class ScrollHorizontal : MonoBehaviour
                 PlayerPrefs.DeleteKey("0");
             }
         }
-        if (PlayerPrefs.HasKey("Unloc " + 14))
+        if (PlayerPrefs.HasKey("Unloc " + 1))
         {
             togl1.isOn = true;
         }
@@ -108,7 +108,7 @@ public class ScrollHorizontal : MonoBehaviour
         {
             togl1.isOn = false;
         }
-        if (PlayerPrefs.HasKey("Unloc " + 21))
+        if (PlayerPrefs.HasKey("Unloc " + 6))
         {
             togl2.isOn = true;
         }
@@ -116,7 +116,7 @@ public class ScrollHorizontal : MonoBehaviour
         {
             togl2.isOn = false;
         }
-        if (PlayerPrefs.HasKey("Unloc " + 22))
+        if (PlayerPrefs.HasKey("Unloc " + 7))
         {
             togl3.isOn = true;
         }
@@ -152,7 +152,7 @@ public class ScrollHorizontal : MonoBehaviour
                     price_button.text = price_ship[i].ToString("0"); 
                     if (price_ship[i] <= PlayerPrefs.GetFloat("Money_box"))
                     {
-                        if (PlayerPrefs.HasKey("Unloc " + 14) && PlayerPrefs.HasKey("Unloc " + 21) && PlayerPrefs.HasKey("Unloc " + 22))
+                        if (PlayerPrefs.HasKey("Unloc " + 1) && PlayerPrefs.HasKey("Unloc " + 6) && PlayerPrefs.HasKey("Unloc " + 7))
                         {
                             sprite.color = new Color(0f, 1f, 0.168f);
                         }
@@ -210,7 +210,7 @@ public class ScrollHorizontal : MonoBehaviour
         }
         if(price_ship[index] > 0)
         {
-            if (PlayerPrefs.HasKey("Unloc " + 14) && PlayerPrefs.HasKey("Unloc " + 21) && PlayerPrefs.HasKey("Unloc " + 22))
+            if (PlayerPrefs.HasKey("Unloc " + 1) && PlayerPrefs.HasKey("Unloc " + 6) && PlayerPrefs.HasKey("Unloc " + 7))
             {
                 if (PlayerPrefs.GetFloat("Money_box") - price_ship[index] >= 0)
                 {
@@ -222,13 +222,13 @@ public class ScrollHorizontal : MonoBehaviour
                         img[c].color = new Color(1, 1, 1);
                     }
                     //вычитание стоимости корабля, обнуление его стоимости и сохранение корабля
-                    PlayerPrefs.DeleteKey("Unloc " + 14);
-                    PlayerPrefs.DeleteKey("Unloc " + 21);
-                    PlayerPrefs.DeleteKey("Unloc " + 22);
+                    PlayerPrefs.DeleteKey("Unloc " + 1);
+                    PlayerPrefs.DeleteKey("Unloc " + 6);
+                    PlayerPrefs.DeleteKey("Unloc " + 7);
                     PlayerPrefs.SetFloat("Money_box", PlayerPrefs.GetFloat("Money_box") - price_ship[index]);
                     PlayerPrefs.SetInt("price_ship" + index, 0);
                     price_ship[index] = 0;
-                    PlayerPrefs.SetInt("num_ship", index);
+                    //SaveAndLoad.Singleton.item.ShipNumber = index;
                     //удаление старого добавление нового корабля
                     Destroy(Ship_Scene);
                     Ship_Scene = Instantiate(Ship[index], new Vector3(0.43f, -0.98f, 0), Quaternion.identity);
@@ -243,8 +243,8 @@ public class ScrollHorizontal : MonoBehaviour
                 Image[] img = instPans[index].GetComponentsInChildren<Image>();
                 img[c].color = new Color(1, 1, 1);
             }
-            price_ship[index] = 0;
-            PlayerPrefs.SetInt("num_ship", index);
+            price_ship[index] = 0; 
+            //SaveAndLoad.Singleton.item.ShipNumber = index;
             //удаление старого добавление нового корабля
             Destroy(Ship_Scene);
             Ship_Scene = Instantiate(Ship[index], new Vector3(0.43f, -0.98f, 0), Quaternion.identity);

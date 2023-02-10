@@ -4,7 +4,6 @@ using TMPro;
 public class RaycastHandler : MonoBehaviour
 {
     public AdsManager AdsManager;
-    public GameManager GameManager;
     public GameObject PrizeForClick;
     private GameObject _newPrizeForClick;
     private readonly string _dolphin = "Dolphin(Clone)";
@@ -38,9 +37,9 @@ public class RaycastHandler : MonoBehaviour
     private void CreatePrizeForClick(RaycastHit2D hit)
     {
         AdsManager.aud_Play();
-        GameManager.gift();
+        MonneyHandler.singleton.gift();
         _newPrizeForClick = Instantiate(PrizeForClick, hit.transform.position, Quaternion.identity);
-        _newPrizeForClick.transform.SetParent(GameManager.transform);
+        _newPrizeForClick.transform.SetParent(MonneyHandler.singleton.transform);
         _newPrizeForClick.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetFloat("Gift").ToString("0");
         Destroy(hit.transform.gameObject);
     }

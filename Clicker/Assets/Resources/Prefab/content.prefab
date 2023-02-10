@@ -146,8 +146,8 @@ GameObject:
   - component: {fileID: 9101497854597500868}
   - component: {fileID: 8857897375377318121}
   - component: {fileID: 5878570087731133818}
-  - component: {fileID: 4257860325049214824}
   - component: {fileID: 5552855674242686955}
+  - component: {fileID: 6368536930193568863}
   m_Layer: 5
   m_Name: content
   m_TagString: Untagged
@@ -222,29 +222,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4257860325049214824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 803929362653903013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f50e54c41df1af46825a60c07e010c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ButtonSprite: {fileID: 714462937440590030}
-  PriceButton: {fileID: 4326343694728474948}
-  LevelUpgrade: {fileID: 3186203724031622242}
-  UpgradeClick: {fileID: 790323755703268435}
-  UpgradePassive: {fileID: 1316933529511611511}
-  ProgressSlider: {fileID: 5741987557113240321}
-  GameManager: {fileID: 0}
-  DefaultValueUpgradeClick: 0
-  DefaultValueUpgradePassiv: 0
-  IdModul: 0
-  stringmodul: []
 --- !u!82 &5552855674242686955
 AudioSource:
   m_ObjectHideFlags: 0
@@ -341,6 +318,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6368536930193568863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803929362653903013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0daed44d7e1f604da3dfb57713ea745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonSprite: {fileID: 714462937440590030}
+  ButtonPrice: {fileID: 4326343694728474948}
+  LevelUpgrade: {fileID: 3186203724031622242}
+  UpgradeClick: {fileID: 790323755703268435}
+  UpgradePassive: {fileID: 1316933529511611511}
+  ProgressSlider: {fileID: 5741987557113240321}
+  DefaultValueUpgradeClick: 1
+  DefaultValueUpgradePassiv: 2
+  IdModul: 0
+  SaveSystem: {fileID: 0}
 --- !u!1 &1268099619117873830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,9 +1447,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4257860325049214824}
+      - m_Target: {fileID: 6368536930193568863}
         m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
-        m_MethodName: income
+        m_MethodName: ClickButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
