@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private Vector2 _inputPosition;
     private void Start()
     {
-        _inputPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         _fuelScale = _fuelScaleMin;
         
         if (PlayerPrefs.HasKey("Tap_maxValue"))
@@ -27,6 +26,7 @@ public class GameManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         if (_isPointerDown == true)
         {
+            _inputPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Cursor.transform.position = new Vector2(_inputPosition.x, _inputPosition.y);
 
             if (_fuelScale < _fuelScaleMax)
@@ -63,12 +63,12 @@ public class GameManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         ManagerButton.CloseAllButton();
         _isPointerDown = true;
-        PlayerPrefs.SetInt("tap", 1);
+        PlayerPrefs.SetInt("_isPointerDown", 1);
     }
     public void OnPointerUp(PointerEventData pointerEventData)
     {
         _isPointerDown = false;
-        PlayerPrefs.DeleteKey("tap");
+        PlayerPrefs.DeleteKey("_isPointerDown");
     }
     private void ScaleFuel(float fuelScale) => TransformFuel.localScale = new Vector2(fuelScale, fuelScale);
     public void Delete_Save() => PlayerPrefs.DeleteAll();

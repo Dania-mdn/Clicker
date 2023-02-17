@@ -44,7 +44,7 @@ public class GenerationEnviroment : MonoBehaviour
         //Дельфин
         if (zf > 0)
         {
-            zf = PlayerPrefs.HasKey("tap") ? zf - 100 * Time.deltaTime : zf - 20 * Time.deltaTime;
+            zf = PlayerPrefs.HasKey("_isPointerDown") ? zf - 100 * Time.deltaTime : zf - 20 * Time.deltaTime;
         }
         else
         {
@@ -55,7 +55,7 @@ public class GenerationEnviroment : MonoBehaviour
         //Бутыль
         if (but > 0)
         {
-            but = PlayerPrefs.HasKey("tap") ? but - 100 * Time.deltaTime : but - 20 * Time.deltaTime;
+            but = PlayerPrefs.HasKey("_isPointerDown") ? but - 100 * Time.deltaTime : but - 20 * Time.deltaTime;
         }
         else
         {
@@ -84,7 +84,7 @@ public class GenerationEnviroment : MonoBehaviour
         else
         {
             f = timer_fish;
-            if (PlayerPrefs.HasKey("tap"))
+            if (PlayerPrefs.HasKey("_isPointerDown"))
             {
                 Instantiate(fish[Random.Range(0, fish.Length)], new Vector3(4f, Random.Range(-2.1f, -5), 0), Quaternion.identity);
                 Instantiate(fish[Random.Range(0, fish.Length)], new Vector3(4f, Random.Range(-2.1f, -5), 0), Quaternion.identity);
@@ -109,7 +109,7 @@ public class GenerationEnviroment : MonoBehaviour
         //задний фон
         if (z > 0)
         {
-            if (PlayerPrefs.HasKey("tap"))
+            if (PlayerPrefs.HasKey("_isPointerDown"))
             {
                 z = z - 50 * Time.deltaTime;
             }
@@ -131,7 +131,7 @@ public class GenerationEnviroment : MonoBehaviour
         //дно
         if (d > 0)
         {
-            if (PlayerPrefs.HasKey("tap"))
+            if (PlayerPrefs.HasKey("_isPointerDown"))
             {
                 d = d - 50 * Time.deltaTime;
             }

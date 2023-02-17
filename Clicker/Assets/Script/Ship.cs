@@ -1,135 +1,60 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
-    public Sprite[] sprite_rubka;
-    public Sprite[] sprite_korpus;
-    public Sprite[] sprite_engine;
-    public SpriteRenderer rubka;
-    public SpriteRenderer korpus;
-    public SpriteRenderer engine;
-    float r = 1;
-    float k = 1;
-    float e = 1;
-    public string Rubka;
-    public string Korpus;
-    public string Engine;
-    public ParticleSystem PS;
-    AudioSource Audio;
-    bool aud;
+    public static Ship singleton; 
+    public SaveSystem SaveSystem;
+    public int ShipNumber;
+    public ShipModuls[] ShipModuls = new ShipModuls[3];
+    public ParticleSystem ParticleSystem;
+    private AudioSource AudioSource;
+
 
     private void Start()
     {
-        Audio = GetComponent<AudioSource>();
-        if (PlayerPrefs.HasKey(Rubka))
-        {
-            rubka.sprite = sprite_rubka[PlayerPrefs.GetInt(Rubka)];
-        }
-        if (PlayerPrefs.HasKey(Korpus))
-        {
-            korpus.sprite = sprite_korpus[PlayerPrefs.GetInt(Korpus)];
-        }
-        if (PlayerPrefs.HasKey(Engine))
-        {
-            engine.sprite = sprite_engine[PlayerPrefs.GetInt(Engine)];
-        }
-    }
-    public void aud_Play()
-    {
-        Audio.Play();
-    }
-    public void aud_Stop()
-    {
-        Audio.Stop();
+        singleton = this;
+
+        AudioSource = GetComponent<AudioSource>();
+
+        InitializeStartSprite(SaveSystem, ShipNumber);
     }
     private void Update()
     {
-        if (PlayerPrefs.HasKey("tap"))
+        if (PlayerPrefs.HasKey("_isPointerDown"))
         {
-            if(aud == false)
+            if(!AudioSource.isPlaying)
             {
-                aud_Play();
-                PS.Play();
-                aud = true;
+                AudioSource.Play();
+                ParticleSystem.Play();
             }
         }
         else
         {
-            if(aud == true)
+            if(AudioSource.isPlaying)
             {
-                aud_Stop();
-                aud = false;
+                AudioSource.Stop();
+                ParticleSystem.Stop();
             }
-            PS.Stop();
         }
-
-        if (PlayerPrefs.HasKey("Color"))
+    }
+    public void ChangedSprite(int idModul, int lvlUpgrade)
+    {
+        if (lvlUpgrade % 5 == 0 && idModul <= ShipModuls.Length)
         {
-            if (PlayerPrefs.HasKey(Rubka))
-            {
-                if (PlayerPrefs.HasKey("i_" + Rubka))
-                {
-                    r = PlayerPrefs.GetInt("i_" + Rubka);
-                    PlayerPrefs.DeleteKey("i_" + Rubka);
-                }
-                else
-                {
-                    if(r < 1)
-                    {
-                        r = r + 0.02f;
-                    }
-                    else
-                    {
-                        r = 1;
-                    }
-                }
-                rubka.sprite = sprite_rubka[PlayerPrefs.GetInt(Rubka)];
-                rubka.color = new Color(r, r, r);
-            }
-            if (PlayerPrefs.HasKey(Korpus))
-            {
-                if (PlayerPrefs.HasKey("i_" + Korpus))
-                {
-                    k = PlayerPrefs.GetInt("i_" + Korpus);
-                    PlayerPrefs.DeleteKey("i_" + Korpus);
-                }
-                else
-                {
-                    if (k < 1)
-                    {
-                        k = k + 0.02f;
-                    }
-                    else
-                    {
-                        k = 1;
-                    }
-                }
-                korpus.sprite = sprite_korpus[PlayerPrefs.GetInt(Korpus)];
-                korpus.color = new Color(k, k, k);
-            }
-            if (PlayerPrefs.HasKey(Engine))
-            {
-                if (PlayerPrefs.HasKey("i_" + Engine))
-                {
-                    e = PlayerPrefs.GetInt("i_" + Engine);
-                    PlayerPrefs.DeleteKey("i_" + Engine);
-                }
-                else
-                {
-                    if (e < 1)
-                    {
-                        e = e + 0.02f;
-                    }
-                    else
-                    {
-                        e = 1;
-                    }
-                }
-                engine.sprite = sprite_engine[PlayerPrefs.GetInt(Engine)];
-                engine.color = new Color(e, e, e);
-            }
+            Modul(ShipModuls[idModul], lvlUpgrade);
         }
+    }
+    public void InitializeStartSprite(SaveSystem saveSystem, int shipNumber)
+    {
+        for(int i = 0; i < ShipModuls.Length; i++)
+        {
+            int j = saveSystem.SaveContain.json[shipNumber].LevelUpgrade[i];
+            Modul(ShipModuls[i], j);
+        }
+    }
+    public void Modul(ShipModuls objectModuls, int lvlUpgrade)
+    {
+        objectModuls.Lvl = lvlUpgrade / 5;
+        objectModuls._coef = 0;
     }
 }

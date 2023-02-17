@@ -4,31 +4,31 @@ using TMPro;
 
 public class Upgrade: MonoBehaviour
 {
+    public SaveSystem SaveSystem;
     public Image ButtonSprite;
     public TextMeshProUGUI ButtonPrice;
     public TextMeshProUGUI LevelUpgrade;
     public TextMeshProUGUI UpgradeClick;
     public TextMeshProUGUI UpgradePassive;
     public Slider ProgressSlider;
+    public int DefaultValueUpgradeClick;
+    public int DefaultValueUpgradePassiv;
+    public int IdModul;
+    private Color _open = new Color(0f, 1f, 0.168f);
+    private Color _close = new Color(1, 1, 1);
     private AudioSource _audioSource;
     private int[] _price;
-    public int DefaultValueUpgradeClick;
     private int _valueUpgradeClick;
-    public int DefaultValueUpgradePassiv;
+    private int _shipNumber;
     private int _ValueUpgradePassive;
     private int _levelUpgrade;
-    public int IdModul;
-    //private string _modul;
-    //public string[] stringmodul;
     private bool _available = false;
-    public SaveSystem SaveSystem;
     public virtual void Start()
     {
         _audioSource = GetComponent<AudioSource>();
         PlayerPrefs.DeleteKey((IdModul / 10).ToString("0"));
 
-        //SaveSystem = SaveSystem.singleton;
-        if (SaveSystem.SaveContain.LevelUpgrade[IdModul] != 0)
+        if (SaveSystem.SaveContain.LoadlLevelUpgrade(IdModul) != 0)
             Load();
         else
             Save();
@@ -42,42 +42,13 @@ public class Upgrade: MonoBehaviour
     }
     public void Update()
     {
-        //присвоение цен и параметров в зависимости от выбранного корабля
-        //_modul = stringmodul[SaveSystem._shipNumber];
-        if (SaveSystem.SaveContain._shipNumber == 0)
-        {
-            _price = MonneyHandler.singleton.price_0;
-        }
-        else if (SaveSystem.SaveContain._shipNumber == 1)
-        {
-            _price = MonneyHandler.singleton.price_1;
-        }
-        else if (SaveSystem.SaveContain._shipNumber == 2)
-        {
-            _price = MonneyHandler.singleton.price_2;
-        }
-        else if (SaveSystem.SaveContain._shipNumber == 3)
-        {
-            _price = MonneyHandler.singleton.price_3;
-        }
-        else if (SaveSystem.SaveContain._shipNumber == 4)
-        {
-            _price = MonneyHandler.singleton.price_4;
-        }
-        else if (SaveSystem.SaveContain._shipNumber == 5)
-        {
-            _price = MonneyHandler.singleton.price_5;
-        }
-        else if (SaveSystem.SaveContain._shipNumber == 6)
-        {
-            _price = MonneyHandler.singleton.price_6;
-        }
+        _price = MonneyHandler.singleton.PriceUpgrade[SaveSystem.SaveContain.ShipNumber];
 
         if (_levelUpgrade < _price.Length)
         {
-            if (_price[_levelUpgrade] < PlayerPrefs.GetFloat("Money_box"))
+            if (_price[_levelUpgrade] < MonneyHandler.singleton.MonneyCount)
             {
-                ButtonSprite.color = new Color(0f, 1f, 0.168f);
+                ButtonSprite.color = _open;
                 ButtonPrice.text = _price[_levelUpgrade].ToString("0");
                 if (_available == false)
                 {
@@ -87,7 +58,7 @@ public class Upgrade: MonoBehaviour
             }
             else
             {
-                ButtonSprite.color = new Color(1f, 1f, 1f);
+                ButtonSprite.color = _close;
                 ButtonPrice.text = _price[_levelUpgrade].ToString("0");
                 if (_available == true)
                 {
@@ -98,7 +69,7 @@ public class Upgrade: MonoBehaviour
         }
         else
         {
-            ButtonSprite.color = new Color(1f, 1f, 1f);
+            ButtonSprite.color = _close;
             ButtonPrice.text = "MAX".ToString();
             UpgradeClick.text = "MAX".ToString();
             UpgradePassive.text = "MAX".ToString();
@@ -113,14 +84,20 @@ public class Upgrade: MonoBehaviour
         {
             ProgressSlider.value = 0;
         }
+
+        if (_shipNumber != SaveSystem.SaveContain.ShipNumber)
+        {
+            Load();
+            UpgradeImgeModule();
+        }
     }
     public void ClickButton()
     {
-        if (_levelUpgrade < _price.Length && _price[_levelUpgrade] < PlayerPrefs.GetFloat("Money_box"))
+        if(ButtonSprite.color == _open)
         {
             _audioSource.Play();
             //забрать денег
-            //GameManager.takeManey();
+            MonneyHandler.singleton.TakeManey(_price[_levelUpgrade]);
             //добавить характеристик
 
             //1
@@ -136,31 +113,35 @@ public class Upgrade: MonoBehaviour
             //перейти на новый уровень цены
             _levelUpgrade = _levelUpgrade + 1;
             ProgressSlider.value = ProgressSlider.value + 0.2f;
-        }
-        if (_levelUpgrade >= _price.Length)
-        {
-            if (IdModul == 1 || IdModul == 6 || IdModul == 7)
-            {
-                PlayerPrefs.SetInt("Unloc " + IdModul, 1);
-            }
-        }
 
-        Save();
+            UpgradeImgeModule();
+            Save();
+        }
     }
-    public void Load()
+    public void UpgradeImgeModule()
     {
-        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
-        _valueUpgradeClick = SaveContain.ClickIncom[IdModul];
-        _ValueUpgradePassive = SaveContain.PassIncom[IdModul];
-        _levelUpgrade = SaveContain.LevelUpgrade[IdModul];
-        ProgressSlider.value = SaveContain.ProgressSlider[IdModul];
+        if (IdModul == ((int)Modul.Engine) || IdModul == ((int)Modul.Deckhouse) || IdModul == ((int)Modul.Сarcass))
+        {
+            PlayerPrefs.SetInt("Unloc " + IdModul, 1);
+            Ship.singleton.ChangedSprite(IdModul, _levelUpgrade);
+        }
     }
     public void Save()
     {
         SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
-        SaveContain.ClickIncom[IdModul] = _valueUpgradeClick;
-        SaveContain.PassIncom[IdModul] = _ValueUpgradePassive;
-        SaveContain.LevelUpgrade[IdModul] = _levelUpgrade;
-        SaveContain.ProgressSlider[IdModul] = ProgressSlider.value;
+        SaveContain.SaveLevelUpgrade(IdModul, _levelUpgrade);
+        SaveContain.SaveClickIncom(IdModul, _valueUpgradeClick);
+        SaveContain.SavePassIncom(IdModul, _ValueUpgradePassive);
+        SaveContain.SaveProgressSlider(IdModul, ProgressSlider.value);
     }
+    public void Load()
+    {
+        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
+        _levelUpgrade = SaveContain.LoadlLevelUpgrade(IdModul);
+        _valueUpgradeClick = SaveContain.LoadClickIncom(IdModul);
+        _ValueUpgradePassive = SaveContain.LoadlPassIncom(IdModul);
+        ProgressSlider.value = SaveContain.LoadlProgressSlider(IdModul);
+        _shipNumber = SaveContain.ShipNumber;
+    }
+    enum Modul { Engine, Deckhouse, Сarcass }
 }

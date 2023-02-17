@@ -1631,7 +1631,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
@@ -1639,7 +1639,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveAndLoad
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -1678,7 +1678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: IdModul
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
@@ -1870,7 +1870,7 @@ MonoBehaviour:
   maxValue_slider: {fileID: 1228598041}
   tap: {fileID: 0}
   b: 10
-  ID: 5
+  ID: 6
 --- !u!1 &106611822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,8 +2340,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284638050
-  m_fontColor: {r: 0.38496798, g: 0.38679248, b: 0.38516095, a: 1}
+    rgba: 4283190348
+  m_fontColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3591,7 +3591,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
@@ -3599,7 +3599,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveAndLoad
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: p.Array.size
       value: 15
@@ -3802,7 +3802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: IdModul
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
@@ -6039,23 +6039,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cdbcb9366434e24abd61a699a42fd24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoneyAnimation: {fileID: 2073683100}
+  SaveSystem: {fileID: 539873631}
   GameManager: {fileID: 1792346878}
-  MonneyCount: {fileID: 161347835}
-  MoneyInSec: {fileID: 22402913}
-  ClickIncome: 3
+  ClickIncome: 1
   PassiveIncome: 1
-  MaxMonneyOfline: 1000
-  tap_hour: 2
-  second_hour: 3
-  all_Time: 0
-  anim_Money: {fileID: 2073683100}
-  price_0: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-  price_1: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
-  price_2: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
-  price_3: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  price_4: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  price_5: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  price_6: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  TextMonneyCount: {fileID: 161347835}
+  TextMoneyInSecond: {fileID: 22402913}
+  price0: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  price1: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
+  price2: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  price3: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  price4: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  price5: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  price6: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &453819873
 GameObject:
   m_ObjectHideFlags: 0
@@ -7048,7 +7045,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
@@ -7056,7 +7053,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveAndLoad
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -7099,7 +7096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: IdModul
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
@@ -7625,7 +7622,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
@@ -7633,7 +7630,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveAndLoad
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -7676,7 +7673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: IdModul
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
@@ -8076,25 +8073,141 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SaveContain:
-    ClickIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    PassIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    LevelUpgrade: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    ProgressSlider:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    _shipNumber: 1
+    AvailableShipNumber: 0
+    ShipNumber: 0
+    json:
+    - LevelUpgrade: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ClickIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      PassIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ProgressSlider:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - LevelUpgrade: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ClickIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      PassIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ProgressSlider:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - LevelUpgrade: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ClickIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      PassIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ProgressSlider:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - LevelUpgrade: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ClickIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      PassIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ProgressSlider:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - LevelUpgrade: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ClickIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      PassIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ProgressSlider:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - LevelUpgrade: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ClickIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      PassIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ProgressSlider:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - LevelUpgrade: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ClickIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      PassIncom: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ProgressSlider:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    MonneyCount: 0
+    ManeyInSecond: 0
+    MaxMonneyOfline: 0
+    TimeBonusForClickIncome: 0
+    TimeBonusforPassiveIncome: 0
+    TimeBonusforAllIncome: 0
 --- !u!1 &569417899
 GameObject:
   m_ObjectHideFlags: 0
@@ -9598,6 +9711,10 @@ MonoBehaviour:
   Time_Pass: {fileID: 881189956}
   Time_Tap: {fileID: 243487697}
   Time_All: {fileID: 1381748070}
+  TimeBonusForClickIncome: 0
+  TimeBonusforPassiveIncome: 0
+  TimeBonusforAllIncome: 0
+  SaveSystem: {fileID: 539873631}
   sprite:
   - {fileID: -424550667, guid: 3232307123de4134abb2da5a85d896ee, type: 3}
   - {fileID: -965496577, guid: 3232307123de4134abb2da5a85d896ee, type: 3}
@@ -9967,12 +10084,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514d84cf4c985704291b10207ef8329c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panCount: 7
-  panOffset: 100
-  snapSpeed: 10.2
-  scaleOffset: 2.97
-  scaleSpeed: 10
-  panPrefab:
+  PanCount: 7
+  PanOffset: 100
+  SnapSpeed: 10.2
+  ScaleOffset: 2.97
+  ScaleSpeed: 10
+  SaveSystem: {fileID: 539873631}
+  PanPrefab:
   - {fileID: 1347067545540421360, guid: a6161f725ac40714187c6f8700b1c792, type: 3}
   - {fileID: 2941230583998975525, guid: c3f4095365069b4489fa33280bc28d6b, type: 3}
   - {fileID: 2279607445468199394, guid: 55c02d868b925ca429372093bc291c58, type: 3}
@@ -9980,10 +10098,7 @@ MonoBehaviour:
   - {fileID: 2795087457025409255, guid: 3a5410b1f52308f48b66089a2c326d4f, type: 3}
   - {fileID: 7131728369694079560, guid: 2f1818dad6f22ff43815193200f3b18c, type: 3}
   - {fileID: 2782706695707776616, guid: a0cd196b08da2e84ea5a95fb929ce531, type: 3}
-  scrollRect: {fileID: 1882193459}
-  MB: {fileID: 1907193266}
-  price_ship: 00000000581b0000204e0000c8af0000f8240100c0d40100e0930400
-  price_button: {fileID: 1930104695}
+  PriceShip: 00000000581b0000204e0000c8af0000f8240100c0d40100e0930400
   Ship:
   - {fileID: 5571983316509801287, guid: 58f01fbc9bd723a4aa7a88f7b4adb085, type: 3}
   - {fileID: 7366661278848116192, guid: ba4a6f193dcd4304eb285e6d503da663, type: 3}
@@ -9992,10 +10107,15 @@ MonoBehaviour:
   - {fileID: 7145914835107798958, guid: 0fdea0c458ab7bb4085abd248db84d70, type: 3}
   - {fileID: 774637305133349986, guid: 116f1f3380a3f324d8f354cf00c8899f, type: 3}
   - {fileID: 2046523848951781896, guid: 446ee85e6403b02458377d394bc83dab, type: 3}
-  sprite: {fileID: 1156139224}
-  togl1: {fileID: 1571701738}
-  togl2: {fileID: 1363748691}
-  togl3: {fileID: 669961245}
+  ScrollRect: {fileID: 1882193459}
+  ManagerButton: {fileID: 1907193266}
+  PriceShipText: {fileID: 1930104695}
+  SpriteColor: {fileID: 1156139224}
+  _clos: {r: 1, g: 1, b: 1, a: 1}
+  _open: {r: 0.033018887, g: 1, b: 0.103811115, a: 1}
+  ToggleEngine: {fileID: 1571701738}
+  ToggleConstruction: {fileID: 1363748691}
+  ToggleCrev: {fileID: 669961245}
 --- !u!1 &738481264
 GameObject:
   m_ObjectHideFlags: 0
@@ -10490,7 +10610,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
@@ -10498,7 +10618,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveAndLoad
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -10541,7 +10661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: IdModul
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
@@ -22717,7 +22837,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
@@ -22725,7 +22845,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveAndLoad
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: p.Array.size
       value: 15
@@ -22937,7 +23057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: IdModul
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
@@ -23464,7 +23584,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  achiw: {fileID: 3635541061465781216, guid: 02c255940ef3811479c27b8096ca9f4e, type: 3}
+  NewAchiwment: {fileID: 3635541061465781216, guid: 02c255940ef3811479c27b8096ca9f4e, type: 3}
 --- !u!1 &1463208440
 GameObject:
   m_ObjectHideFlags: 0
@@ -23583,7 +23703,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
@@ -23591,7 +23711,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveAndLoad
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -23634,7 +23754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: IdModul
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
@@ -24956,7 +25076,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
@@ -24964,7 +25084,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveAndLoad
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: p.Array.size
       value: 15
@@ -25587,7 +25707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: IdModul
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
@@ -26057,7 +26177,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
@@ -26065,7 +26185,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveAndLoad
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -26108,7 +26228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: IdModul
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
@@ -29908,7 +30028,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1907193266}
         m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
-        m_MethodName: ClousAllButton
+        m_MethodName: CloseAllButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30253,7 +30373,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
@@ -30261,7 +30381,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveAndLoad
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -30304,7 +30424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: IdModul
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
@@ -33059,7 +33179,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: GameManager
       value: 
@@ -33067,7 +33187,7 @@ PrefabInstance:
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveAndLoad
       value: 
-      objectReference: {fileID: 539873631}
+      objectReference: {fileID: 0}
     - target: {fileID: 4257860325049214824, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: price_0.Array.size
       value: 6
@@ -33110,7 +33230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: IdModul
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6368536930193568863, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
       propertyPath: SaveSystem
@@ -33666,9 +33786,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: add_manney
+      - m_Target: {fileID: 446032078}
+        m_TargetAssemblyTypeName: MonneyHandler, Assembly-CSharp
+        m_MethodName: AddMonney
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37374,7 +37494,7 @@ MonoBehaviour:
   slider: {fileID: 5741987558010833128}
   tap: {fileID: 0}
   Maney: 15000
-  ID: 8
+  ID: 7
 --- !u!82 &9101497853985152047
 AudioSource:
   m_ObjectHideFlags: 0

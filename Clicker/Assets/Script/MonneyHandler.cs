@@ -1,208 +1,138 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using System;
 
 public class MonneyHandler : MonoBehaviour
 {
     public static MonneyHandler singleton;
+    public Animation MoneyAnimation;
+    public SaveSystem SaveSystem;
     public GameManager GameManager;
-    public TextMeshProUGUI MonneyCount;
-    public TextMeshProUGUI MoneyInSec;
     public float ClickIncome;
     public float PassiveIncome;
-    public float MaxMonneyOfline;
+    public TextMeshProUGUI TextMonneyCount;
+    public TextMeshProUGUI TextMoneyInSecond;
+    public float MonneyCount { get; private set; }
+    private float _maneyInSecond = 0.1f;
+    private float _maxMonneyOfline = 1000;
     private float _maneyOffline;
-    private float _maneyInSecond;
-    public float tap_hour;
-    public float second_hour;
-    public float all_Time;
-    private int coef_pass;
-    private int coef_tap;
-    private int coef_all;
-    private float promeg;
-    public Animation anim_Money;
+    private int _coefPassiv;
+    private int _coefClick;
+    private int _coefAll;
+    private float _intermediateValue;
 
-    //public int[][] PriceShip;
-    public int[] price_0;
-    public int[] price_1;
-    public int[] price_2;
-    public int[] price_3;
-    public int[] price_4;
-    public int[] price_5;
-    public int[] price_6;
+    public int[] price0;
+    public int[] price1;
+    public int[] price2;
+    public int[] price3;
+    public int[] price4;
+    public int[] price5;
+    public int[] price6;
+    public int[][] PriceUpgrade;
     private void Awake()
     {
         singleton = this;
     }
     private void Start()
     {
-        //for(int i = 0; i < 7; i++)
-        //{
-        //    PriceShip[i] = price_i;
-        //}
-        //деньги накопившиеся офлайн
-        DateTime LastSaveTime = DateAndTime.GetDateTime(key: "lastSaveTime", DateTime.UtcNow);
-        TimeSpan timePassed = DateTime.UtcNow - LastSaveTime;
-        int secondPassed = (int)timePassed.TotalSeconds;
-        _maneyOffline = (PassiveIncome + PlayerPrefs.GetFloat("Money_sec")) * secondPassed;
-        if (_maneyOffline > MaxMonneyOfline)
-        {
-            PlayerPrefs.SetFloat("Maney_offline", MaxMonneyOfline);
-        }
+        PriceUpgrade = new int[7][];
+        PriceUpgrade[0] = price0;
+        PriceUpgrade[1] = price1;
+        PriceUpgrade[2] = price2;
+        PriceUpgrade[3] = price3;
+        PriceUpgrade[4] = price4;
+        PriceUpgrade[5] = price5;
+        PriceUpgrade[6] = price6;
+
+        if (SaveSystem.SaveContain.MonneyCount != 0)
+            Load();
         else
-        {
-            PlayerPrefs.SetFloat("Maney_offline", _maneyOffline);
-        }
+            Save();
 
-        if (second_hour >= 0)
+        _maneyOffline = GetManneyOffline();
+        if (_maneyOffline > _maxMonneyOfline)
         {
-            PlayerPrefs.SetFloat("second_hour", PlayerPrefs.GetFloat("second_hour") - secondPassed);
-        }
-
-        //щетчик для активного прироста Х2
-        if (tap_hour >= 0)
-        {
-            PlayerPrefs.SetFloat("tap_hour", PlayerPrefs.GetFloat("tap_hour") - secondPassed);
-        }
-
-
-        //присвоение сохранений
-        if (PlayerPrefs.HasKey("tap_income"))
-        {
-            ClickIncome = PlayerPrefs.GetFloat("tap_income");
-            PassiveIncome = PlayerPrefs.GetFloat("pass_income");
-        }
-        if (PlayerPrefs.HasKey("Max_ofline"))
-        {
-            MaxMonneyOfline = PlayerPrefs.GetFloat("Max_ofline");
-        }
-        else
-        {
-            MaxMonneyOfline = 1000;
-        }
-
-        if (PlayerPrefs.HasKey("second_hour"))
-        {
-            second_hour = PlayerPrefs.GetFloat("second_hour");
-        }
-        if (PlayerPrefs.HasKey("tap_hour"))
-        {
-            tap_hour = PlayerPrefs.GetFloat("tap_hour");
-        }
-        if (PlayerPrefs.HasKey("all_Time"))
-        {
-            tap_hour = PlayerPrefs.GetFloat("all_Time");
+            _maneyOffline = _maxMonneyOfline;
         }
     }
-    void Update()
+    private void Update()
     {
-        //отображение денег
-        if (PlayerPrefs.GetFloat("Money_box") < 1000)
-        {
-            MonneyCount.text = PlayerPrefs.GetFloat("Money_box").ToString("0");
-        }
-        else if (PlayerPrefs.GetFloat("Money_box") > 1000 && PlayerPrefs.GetFloat("Money_box") < 1000000)
-        {
-            MonneyCount.text = (PlayerPrefs.GetFloat("Money_box") / 1000).ToString("0.00") + "K";
-        }
-        else if (PlayerPrefs.GetFloat("Money_box") > 1000000)
-        {
-            MonneyCount.text = (PlayerPrefs.GetFloat("Money_box") / 1000000).ToString("0.00") + "M";
-        }
-        MoneyInSec.text = PlayerPrefs.GetFloat("Money_sec").ToString("0.0") + "/s";
-        DateAndTime.SetDateTime("lastSaveTime", System.DateTime.UtcNow);
+        MonneyCount = MonneyCount + PassiveIncome + _maneyInSecond * _coefPassiv * _coefAll;
 
-        //работа с заработанными деньгами
-        _maneyInSecond = PlayerPrefs.GetFloat("Money_box") + ((PassiveIncome + PlayerPrefs.GetFloat("Money_sec")) * coef_pass * coef_all) * Time.deltaTime;
-        PlayerPrefs.SetFloat("Money_box", _maneyInSecond);
+        if (MonneyCount < 1000)
+            TextMonneyCount.text = MonneyCount.ToString("0");
+        else if (MonneyCount > 1000 && MonneyCount < 1000000)
+            TextMonneyCount.text = (MonneyCount / 1000).ToString("0.00") + "K";
+        else if (MonneyCount > 1000000)
+            TextMonneyCount.text = (MonneyCount / 1000000).ToString("0.00") + "M";
 
-        //работа с деньгами за тап
-        if (GameManager._isPointerDown == true && GameManager.FuelProgressSlider.value > 0.001f)
+        if (GameManager._isPointerDown == true && GameManager.FuelProgressSlider.value > 0)
         {
-            if (PlayerPrefs.GetFloat("Money_sec") < ClickIncome * coef_tap * coef_all * 2)
-            {
-                PlayerPrefs.SetFloat("Money_sec", (PlayerPrefs.GetFloat("Money_sec") * 1.02f));
-            }
-        }
-
-        //щетчик для пасивного прироста Х2
-        if (second_hour >= 0)
-        {
-            PlayerPrefs.SetFloat("second_hour", second_hour);
-            second_hour = second_hour - Time.deltaTime;
-            coef_pass = 2;
+            if (_maneyInSecond < ClickIncome * _coefClick * _coefAll * 2)
+                _maneyInSecond = _maneyInSecond * 1.02f;
         }
         else
         {
-            PlayerPrefs.DeleteKey("second_hour");
-            coef_pass = 1;
+            _maneyInSecond = ClickIncome;
         }
 
-        //щетчик для активного прироста Х2
-        if (tap_hour >= 0)
+        TextMoneyInSecond.text = _maneyInSecond.ToString("0.0") + "/s";
+
+        if (_intermediateValue > 0)
         {
-            PlayerPrefs.SetFloat("tap_hour", tap_hour);
-            tap_hour = tap_hour - Time.deltaTime;
-            coef_tap = 2;
+            MoneyAnimation.Play();
+            _intermediateValue = _intermediateValue - MonneyCount / 4;
+            TextMonneyCount.color = new Color(0.2622374f, 0.6698113f, 0.3052149f);
         }
         else
         {
-            PlayerPrefs.DeleteKey("tap_hour");
-            coef_tap = 1;
+            TextMonneyCount.color = new Color(0.3f, 0.3f, 0.3f);
         }
-
-        //щетчик для всего прироста Х10
-        if (all_Time >= 0)
-        {
-            PlayerPrefs.SetFloat("all_Time", all_Time);
-            all_Time = all_Time - Time.deltaTime;
-            coef_all = 10;
-        }
-        else
-        {
-            PlayerPrefs.DeleteKey("all_Time");
-            coef_all = 1;
-        }
-
-        //пополнялка кэша
-        if (promeg > 0)
-        {
-            anim_Money.Play();
-            promeg = promeg - ((PlayerPrefs.GetFloat("Money_box") / 4) * Time.deltaTime);
-            PlayerPrefs.SetFloat("Money_box", PlayerPrefs.GetFloat("Money_box") + ((PlayerPrefs.GetFloat("Money_box") / 4) * Time.deltaTime));
-            MonneyCount.color = new Color(0.2622374f, 0.6698113f, 0.3052149f);
-        }
-        else
-        {
-            MonneyCount.color = new Color(0.3f, 0.3f, 0.3f);
-        }
+    }
+    public void TakeManey(int value)
+    {
+        MonneyCount = MonneyCount - value;
     }
     public void bank_x2()
     {
-        promeg = promeg + PlayerPrefs.GetFloat("Maney_offline") * 2;
+        _intermediateValue = _intermediateValue + _maneyOffline * 2;
     }
     public void bank_x1()
     {
-        promeg = promeg + PlayerPrefs.GetFloat("Maney_offline");
+        _intermediateValue = _intermediateValue + _maneyOffline;
     }
     public void gift()
     {
-        promeg = promeg + PlayerPrefs.GetFloat("Gift") * 2;
+        _intermediateValue = _intermediateValue + PlayerPrefs.GetFloat("Gift") * 2;
     }
     public void gift_free()
     {
-        promeg = promeg + (PlayerPrefs.GetFloat("Gift"));
+        _intermediateValue = _intermediateValue + (PlayerPrefs.GetFloat("Gift"));
     }
     public void achivment(float i)
     {
-        promeg = promeg + i;
+        _intermediateValue = _intermediateValue + i;
     }
-    public void add_manney()
+    public void Load()
     {
-        PlayerPrefs.SetFloat("Money_box", PlayerPrefs.GetFloat("Money_box") + 100000);
+        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
+        MonneyCount = SaveContain.MonneyCount;
+        _maneyInSecond = SaveContain.ManeyInSecond;
+        _maxMonneyOfline = SaveContain.MaxMonneyOfline;
     }
+    public void Save()
+    {
+        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
+        SaveContain.MonneyCount = MonneyCount;
+        SaveContain.ManeyInSecond = _maneyInSecond;
+        SaveContain.MaxMonneyOfline = _maxMonneyOfline;
+    }
+    private float GetManneyOffline()
+    {
+        DateTime LastSaveTime = DateAndTime.GetDateTime(key: "lastSaveTime", DateTime.UtcNow);
+        TimeSpan timePassed = DateTime.UtcNow - LastSaveTime;
+        int secondPassed = (int)timePassed.TotalSeconds;
+        return _maneyOffline = (PassiveIncome + PlayerPrefs.GetFloat("Money_sec")) * secondPassed;
+    }
+    public void AddMonney() => MonneyCount = MonneyCount + 100000;
 }

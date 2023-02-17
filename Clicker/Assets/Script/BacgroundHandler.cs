@@ -23,7 +23,7 @@ public class BacgroundHandler : MonoBehaviour
     {
         if (this.transform.position.x > _leftBorder)
         {
-            if (PlayerPrefs.HasKey("tap"))
+            if (PlayerPrefs.HasKey("_isPointerDown"))
                 OffsetBacground(_swimm);
             else
                 OffsetBacground(_idl);

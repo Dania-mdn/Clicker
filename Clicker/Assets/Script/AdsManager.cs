@@ -28,6 +28,10 @@ public class AdsManager : MonoBehaviour
     public TextMeshProUGUI Time_Pass;
     public TextMeshProUGUI Time_Tap;
     public TextMeshProUGUI Time_All;
+    public float TimeBonusForClickIncome;
+    public float TimeBonusforPassiveIncome;
+    public float TimeBonusforAllIncome;
+    public SaveSystem SaveSystem;
 
     //картинки для кнопок
     public Sprite[] sprite;
@@ -117,7 +121,7 @@ public class AdsManager : MonoBehaviour
             isoffline = true;
         }
         //работа с картинками
-        if (MonneyHandler.singleton.second_hour >= 0)
+        if (SaveSystem.SaveContain.TimeBonusforPassiveIncome >= 0)
         {
             imj_pass.sprite = sprite[1];
         }
@@ -125,7 +129,7 @@ public class AdsManager : MonoBehaviour
         {
             imj_pass.sprite = sprite[0];
         }
-        if (MonneyHandler.singleton.tap_hour >= 0)
+        if (SaveSystem.SaveContain.TimeBonusForClickIncome >= 0)
         {
             imj_tap.sprite = sprite[3];
         }
@@ -133,7 +137,7 @@ public class AdsManager : MonoBehaviour
         {
             imj_tap.sprite = sprite[2];
         }
-        if (MonneyHandler.singleton.all_Time >= 0)
+        if (SaveSystem.SaveContain.TimeBonusforAllIncome >= 0)
         {
             imj_all.sprite = sprite[5];
         }
@@ -431,14 +435,14 @@ public class AdsManager : MonoBehaviour
         if (ads_dan == 2)
         {
             PlayerPrefs.SetInt("adss_pass", 1);
-            MonneyHandler.singleton.second_hour = MonneyHandler.singleton.second_hour + 3600;
+            SaveSystem.SaveContain.TimeBonusforPassiveIncome = SaveSystem.SaveContain.TimeBonusforPassiveIncome + 3600;
             gg.SetActive(false);
             ads_dan = 0;
         }
         if (ads_dan == 3)
         {
             PlayerPrefs.SetInt("adss_tap", 1);
-            MonneyHandler.singleton.tap_hour = MonneyHandler.singleton.tap_hour + 3600;
+            SaveSystem.SaveContain.TimeBonusForClickIncome = SaveSystem.SaveContain.TimeBonusForClickIncome + 3600;
             gg.SetActive(false);
             ads_dan = 0;
         }
@@ -452,7 +456,7 @@ public class AdsManager : MonoBehaviour
         if (ads_dan == 5)
         {
             PlayerPrefs.SetInt("adss_x10", 1);
-            MonneyHandler.singleton.all_Time = 10;
+            SaveSystem.SaveContain.TimeBonusforAllIncome = 10;
             gg.SetActive(false);
             ads_dan = 0;
         }
@@ -498,5 +502,19 @@ public class AdsManager : MonoBehaviour
         PlayerPrefs.SetInt("Gift1", 1);
         MonneyHandler.singleton.gift_free();
         g.SetActive(false);
+    }
+    public void Load()
+    {
+        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
+        TimeBonusForClickIncome = SaveContain.TimeBonusForClickIncome;
+        TimeBonusforPassiveIncome = SaveContain.TimeBonusforPassiveIncome;
+        TimeBonusforAllIncome = SaveContain.TimeBonusforAllIncome;
+    }
+    public void Save()
+    {
+        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
+        SaveContain.TimeBonusForClickIncome = TimeBonusForClickIncome;
+        SaveContain.TimeBonusforPassiveIncome = TimeBonusforPassiveIncome;
+        SaveContain.TimeBonusforAllIncome = TimeBonusforAllIncome;
     }
 }

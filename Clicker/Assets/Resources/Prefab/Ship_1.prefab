@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 155305359397025742}
   - component: {fileID: 2320292665562571236}
+  - component: {fileID: 1126608546834959300}
   m_Layer: 0
   m_Name: korpus
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7366661278848116194}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2320292665562571236
 SpriteRenderer:
@@ -84,6 +85,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1126608546834959300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512710735886136584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01f383cb2122be47b5937cfe3feed77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteArray:
+  - {fileID: -1050923907, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  - {fileID: -21007883, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  - {fileID: 402047753, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  - {fileID: -92534682, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  Lvl: 0
+  _coef: 1
 --- !u!1 &1580079509547428680
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2901769284314790866}
   - component: {fileID: 9094620903828219925}
+  - component: {fileID: 8403852812253199549}
   m_Layer: 0
   m_Name: engine
   m_TagString: Untagged
@@ -114,7 +135,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7366661278848116194}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9094620903828219925
 SpriteRenderer:
@@ -168,6 +189,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8403852812253199549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580079509547428680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01f383cb2122be47b5937cfe3feed77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteArray:
+  - {fileID: 990186259, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  - {fileID: -1939376370, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  - {fileID: 2005976204, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  - {fileID: -1265559257, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  Lvl: 0
+  _coef: 1
 --- !u!1 &5902138407720212236
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2805571360854358236}
   - component: {fileID: 3882954530571497545}
+  - component: {fileID: 2686749326808709640}
   m_Layer: 0
   m_Name: rubka
   m_TagString: Untagged
@@ -198,7 +239,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7366661278848116194}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3882954530571497545
 SpriteRenderer:
@@ -252,6 +293,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2686749326808709640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902138407720212236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01f383cb2122be47b5937cfe3feed77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteArray:
+  - {fileID: 565359726, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  - {fileID: -1227853420, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  - {fileID: 996644543, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  - {fileID: -140518960, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
+  Lvl: 0
+  _coef: 1
 --- !u!1 &7366661278848116192
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,9 +344,9 @@ Transform:
   m_LocalScale: {x: 0.39199498, y: 0.39199498, z: 0.8711}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2901769284314790866}
   - {fileID: 2805571360854358236}
   - {fileID: 155305359397025742}
-  - {fileID: 2901769284314790866}
   - {fileID: 2232643999087923578}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -323,28 +383,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e08e253e9928a48bf01aadbca204aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite_rubka:
-  - {fileID: 565359726, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: -1227853420, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: 996644543, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: -140518960, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  sprite_korpus:
-  - {fileID: -1050923907, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: -21007883, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: 402047753, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: -92534682, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  sprite_engine:
-  - {fileID: 990186259, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: -1939376370, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: 2005976204, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: -1265559257, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  rubka: {fileID: 3882954530571497545}
-  korpus: {fileID: 2320292665562571236}
-  engine: {fileID: 9094620903828219925}
-  Rubka: rubka_1
-  Korpus: korpus_1
-  Engine: engine_1
-  PS: {fileID: 4468333792986318979}
+  ShipModuls:
+  - {fileID: 8403852812253199549}
+  - {fileID: 2686749326808709640}
+  - {fileID: 1126608546834959300}
+  ParticleSystem: {fileID: 4468333792986318979}
 --- !u!114 &4876218284820455858
 MonoBehaviour:
   m_ObjectHideFlags: 0

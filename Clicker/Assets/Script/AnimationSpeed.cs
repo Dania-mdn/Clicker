@@ -11,7 +11,7 @@ public class AnimationSpeed : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerPrefs.HasKey("tap"))
+        if (PlayerPrefs.HasKey("_isPointerDown"))
         {
             if(_anim.speed < _speed)
                 _anim.speed = _anim.speed + Time.deltaTime;

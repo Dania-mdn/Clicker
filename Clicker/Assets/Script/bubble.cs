@@ -20,7 +20,7 @@ public class Bubble : MonoBehaviour
     {
         if (transform.position.y < _lineOfWater)
         {
-            if (PlayerPrefs.HasKey("tap")) Swimm(_swimm);
+            if (PlayerPrefs.HasKey("_isPointerDown")) Swimm(_swimm);
             else Swimm(_idl);
         }
         else

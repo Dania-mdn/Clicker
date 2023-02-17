@@ -71,28 +71,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e08e253e9928a48bf01aadbca204aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite_rubka:
-  - {fileID: -1203586344, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: -250924116, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: 1041880160, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: 896340551, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  sprite_korpus:
-  - {fileID: -1661837899, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: -539751513, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: -1074869923, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: -1389302543, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  sprite_engine:
-  - {fileID: -1156802820, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: 910356522, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: 169857201, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  - {fileID: -676032428, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
-  rubka: {fileID: 6420080777997183435}
-  korpus: {fileID: 5532925045764913254}
-  engine: {fileID: 1354781289615798679}
-  Rubka: rubka_5
-  Korpus: korpus_5
-  Engine: engine_5
-  PS: {fileID: 3286807355755511482}
+  SpriteDeckhouse: []
+  "Sprite\u0421arcass": []
+  SpriteEngine: []
+  Deckhouse: {fileID: 6420080777997183435}
+  "\u0421arcass": {fileID: 5532925045764913254}
+  Engine: {fileID: 1354781289615798679}
+  DeckhouseText: 
+  "\u0421arcassText": 
+  EngineText: 
+  ParticleSystem: {fileID: 0}
 --- !u!114 &3409362703181690928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +201,7 @@ GameObject:
   - component: {fileID: 3286807355755511482}
   - component: {fileID: 3068268012493582753}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5045,7 +5033,7 @@ GameObject:
   - component: {fileID: 5338128578047074654}
   - component: {fileID: 6420080777997183435}
   m_Layer: 0
-  m_Name: rubka
+  m_Name: Deckhouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5129,7 +5117,7 @@ GameObject:
   - component: {fileID: 7988385766196784716}
   - component: {fileID: 5532925045764913254}
   m_Layer: 0
-  m_Name: korpus
+  m_Name: "\u0421arcass"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5213,7 +5201,7 @@ GameObject:
   - component: {fileID: 4953559553831084624}
   - component: {fileID: 1354781289615798679}
   m_Layer: 0
-  m_Name: engine
+  m_Name: Engine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
