@@ -97,3 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsLeftBorder: 0
+  IsRightBorder: 1
+  _isPooled: 1

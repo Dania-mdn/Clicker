@@ -6,8 +6,7 @@ public class RaycastHandler : MonoBehaviour
     public AdsManager AdsManager;
     public GameObject PrizeForClick;
     private GameObject _newPrizeForClick;
-    private readonly string _dolphin = "Dolphin(Clone)";
-    private readonly string _bottle = "Bottle(Clone)";
+    [SerializeField] private EventManager.AchiveName _achiveName;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -17,12 +16,13 @@ public class RaycastHandler : MonoBehaviour
 
             if(hit.collider != null)
             {
-                if(hit.collider.name == _dolphin)
+                if(hit.transform.GetComponent<PriezeObject>().IsLeftBorder)
                 {
                     CreatePrizeForClick(hit);
-                    PlayerPrefs.SetInt("dolfi_trigger", 1);
+                    //dolfy
+                    EventManager.DoNewAchive(_achiveName);
                 }
-                else if (hit.collider.name == _bottle)
+                else if (hit.transform.GetComponent<PriezeObject>().IsRightBorder)
                 {
                     CreatePrizeForClick(hit);
                 }
@@ -41,6 +41,6 @@ public class RaycastHandler : MonoBehaviour
         _newPrizeForClick = Instantiate(PrizeForClick, hit.transform.position, Quaternion.identity);
         _newPrizeForClick.transform.SetParent(MonneyHandler.singleton.transform);
         _newPrizeForClick.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetFloat("Gift").ToString("0");
-        Destroy(hit.transform.gameObject);
+        hit.transform.GetComponent<PriezeObject>().Pooled();
     }
 }

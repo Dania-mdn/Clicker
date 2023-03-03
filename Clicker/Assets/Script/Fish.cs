@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class Fish : MonoBehaviour
+public class Fish : PooledItem
 {
+    [SerializeField] private Sprite[] ArraySprite;
     private SpriteRenderer _spriteRenderer;
     private const float _lineOfWater = -2.22f;
 
     private float _directionHorizontal;
     private float _directionVertical;
     private float _boostSpeed;
+    [SerializeField] private bool _isPooled;
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.color = new Color(1, 1, 1, Random.Range(0.25f, 0.85f));
+        _spriteRenderer.sprite = ArraySprite[Random.Range(0, ArraySprite.Length)];
 
         _directionVertical = Random.Range(0.2f, -0.2f);
 
@@ -21,16 +24,17 @@ public class Fish : MonoBehaviour
     {
         if (IsZone())
         {
-            Swimm(_boostSpeed, _directionHorizontal, _directionVertical);
+            _boostSpeed = PlayerPrefs.HasKey("_isPointerDown") ? 0.04f : 0;
 
-            _boostSpeed = PlayerPrefs.HasKey("_isPointerDown") ? 0.04f : 0.01f;
+            Swimm(_boostSpeed, _directionHorizontal, _directionVertical);
 
             if (transform.position.y >= _lineOfWater)
                 _directionVertical = -0.1f;
         }
         else
         {
-            Destroy(gameObject);
+            if (_isPooled) Pooled();
+            else Regular();
         }
     }
     private void DirectionOfMov(int random)
@@ -46,11 +50,13 @@ public class Fish : MonoBehaviour
         }
         transform.right = new Vector2(_directionHorizontal, _directionVertical);
     }
-    private bool IsZone() => transform.position.x < 4.2f && transform.position.x > -4.2f && transform.position.y < -2 && transform.position.y > -5.7f;
+    public bool IsZone() => transform.position.x < 4.2f && transform.position.x > -4.2f && transform.position.y < -2 && transform.position.y > -5.7f;
     private void Swimm(float boostSpeed, float directionHorizontal, float directionVertical)
     {
         float positionX = this.transform.position.x - boostSpeed + directionHorizontal * Time.deltaTime;
         float positionY = this.transform.position.y + directionVertical * Time.deltaTime;
         transform.position = new Vector3(positionX, positionY, transform.position.z);
     }
+    private void Regular() => Destroy(gameObject);
+    private void Pooled() => ReturnToPool();
 }

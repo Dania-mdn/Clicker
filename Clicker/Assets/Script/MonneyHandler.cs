@@ -7,14 +7,14 @@ public class MonneyHandler : MonoBehaviour
     public static MonneyHandler singleton;
     public Animation MoneyAnimation;
     public SaveSystem SaveSystem;
-    public GameManager GameManager;
+    public PointerHandler PointerHandler;
     public float ClickIncome;
     public float PassiveIncome;
     public TextMeshProUGUI TextMonneyCount;
     public TextMeshProUGUI TextMoneyInSecond;
     public float MonneyCount { get; private set; }
+    public float MaxMonneyOfline;
     private float _maneyInSecond = 0.1f;
-    private float _maxMonneyOfline = 1000;
     private float _maneyOffline;
     private int _coefPassiv;
     private int _coefClick;
@@ -50,9 +50,9 @@ public class MonneyHandler : MonoBehaviour
             Save();
 
         _maneyOffline = GetManneyOffline();
-        if (_maneyOffline > _maxMonneyOfline)
+        if (_maneyOffline > MaxMonneyOfline)
         {
-            _maneyOffline = _maxMonneyOfline;
+            _maneyOffline = MaxMonneyOfline;
         }
     }
     private void Update()
@@ -66,7 +66,7 @@ public class MonneyHandler : MonoBehaviour
         else if (MonneyCount > 1000000)
             TextMonneyCount.text = (MonneyCount / 1000000).ToString("0.00") + "M";
 
-        if (GameManager._isPointerDown == true && GameManager.FuelProgressSlider.value > 0)
+        if (PointerHandler._isPointerDown == true && PointerHandler.FuelProgressSlider.value > 0)
         {
             if (_maneyInSecond < ClickIncome * _coefClick * _coefAll * 2)
                 _maneyInSecond = _maneyInSecond * 1.02f;
@@ -118,14 +118,14 @@ public class MonneyHandler : MonoBehaviour
         SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
         MonneyCount = SaveContain.MonneyCount;
         _maneyInSecond = SaveContain.ManeyInSecond;
-        _maxMonneyOfline = SaveContain.MaxMonneyOfline;
+        MaxMonneyOfline = SaveContain.MaxMonneyOfline;
     }
     public void Save()
     {
         SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
         SaveContain.MonneyCount = MonneyCount;
         SaveContain.ManeyInSecond = _maneyInSecond;
-        SaveContain.MaxMonneyOfline = _maxMonneyOfline;
+        SaveContain.MaxMonneyOfline = MaxMonneyOfline;
     }
     private float GetManneyOffline()
     {

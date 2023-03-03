@@ -1,20 +1,27 @@
 using UnityEngine;
 
-public class BacgroundHandler : MonoBehaviour
+public class BacgroundHandler : PooledItem
 {
+    [SerializeField] private Sprite[] ArrayAbyssalSprite;
+    [SerializeField] private Sprite[] ArrayOtherSprite;
+    private SpriteRenderer SpriteRenderer;
     private const int _leftBorder = -6;
     private float _swimm;
     private float _idl;
-    [SerializeField] private bool _deep;
+    [SerializeField] private bool _abyssal;
+    [SerializeField] private bool _isPooled;
     private void Start()
     {
-        if (_deep)
+        SpriteRenderer = GetComponent<SpriteRenderer>();
+        if (_abyssal)
         {
+            SpriteRenderer.sprite = ArrayAbyssalSprite[Random.Range(0, ArrayAbyssalSprite.Length)];
             _swimm = 0.75f;
             _idl = 0.3f;
         }
         else
         {
+            SpriteRenderer.sprite = ArrayOtherSprite[Random.Range(0, ArrayOtherSprite.Length)];
             _swimm = 0.4f;
             _idl = 0.12f;
         }
@@ -30,7 +37,8 @@ public class BacgroundHandler : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            if (_isPooled) Pooled();
+            else Regular();
         }
     }
 
@@ -38,4 +46,6 @@ public class BacgroundHandler : MonoBehaviour
     {
         transform.position = new Vector2(transform.position.x - offset * Time.deltaTime, transform.position.y);
     }
+    private void Regular() => Destroy(gameObject);
+    private void Pooled() => ReturnToPool();
 }

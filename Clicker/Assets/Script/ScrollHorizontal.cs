@@ -123,7 +123,7 @@ public class ScrollHorizontal : MonoBehaviour
         _contentVector.x = Mathf.SmoothStep(_contentRect.anchoredPosition.x, _pansPos[_selectedPan].x, SnapSpeed * Time.deltaTime);
         _contentRect.anchoredPosition = _contentVector;
     }
-    public void Buy_ship()
+    public void BuyShip()
     {
         if(SpriteColor.color == _open)
         {
@@ -134,6 +134,9 @@ public class ScrollHorizontal : MonoBehaviour
             OpenAvailableShip();
             Destroy(_shipScene);
             InitializeShip(_selectedPan);
+            //ship
+            EventManager.DoBuy();
+            EventManager.DoNewAchive(EventManager.AchiveName.Ship);
         }
     }
     public void InitializeShip(int shipNumber)

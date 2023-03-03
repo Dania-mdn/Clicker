@@ -1,55 +1,53 @@
-using TMPro;
-
 public class Upgrade: BazeUpdate
 {
-    private int _valueUpgradeClick;
-    private int _ValueUpgradePassive;
-    public TextMeshProUGUI UpgradeClick;
-    public TextMeshProUGUI UpgradePassive;
+    public ClickAndPassive UpgradeClick;
+    public ClickAndPassive UpgradePassive;
     public override void Start()
     {
         base.Start();
-        MonneyHandler.singleton.ClickIncome = MonneyHandler.singleton.ClickIncome + (_valueUpgradeClick * 0.01f);
-        UpgradeClick.text = $"+ {_valueUpgradeClick} %";
 
-        MonneyHandler.singleton.PassiveIncome = MonneyHandler.singleton.PassiveIncome + (_ValueUpgradePassive * 0.01f);
-        UpgradePassive.text = $"+ {_ValueUpgradePassive} %";
+        ChangeValues(UpgradeClick);
+        ChangeValues(UpgradePassive); 
     }
     public override void ClozeButton(string Pricetext, bool isMaxUpgrade)
     {
         base.ClozeButton(Pricetext, isMaxUpgrade);
         if(isMaxUpgrade)
         {
-            UpgradeClick.text = "MAX".ToString();
-            UpgradePassive.text = "MAX".ToString();
+            UpgradeClick.Upgrade.text = "MAX".ToString();
+            UpgradePassive.Upgrade.text = "MAX".ToString();
         }
     }
     public override void ClickButton()
     {
         base.ClickButton();
-        //1
-        _valueUpgradeClick = _valueUpgradeClick + DefaultValueUpgradeClick;
-        MonneyHandler.singleton.ClickIncome = MonneyHandler.singleton.ClickIncome + (DefaultValueUpgradeClick * 0.01f);
-        UpgradeClick.text = "+ " + _valueUpgradeClick.ToString("0") + "%";
-
-        //1
-        _ValueUpgradePassive = _ValueUpgradePassive + DefaultValueUpgradePassiv;
-        MonneyHandler.singleton.PassiveIncome = MonneyHandler.singleton.PassiveIncome + (DefaultValueUpgradePassiv * 0.01f);
-        UpgradePassive.text = "+ " + _ValueUpgradePassive.ToString("0") + "%";
+        ChangeValues(UpgradeClick);
+        AddValues(UpgradeClick);
+        ChangeValues(UpgradePassive);
+        AddValues(UpgradePassive);
     }
+    public void ChangeValues(ClickAndPassive objectUpgrade)
+    {
+        objectUpgrade.Upgrade.text = $"+ {objectUpgrade.ValueUpgrade} %";
+        MonneyHandler.singleton.ClickIncome = MonneyHandler.singleton.ClickIncome + objectUpgrade.ValueUpgrade;
+    }
+    public void AddValues(ClickAndPassive objectUpgrade)
+    {
+        objectUpgrade.ValueUpgrade = objectUpgrade.ValueUpgrade + objectUpgrade.DefaultValueUpgrade;
+    }
+
     public override void Save()
     {
         base.Save();
         SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
-        SaveContain.SaveClickIncom(IdModul, _valueUpgradeClick);
-        SaveContain.SavePassIncom(IdModul, _ValueUpgradePassive);
+        SaveContain.SaveClickIncom(IdModul, UpgradeClick.ValueUpgrade);
+        SaveContain.SavePassIncom(IdModul, UpgradePassive.ValueUpgrade);
     }
     public override void Load()
     {
         base.Load();
         SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
-        _valueUpgradeClick = SaveContain.LoadClickIncom(IdModul);
-        _ValueUpgradePassive = SaveContain.LoadlPassIncom(IdModul);
+        UpgradeClick.ValueUpgrade = SaveContain.LoadClickIncom(IdModul);
+        UpgradePassive.ValueUpgrade = SaveContain.LoadlPassIncom(IdModul);
     }
-    enum Modul { Engine, Deckhouse, Ñarcass }
 }

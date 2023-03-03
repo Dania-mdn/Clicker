@@ -39,7 +39,7 @@ public class Ship : MonoBehaviour
     }
     public void ChangedSprite(int idModul, int lvlUpgrade)
     {
-        if (lvlUpgrade % 5 == 0 && idModul <= ShipModuls.Length)
+        if (lvlUpgrade % 5 == 0 && idModul < ShipModuls.Length)
         {
             Modul(ShipModuls[idModul], lvlUpgrade);
         }

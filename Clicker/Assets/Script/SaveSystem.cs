@@ -49,9 +49,12 @@ public class SaveSystem: MonoBehaviour
         public float MonneyCount;
         public float ManeyInSecond;
         public float MaxMonneyOfline;
+        public float Cistern;
         public float TimeBonusForClickIncome;
         public float TimeBonusforPassiveIncome;
         public float TimeBonusforAllIncome;
+
+        public int DolfyCount;
         public void SaveLevelUpgrade(int IdModul, int Value) => json[ShipNumber].LevelUpgrade[IdModul] = Value;
         public void SaveClickIncom(int IdModul, int Value) => json[ShipNumber].ClickIncom[IdModul] = Value;
         public void SavePassIncom(int IdModul, int Value) => json[ShipNumber].PassIncom[IdModul] = Value;

@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 9117802337012962646}
   - component: {fileID: 4145262998223890470}
   - component: {fileID: 415836677253084294}
+  - component: {fileID: 299236260303290569}
   m_Layer: 0
   m_Name: Dolphin
   m_TagString: Untagged
@@ -194,6 +195,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0.23, y: 1.29}
   m_Size: {x: 3.14, y: 1.22}
   m_Direction: 1
+--- !u!114 &299236260303290569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7944606195202460981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd096ea4f70c594a978ab4c770a9737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsLeftBorder: 1
+  IsRightBorder: 0
 --- !u!1 &8954549193386407865
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,8 +313,8 @@ MonoBehaviour:
   - {fileID: 8245790484210814176}
   - {fileID: 5958987500878318237}
   m_Bounds:
-    m_Center: {x: -0.0007944107, y: 0.0029303432, z: 0}
-    m_Extent: {x: 1.9042054, y: 0.9920703, z: 0}
+    m_Center: {x: -0.00079524517, y: 0.0029301047, z: 0}
+    m_Extent: {x: 1.9042053, y: 0.99207044, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0

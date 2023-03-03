@@ -1,12 +1,13 @@
 using UnityEngine;
 
-public class Bubble : MonoBehaviour
+public class Bubble : PooledItem
 {
     private SpriteRenderer _spriteRenderer;
 
     private const float _lineOfWater = -1.85f;
     private const int _swimm = 2;
     private const float _idl = 0.5f;
+    [SerializeField] private bool _isPooled;
 
     private void Start()
     {
@@ -18,19 +19,23 @@ public class Bubble : MonoBehaviour
     }
     private void Update()
     {
-        if (transform.position.y < _lineOfWater)
+        if (IsZone())
         {
             if (PlayerPrefs.HasKey("_isPointerDown")) Swimm(_swimm);
             else Swimm(_idl);
         }
         else
         {
-            Destroy(gameObject);
+            if (_isPooled) Pooled();
+            else Regular();
         }
     }
-    private void Swimm(float state)
+    public bool IsZone() => transform.position.y < _lineOfWater && transform.position.x > -4.2f;
+    private void Swimm(float speed)
     {
-        float _climb = Random.Range(0.2f, 0.4f);
-        transform.position = new Vector2(transform.position.x - state * Time.deltaTime, transform.position.y + _climb * Time.deltaTime);
+        float _climb = Random.Range(0.1f, 0.4f);
+        transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y + _climb * Time.deltaTime);
     }
+    private void Regular() => Destroy(gameObject);
+    private void Pooled() => ReturnToPool();
 }

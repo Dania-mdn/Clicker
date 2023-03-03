@@ -270,6 +270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b25944365ea914b87f9bf4aca979b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsLeftBorder: 1
+  IsRightBorder: 1
+  _isPooled: 1
 --- !u!1 &4838158228078269954
 GameObject:
   m_ObjectHideFlags: 0
