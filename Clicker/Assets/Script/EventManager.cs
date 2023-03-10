@@ -39,21 +39,4 @@ public class EventManager
         AdsAllX10,
         Gift
     }
-    //корабль
-    //дельфин
-    //х2 пасивный
-    //х2 за тап
-    //подарок за рекламу
-    //х10
-    //подарок
-    //enum Achiwment
-    //{
-    //    Ship,
-    //    Dolfi,
-    //    AdsPassiwX2,
-    //    AdsClickX2,
-    //    AdsGift,
-    //    AdsAllX10,
-    //    Gift
-    //}
 }

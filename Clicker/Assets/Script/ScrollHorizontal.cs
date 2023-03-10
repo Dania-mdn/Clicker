@@ -39,6 +39,7 @@ public class ScrollHorizontal : MonoBehaviour
     private Vector2 _contentVector;
     private int _selectedPan;
     private bool _isScrolling;
+    public GameObject AlradyBuyButton;
 
     private void Start()
     {
@@ -69,7 +70,6 @@ public class ScrollHorizontal : MonoBehaviour
             ScrollRect.inertia = false;
 
         float nearestPos = float.MaxValue;
-        //PlayerPrefs.SetFloat("Gift", PriceShip[i] / 30);
 
         for (int i = 0; i < PanCount; i++)
         {
@@ -96,6 +96,7 @@ public class ScrollHorizontal : MonoBehaviour
                 else
                 {
                     SpriteColor.color = _open;
+                    ///
                     if (PlayerPrefs.GetInt("Lanqaqe") == 2)
                         PriceShipText.text = "куплений";
                     else if (PlayerPrefs.GetInt("Lanqaqe") == 1)
@@ -128,7 +129,6 @@ public class ScrollHorizontal : MonoBehaviour
         if(SpriteColor.color == _open)
         {
             ManagerButton.CloseAllButton();
-            PlayerPrefs.SetInt("Ship_Trigger", 1);
             MonneyHandler.singleton.TakeManey(PriceShip[_selectedPan]);
             SaveSystem.SaveContain.SaveShipNumber(_selectedPan);
             OpenAvailableShip();
@@ -156,6 +156,7 @@ public class ScrollHorizontal : MonoBehaviour
 
             PriceShip[i] = 0;
         }
+        MonneyHandler.singleton.PrizeMonney = PriceShip[SaveSystem.SaveContain.AvailableShipNumber + 1] / 30;
     }
     public void Scrolling(bool scroll)
     {

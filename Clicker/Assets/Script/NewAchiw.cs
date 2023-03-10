@@ -12,7 +12,7 @@ public class NewAchiw : MonoBehaviour
     }
     public void TakeReward()
     {
-        MonneyHandler.singleton.achivment(i);
+        //MonneyHandler.singleton.achivment(i);
         EventManager.DoBuy();
         Destroy(this.gameObject);
     }
