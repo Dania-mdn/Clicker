@@ -13,45 +13,31 @@ public class Optiuns : MonoBehaviour
     public AudioMixerGroup Sound;
     public Toggle ToggleMusic;
     public Toggle ToggleSound;
-    private Func<string, float, bool> MixerSetVolume;
-
+    private Func<string, float, bool> _mixerSetVolume;
 
     private void Start()
     {
-        MixerSetVolume = Mixer.audioMixer.SetFloat;
+        _mixerSetVolume = Mixer.audioMixer.SetFloat;
 
         if (PlayerPrefs.HasKey(Music.name))
-        {
             LoadVoice(Music, ToggleMusic);
-        }
         if (PlayerPrefs.HasKey(Sound.name))
-        {
             LoadVoice(Sound, ToggleSound);
-        }
     }
     public void Enable(Toggle Toggle)
     {
         if (Toggle.isOn == true)
-        {
             PlayerPrefs.SetInt(Toggle.name, _off);
-        }
         else
-        {
             PlayerPrefs.SetInt(Toggle.name, _on);
-        }
-        MixerSetVolume(Toggle.name, PlayerPrefs.GetInt(Toggle.name));
+
+        _mixerSetVolume(Toggle.name, PlayerPrefs.GetInt(Toggle.name));
     }
     private void LoadVoice(AudioMixerGroup AudioMixer, Toggle toggle)
     {
-        MixerSetVolume(AudioMixer.name, PlayerPrefs.GetInt(AudioMixer.name));
+        _mixerSetVolume(AudioMixer.name, PlayerPrefs.GetInt(AudioMixer.name));
         if (PlayerPrefs.GetInt(AudioMixer.name) == _off)
-        {
             toggle.isOn = true;
-        }
     }
-
-    public void URLInstagramm()
-    {
-        Application.OpenURL("https://www.instagram.com/gamesdmurdok/?hl=ru");
-    }
+    public void URLInstagramm() => Application.OpenURL("https://www.instagram.com/gamesdmurdok/?hl=ru");
 }

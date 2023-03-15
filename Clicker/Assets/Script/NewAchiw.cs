@@ -4,15 +4,15 @@ using TMPro;
 public class NewAchiw : MonoBehaviour
 {
     public TextMeshProUGUI AchivName;
-    public TextMeshProUGUI Reward;
-    public float i;
+    public float Prize;
+    private TextMeshProUGUI _reward;
     private void Start()
     {
-        Reward.text = i.ToString("0");
+        _reward.text = Prize.ToString("0");
     }
     public void TakeReward()
     {
-        //MonneyHandler.singleton.achivment(i);
+        MonneyHandler.singleton.TakeGift();
         EventManager.DoBuy();
         Destroy(this.gameObject);
     }

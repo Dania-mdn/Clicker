@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class DateAndTime
 {
-    public static void SetDateTime (string key, DateTime value)
+    public static void SetDateTime(string key, DateTime value)
     {
         string convertedstotring = value.ToString(format: "u", CultureInfo.InvariantCulture);
         PlayerPrefs.SetString(key, convertedstotring);

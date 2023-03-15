@@ -1,4 +1,4 @@
-public class Upgrade: BazeUpdate
+public class UpgradeModul: BazeUpdate
 {
     public ClickAndPassive UpgradeClick;
     public ClickAndPassive UpgradePassive;

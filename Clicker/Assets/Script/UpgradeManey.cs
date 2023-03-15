@@ -21,7 +21,6 @@ public class UpgradeManey: BazeUpdate
     public override void ClickButton()
     {
         base.ClickButton();
-        //
         _maxMoneyOffline = _maxMoneyOffline + DefaultMaxMoneyOffline;
         TextMaxMoneyOffline.text = "+ " + _maxMoneyOffline.ToString("0") + "%";
         MonneyHandler.singleton.MaxMonneyOfline = _maxMoneyOffline;

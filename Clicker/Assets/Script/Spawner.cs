@@ -31,9 +31,9 @@ public class Spawner : MonoBehaviour
                 _cooldownTimer = Time.time + _spawnCooldown;
 
             float positionX;
-            if (_prefab.IsLeftBorder)
+            if (_prefab.IsLeftBorder && !_prefab.IsRightBorder)
                 positionX = _spawnPositionMinX;
-            else if (_prefab.IsRightBorder)
+            else if (_prefab.IsRightBorder && !_prefab.IsLeftBorder)
                 positionX = _spawnPositionMaxX;
             else
                 positionX = Random.Range(0, 2) == 0 ? _spawnPositionMinX : _spawnPositionMaxX;

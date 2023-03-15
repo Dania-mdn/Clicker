@@ -4,15 +4,10 @@ public class ManagerButton : MonoBehaviour
 {
     public GameObject[] Button;
     public GameObject[] ButtonUpgrade;
-    public void CloseButton(GameObject button)
-    {
-        PlayerPrefs.SetInt("Color", 1);
-        button.SetActive(false);
-    }
+    public void CloseButton(GameObject button) => button.SetActive(false);
     public void OpenButton(GameObject button)
     {
         CloseAllButton();
-        PlayerPrefs.DeleteKey("Color");
         for (int i = 0; i < Button.Length; i++)
         {
             if(Button[i].name == button.name)
@@ -24,7 +19,6 @@ public class ManagerButton : MonoBehaviour
     public void ChengeButton(GameObject button)
     {
         CloseAllButton();
-        PlayerPrefs.DeleteKey("Color");
         for (int i = 0; i < ButtonUpgrade.Length; i++)
         {
             if (ButtonUpgrade[i].name == button.name)
@@ -35,7 +29,6 @@ public class ManagerButton : MonoBehaviour
     }
     public void CloseAllButton()
     {
-        PlayerPrefs.SetInt("Color", 1);
         for (int i = 0; i < ButtonUpgrade.Length; i++)
         {
             ButtonUpgrade[i].transform.position = new Vector3(-10, ButtonUpgrade[i].transform.position.y, ButtonUpgrade[i].transform.position.z);

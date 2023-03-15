@@ -19,7 +19,6 @@ public class RaycastHandler : MonoBehaviour
                 if(hit.transform.GetComponent<PriezeObject>().IsLeftBorder)
                 {
                     CreatePrizeForClick(hit);
-                    //dolfy
                     EventManager.DoNewAchive(_achiveName);
                 }
                 else if (hit.transform.GetComponent<PriezeObject>().IsRightBorder)
@@ -37,10 +36,10 @@ public class RaycastHandler : MonoBehaviour
     private void CreatePrizeForClick(RaycastHit2D hit)
     {
         AdsManager.PlayAudio();
-        //MonneyHandler.singleton.gift();
+        MonneyHandler.singleton.TakeGift();
         _newPrizeForClick = Instantiate(PrizeForClick, hit.transform.position, Quaternion.identity);
         _newPrizeForClick.transform.SetParent(MonneyHandler.singleton.transform);
-        _newPrizeForClick.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetFloat("Gift").ToString("0");
+        _newPrizeForClick.GetComponent<TextMeshProUGUI>().text = MonneyHandler.singleton.PrizeMonney.ToString("0");
         hit.transform.GetComponent<PriezeObject>().Pooled();
     }
 }

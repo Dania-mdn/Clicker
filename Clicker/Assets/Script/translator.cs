@@ -46,7 +46,8 @@ public class Translator : MonoBehaviour
             "Take", //31
             "Language", //32
             "New achievement", //33
-            "to purchase you need:" //34
+            "to purchase you need:", //34
+            "bought" //35
         },
         #endregion
 
@@ -86,7 +87,8 @@ public class Translator : MonoBehaviour
             "Забрать", //31
             "Язык", //32
             "Новое достижение", //33
-            "для покупки необходимо:" //34
+            "для покупки необходимо:", //34
+            "куплен" //35
         },
         #endregion
 
@@ -126,7 +128,8 @@ public class Translator : MonoBehaviour
             "Забрати", //31
             "Мова", //31
             "Нове досягнення", //32
-            "для покупки необхідно:" //34
+            "для покупки необхідно:", //34
+            "куплений" //35
         },
         #endregion
     };

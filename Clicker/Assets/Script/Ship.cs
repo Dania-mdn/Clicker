@@ -22,7 +22,7 @@ public class Ship : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("_isPointerDown"))
         {
-            if(!AudioSource.isPlaying)
+            if(!ParticleSystem.isPlaying)
             {
                 AudioSource.Play();
                 ParticleSystem.Play();
@@ -30,7 +30,7 @@ public class Ship : MonoBehaviour
         }
         else
         {
-            if(AudioSource.isPlaying)
+            if(ParticleSystem.isPlaying)
             {
                 AudioSource.Stop();
                 ParticleSystem.Stop();

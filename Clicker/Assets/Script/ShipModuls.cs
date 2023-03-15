@@ -14,13 +14,9 @@ public class ShipModuls : MonoBehaviour
     {
         if (_coef < 1)
         {
-            _coef = _coef + 0.01f;
+            _coef = _coef + 0.01f; 
+            _spriteRenderer.color = new Color(_coef, _coef, _coef);
             _spriteRenderer.sprite = SpriteArray[Lvl];
-            ChangeColor(_coef);
         }
-    }
-    private void ChangeColor(float coef)
-    {
-        _spriteRenderer.color = new Color(coef, coef, coef);
     }
 }

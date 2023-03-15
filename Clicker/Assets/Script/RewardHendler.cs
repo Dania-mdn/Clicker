@@ -18,7 +18,10 @@ public class RewardHendler : MonoBehaviour
     protected Color _readyForUseColor = new Color(0f, 1f, 0.168f);
     protected bool _ChangeStageOfButton = false;
 
-    void Start() => animation = GetComponent<Animation>();
+    void Start()
+    {
+        animation = GetComponent<Animation>();
+    }
 
     void Update()
     {

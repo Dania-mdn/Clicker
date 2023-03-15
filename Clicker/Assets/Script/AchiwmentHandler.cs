@@ -96,7 +96,6 @@ public class AchiwmentHandler : MonoBehaviour
     {
         _newAchiw = Instantiate(Achiwment, transform.parent.parent);
         var NewAchiw = _newAchiw?.GetComponent<NewAchiw>();
-        //NewAchiw.i = PlayerPrefs.GetFloat("Gift");
         var firstPair = _intermediateAchievementList.FirstOrDefault();
         NewAchiw.AchivName.text = $"{firstPair.FirstOrDefault().Key}, {firstPair.FirstOrDefault().Value}".ToString();
         _intermediateAchievementList.Remove(_intermediateAchievementList.First());

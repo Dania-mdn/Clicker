@@ -23,7 +23,8 @@ public class ScrollHorizontal : MonoBehaviour
     public GameObject[] Ship;
     public ScrollRect ScrollRect;
     public ManagerButton ManagerButton;
-    public TextMeshProUGUI PriceShipText;
+    public GameObject BuyButton;
+    private TextMeshProUGUI _buyButtonText;
     public Image SpriteColor;
     public Color _clos;
     public Color _open;
@@ -52,13 +53,15 @@ public class ScrollHorizontal : MonoBehaviour
 
         for (int i = 0; i < PanCount; i++)
         {
-            _instPans[i] = Instantiate(PanPrefab[i], /*!*/transform, false/*!*/);
+            _instPans[i] = Instantiate(PanPrefab[i], transform, false);
 
             if (i == 0) continue;
             _instPans[i].transform.localPosition = new Vector2(_instPans[i - 1].transform.localPosition.x + PanPrefab[i].GetComponent<RectTransform>().sizeDelta.x + PanOffset, _instPans[i].transform.localPosition.y);
             _pansPos[i] = -_instPans[i].transform.localPosition;
         }
         OpenAvailableShip();
+
+        _buyButtonText = BuyButton.GetComponentInChildren<TextMeshProUGUI>();
     }
     private void Update()
     {
@@ -80,7 +83,9 @@ public class ScrollHorizontal : MonoBehaviour
                 _selectedPan = i;
                 if (PriceShip[i] != 0)
                 {
-                    PriceShipText.text = PriceShip[i].ToString("0");
+                    AlradyBuyButton.SetActive(false);
+                    BuyButton.SetActive(true);
+                    _buyButtonText.text = PriceShip[i].ToString("0");
                     if (PriceShip[i] <= MonneyHandler.singleton.MonneyCount)
                     {
                         if (ToggleEngine.isOn && ToggleConstruction.isOn && ToggleCrev.isOn)
@@ -96,13 +101,8 @@ public class ScrollHorizontal : MonoBehaviour
                 else
                 {
                     SpriteColor.color = _open;
-                    ///
-                    if (PlayerPrefs.GetInt("Lanqaqe") == 2)
-                        PriceShipText.text = "куплений";
-                    else if (PlayerPrefs.GetInt("Lanqaqe") == 1)
-                        PriceShipText.text = "куплен";
-                    else if (PlayerPrefs.GetInt("Lanqaqe") == 0)
-                        PriceShipText.text = "bought";
+                    AlradyBuyButton.SetActive(true);
+                    BuyButton.SetActive(false);
                 }
             }
             PanScale(i, distance);
@@ -134,7 +134,6 @@ public class ScrollHorizontal : MonoBehaviour
             OpenAvailableShip();
             Destroy(_shipScene);
             InitializeShip(_selectedPan);
-            //ship
             EventManager.DoBuy();
             EventManager.DoNewAchive(EventManager.AchiveName.Ship);
         }

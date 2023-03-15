@@ -6,7 +6,7 @@ public class SaveSystem: MonoBehaviour
 {
     [Header("Reservation")]
     public Reservation SaveContain;
-    private string path;
+    private string _path;
 
     private void OnDisable()
     {
@@ -18,16 +18,15 @@ public class SaveSystem: MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
         path = Path.Combine(Application.persistentDataPath, "JSON.json");
 #else
-        path = Path.Combine(Application.dataPath + "JSON.json");
+        _path = Path.Combine(Application.dataPath + "JSON.json");
 #endif
-        
         //if(JsonUtility.FromJson<Reservation>(File.ReadAllText(path)) != null)  ??
         LoadField();
     }
 
     public void LoadField()
     {
-        SaveContain = JsonUtility.FromJson<Reservation>(File.ReadAllText(path));
+        SaveContain = JsonUtility.FromJson<Reservation>(File.ReadAllText(_path));
     }
 
     public void SaveField()
@@ -35,7 +34,7 @@ public class SaveSystem: MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
         if (pause) File.WriteAllText(path, JsonUtility.ToJson(item));
 #endif
-        File.WriteAllText(path, JsonUtility.ToJson(SaveContain));
+        File.WriteAllText(_path, JsonUtility.ToJson(SaveContain));
     }
 
     [System.Serializable]
@@ -70,13 +69,14 @@ public class SaveSystem: MonoBehaviour
         }
         public bool GetAvailable(int Update) => json[AvailableShipNumber].LevelUpgrade[Update] == 15;
     }
-    [System.Serializable]
-    public class Upgrade
-    {
-        private static int _upgradeCount = 14;
-        public int[] LevelUpgrade = new int[_upgradeCount];
-        public int[] ClickIncom = new int[_upgradeCount];
-        public int[] PassIncom = new int[_upgradeCount];
-        public float[] ProgressSlider = new float[_upgradeCount];
-    }
+}
+
+[System.Serializable]
+public class Upgrade
+{
+    private static int _upgradeCount = 14;
+    public int[] LevelUpgrade = new int[_upgradeCount];
+    public int[] ClickIncom = new int[_upgradeCount];
+    public int[] PassIncom = new int[_upgradeCount];
+    public float[] ProgressSlider = new float[_upgradeCount];
 }
