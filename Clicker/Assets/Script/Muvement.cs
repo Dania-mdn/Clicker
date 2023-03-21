@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,21 @@ public class Muvement : MonoBehaviour
     private float positionFitst = 2.83f;
     private float positionTwo = 1.78f;
     private float positionThre = 0.63f;
+    private void OnEnable()
+    {
+        EventManager.TakeReward += TakeReward;
+    }
+    private void OnDisable()
+    {
+        EventManager.TakeReward -= TakeReward;
+    }
+
+    private void TakeReward()
+    {
+        if(QueueCount > 0)
+        QueueCount--;
+    }
+
     void Update()
     {
         if(QueueCount == 0)

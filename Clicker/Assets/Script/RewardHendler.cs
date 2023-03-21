@@ -38,18 +38,3 @@ public class RewardHendler : MonoBehaviour
         AdsManager.ActivReward(RewardName);
     }
 }
-
-//public void Load()
-//{
-//    SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
-//    TimeBonusForClickIncome = SaveContain.TimeBonusForClickIncome;
-//    TimeBonusforPassiveIncome = SaveContain.TimeBonusforPassiveIncome;
-//    TimeBonusforAllIncome = SaveContain.TimeBonusforAllIncome;
-//}
-//public void Save()
-//{
-//    SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
-//    SaveContain.TimeBonusForClickIncome = TimeBonusForClickIncome;
-//    SaveContain.TimeBonusforPassiveIncome = TimeBonusforPassiveIncome;
-//    SaveContain.TimeBonusforAllIncome = TimeBonusforAllIncome;
-//}

@@ -8,6 +8,7 @@ public class EventManager
     public static event Action SetBuy;
     public static event Action<int> SetNewAvalable;
     public static event Action<int> SetNewAchive;
+    public static event Action TakeReward;
 
     public static void DoBuy()
     {
@@ -20,6 +21,10 @@ public class EventManager
     public static void DoNewAchive(AchiveName numberAchive)
     {
         SetNewAchive?.Invoke((int)numberAchive);
+    }
+    public static void DoTakeReward()
+    {
+        TakeReward?.Invoke();
     }
     public enum UpgradeName
     {

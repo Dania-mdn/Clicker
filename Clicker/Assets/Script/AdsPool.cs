@@ -27,7 +27,8 @@ public class AdsPool : MonoBehaviour
             queueCount = 0;
         }
 
-        if (_queue.Count > 2) Dequeue();
+        Debug.Log(_queue.Count);
+        if (_queue.Count > 2) TakeReward();
     }
     private void Enqueue(GameObject gameObject)
     {
@@ -36,9 +37,18 @@ public class AdsPool : MonoBehaviour
         gameObject.transform.position = _startPosition;
         gameObject.GetComponent<Muvement>().QueueCount = queueCount;
     }
-    public void Dequeue()
+    public void TakeReward()
     {
+        EventManager.DoTakeReward();
+        queueCount--;
         var queue = _queue.Dequeue();
         queue.SetActive(false);
     }
+    //public void TakeReward(GameObject go)
+    //{
+    //    EventManager.DoTakeReward();
+    //    queueCount--;
+    //    var queue = _queue.
+    //    //queue.SetActive(false);
+    //}
 }
