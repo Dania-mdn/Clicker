@@ -122,7 +122,7 @@ TextureImporter:
         x: 1100
         y: 725
         width: 1077
-        height: 509
+        height: 487
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -955,8 +955,8 @@ TextureImporter:
       Main_Image_29: -31305989
       Main_Image_26: 1665375344
       Main_Image_21: -4544873
-      Main_Image_51: -1559541533
       Main_Image_58: 244694253
+      Main_Image_51: -1559541533
       Main_Image_5: -1599584502
       Main_Image_40: 928646578
       Main_Image_53: 515865950

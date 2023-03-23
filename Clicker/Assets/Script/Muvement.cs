@@ -6,9 +6,7 @@ using UnityEngine;
 public class Muvement : MonoBehaviour
 {
     public int QueueCount;
-    private float positionFitst = 2.83f;
-    private float positionTwo = 1.78f;
-    private float positionThre = 0.63f;
+    private Vector2[] position = new Vector2[3];
     private void OnEnable()
     {
         EventManager.TakeReward += TakeReward;
@@ -17,29 +15,33 @@ public class Muvement : MonoBehaviour
     {
         EventManager.TakeReward -= TakeReward;
     }
-
+    private void Start()
+    {
+        position[0] = new Vector2(transform.position.x, 2.83f);
+        position[1] = new Vector2(transform.position.x, 1.78f);
+        position[2] = new Vector2(transform.position.x, 0.63f);
+        StartCoroutine(MuveUp(position[QueueCount]));
+    }
     private void TakeReward()
     {
-        if(QueueCount > 0)
-        QueueCount--;
+        if (QueueCount > 0)
+            QueueCount--;
+        else
+            Destroy(gameObject);
+        StartCoroutine(MuveUp(position[QueueCount]));
     }
-
-    void Update()
+    IEnumerator MuveUp(Vector2 endPosition)
     {
-        if(QueueCount == 0)
+        Vector2 startPos = this.transform.position;
+
+        float duration = 3;
+        float elapsedTime = 0.0f;
+
+        while (elapsedTime < duration)
         {
-            if (transform.position.y < positionFitst)
-                transform.position = new Vector2(transform.position.x, transform.position.y + 0.1f);
-        }
-        else if (QueueCount == 1)
-        {
-            if (transform.position.y < positionTwo)
-                transform.position = new Vector2(transform.position.x, transform.position.y + 0.1f);
-        }
-        else if (QueueCount == 2)
-        {
-            if (transform.position.y < positionThre)
-                transform.position = new Vector2(transform.position.x, transform.position.y + 0.1f);
+            transform.position = Vector2.Lerp(startPos, endPosition, (elapsedTime / duration));
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
     }
 }
