@@ -1,27 +1,25 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using GoogleMobileAds.Api;
 
 public class RewardHendlerInTime : RewardHendler
 {
-    public TextMeshProUGUI TimerReward;
-    public Sprite DefaultImage;
-    public Sprite ActiwTimerImage;
+    [SerializeField] private TextMeshProUGUI _timerRewardActiv;
+    [SerializeField] private Sprite _actiwTimerImage;
+
     private Image _image;
-    private bool _isOn = false;
+    private Sprite _defaultImage;
+    private bool _isRewardActiv = false;
     void Start()
     {
         _image = GetComponent<Image>();
-        animation = GetComponent<Animation>();
+        _defaultImage = _image.sprite;
+        _animation = GetComponent<Animation>();
     }
 
     void Update()
     {
-        if (AdsManager.RewardedAd.IsLoaded() && _ChangeStageOfButton == false)
+        if (_adsManager.RewardedAd.IsLoaded() && _ChangeStageOfButton == false)
         {
             ReadyForUseButton();
             _ChangeStageOfButton = true;
@@ -29,26 +27,26 @@ public class RewardHendlerInTime : RewardHendler
 
         foreach (var rewardContain in MonneyHandler.singleton.RewardContain)
         {
-            if (rewardContain.RewardName == RewardName)
+            if (rewardContain.RewardName == _rewardName)
             {
                 if (rewardContain.TimeForReward > 0)
                 {
-                    ShowTime(rewardContain.TimeForReward, TimerReward);
-                    if (_isOn)
+                    ShowTime(rewardContain.TimeForReward, _timerRewardActiv);
+                    if (_isRewardActiv)
                     {
-                        _image.sprite = ActiwTimerImage;
-                        TimerReward.enabled = true;
-                        _isOn = false;
+                        _image.sprite = _actiwTimerImage;
+                        _timerRewardActiv.enabled = true;
+                        _isRewardActiv = false;
                     }
                 }
                 else
                 {
-                    if(_isOn == false)
+                    if(_isRewardActiv == false)
                     {
-                        _image.sprite = DefaultImage;
-                        TimerReward.enabled = false;
-                        animation.Play();
-                        _isOn = true;
+                        _image.sprite = _defaultImage;
+                        _timerRewardActiv.enabled = false;
+                        _animation.Play();
+                        _isRewardActiv = true;
                     }
                 }
             }

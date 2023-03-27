@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6315244106114875627}
   - component: {fileID: 6315244106114875636}
-  - component: {fileID: 6315244106114875626}
+  - component: {fileID: 3442364992305136931}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6315244106114875626
+--- !u!114 &3442364992305136931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,5 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsLeftBorder: 0
-  IsRightBorder: 1
+  IsRightBorder: 0
   _isPooled: 1

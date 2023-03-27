@@ -43,7 +43,7 @@ public class SaveSystem: MonoBehaviour
         private static int ShipCount = 7;
         public int AvailableShipNumber;
         public int ShipNumber;
-        public Upgrade[] json = new Upgrade[ShipCount];
+        public Upgrade[] Upgrade = new Upgrade[ShipCount];
 
         public float MonneyCount;
         public float ManeyInSecond;
@@ -54,20 +54,20 @@ public class SaveSystem: MonoBehaviour
         public float TimeBonusforAllIncome;
 
         public int DolfyCount;
-        public void SaveLevelUpgrade(int IdModul, int Value) => json[ShipNumber].LevelUpgrade[IdModul] = Value;
-        public void SaveClickIncom(int IdModul, int Value) => json[ShipNumber].ClickIncom[IdModul] = Value;
-        public void SavePassIncom(int IdModul, int Value) => json[ShipNumber].PassIncom[IdModul] = Value;
-        public void SaveProgressSlider(int IdModul, float Value) => json[ShipNumber].ProgressSlider[IdModul] = Value;
-        public int LoadlLevelUpgrade(int IdModul) => json[ShipNumber].LevelUpgrade[IdModul];
-        public int LoadClickIncom(int IdModul) => json[ShipNumber].ClickIncom[IdModul];
-        public int LoadlPassIncom(int IdModul) => json[ShipNumber].PassIncom[IdModul];
-        public float LoadlProgressSlider(int IdModul) => json[ShipNumber].ProgressSlider[IdModul];
+        public void SaveLevelUpgrade(int IdModul, int Value) => Upgrade[ShipNumber].LevelUpgrade[IdModul] = Value;
+        public void SaveClickIncom(int IdModul, int Value) => Upgrade[ShipNumber].ClickIncom[IdModul] = Value;
+        public void SavePassIncom(int IdModul, int Value) => Upgrade[ShipNumber].PassIncom[IdModul] = Value;
+        public void SaveProgressSlider(int IdModul, float Value) => Upgrade[ShipNumber].ProgressSlider[IdModul] = Value;
+        public int LoadlLevelUpgrade(int IdModul) => Upgrade[ShipNumber].LevelUpgrade[IdModul];
+        public int LoadClickIncom(int IdModul) => Upgrade[ShipNumber].ClickIncom[IdModul];
+        public int LoadlPassIncom(int IdModul) => Upgrade[ShipNumber].PassIncom[IdModul];
+        public float LoadlProgressSlider(int IdModul) => Upgrade[ShipNumber].ProgressSlider[IdModul];
         public void SaveShipNumber(int ShipNumber) 
         {
             this.ShipNumber = ShipNumber;
             AvailableShipNumber = AvailableShipNumber < ShipNumber ? ShipNumber : AvailableShipNumber;
         }
-        public bool GetAvailable(int Update) => json[AvailableShipNumber].LevelUpgrade[Update] == 15;
+        public bool GetAvailable(int Update) => Upgrade[AvailableShipNumber].LevelUpgrade[Update] == 15;
     }
 }
 

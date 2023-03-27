@@ -3,65 +3,65 @@ using UnityEngine.UI;
 
 public class Snapscrolling : MonoBehaviour
 {
-    [Range(1, 50)]
     [Header("Controllers")]
-    public int panCount;
     [Range(0f, 20f)]
-    public float snapSpeed;
+    [SerializeField] private float _snapSpeed;
+
     [Range(1f, 20f)]
     [Header("Other Objects")]
-    public GameObject[] panPrefab;
-    public ScrollRect scrollRect;
+    [SerializeField] private GameObject[] _panPrefab;
+    [SerializeField] private ScrollRect _scrollRect;
 
-    private GameObject[] instPans;
-    private Vector2[] pansPos;
+    private GameObject[] _instPans;
+    private Vector2[] _pansPos;
 
-    private RectTransform contentRect;
-    private Vector2 contentVector;
+    private RectTransform _contentRect;
+    private Vector2 _contentVector;
 
-    private int selectedPanID;
-    private bool isScrolling;
+    private int _selectedPanID;
+    private bool _isScrolling;
 
     private void Start()
     {
-        contentRect = GetComponent<RectTransform>();
-        instPans = new GameObject[panCount];
-        pansPos = new Vector2[panCount];
-        for (int i = 0; i < panCount; i++)
+        _contentRect = GetComponent<RectTransform>();
+        _instPans = new GameObject[_panPrefab.Length];
+        _pansPos = new Vector2[_panPrefab.Length];
+
+        for (int i = 0; i < _panPrefab.Length; i++)
         {
-            instPans[i] = panPrefab[i];
-            instPans[i].transform.localPosition = panPrefab[i].transform.localPosition;
-            pansPos[i] = -instPans[i].transform.localPosition;
+            _instPans[i] = _panPrefab[i];
+            _instPans[i].transform.localPosition = _panPrefab[i].transform.localPosition;
+            _pansPos[i] = -_instPans[i].transform.localPosition;
         }
     }
 
     private void FixedUpdate()
     {
-        if (contentRect.anchoredPosition.y <= pansPos[0].y && !isScrolling || contentRect.anchoredPosition.y >= pansPos[pansPos.Length - 3].y && !isScrolling)
+        if (_contentRect.anchoredPosition.y <= _pansPos[0].y && !_isScrolling || _contentRect.anchoredPosition.y >= _pansPos[_pansPos.Length - 3].y && !_isScrolling)
         {
-            scrollRect.inertia = false;
+            _scrollRect.inertia = false;
             float nearestPos = float.MaxValue;
 
-            for (int i = 0; i < panCount; i++)
+            for (int i = 0; i < _panPrefab.Length; i++)
             {
-                float distance = Mathf.Abs(contentRect.anchoredPosition.y - pansPos[i].y);
+                float distance = Mathf.Abs(_contentRect.anchoredPosition.y - _pansPos[i].y);
                 if (distance > nearestPos)
                 {
                     nearestPos = distance;
-                    selectedPanID = i;
+                    _selectedPanID = i;
                 }
             }
-            float scrollVelocity = Mathf.Abs(scrollRect.velocity.y);
-            if (scrollVelocity < 0 && !isScrolling) scrollRect.inertia = false;
-            if (isScrolling || scrollVelocity > 0) return;
-            contentVector.y = Mathf.SmoothStep(contentRect.anchoredPosition.y, pansPos[selectedPanID].y - 320, snapSpeed * Time.fixedDeltaTime);
-            contentRect.anchoredPosition = contentVector;
+            float scrollVelocity = Mathf.Abs(_scrollRect.velocity.y);
+            if (scrollVelocity < 0 && !_isScrolling) _scrollRect.inertia = false;
+            if (_isScrolling || scrollVelocity > 0) return;
+            _contentVector.y = Mathf.SmoothStep(_contentRect.anchoredPosition.y, _pansPos[_selectedPanID].y - 320, _snapSpeed * Time.fixedDeltaTime);
+            _contentRect.anchoredPosition = _contentVector;
         }
     }
 
     public void Scrolling(bool scroll)
     {
-        isScrolling = scroll;
-        if (scroll) scrollRect.inertia = true;
+        _isScrolling = scroll;
+        if (scroll) _scrollRect.inertia = true;
     }
 }

@@ -23,9 +23,6 @@ public class MonneyHandler : MonoBehaviour
     Color _defoltMonneyColor = new Color(0.3f, 0.3f, 0.3f);
     private Color _addMonneyColor = new Color(0.2622374f, 0.6698113f, 0.3052149f);
     public RewardContain[] RewardContain = new RewardContain[3];
-    public RewardContain DoubleForClik;
-    public RewardContain DoubleForPassiwe;
-    public RewardContain AllInkomeX10;
 
     public int[] price0;
     public int[] price1;

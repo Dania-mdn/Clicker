@@ -4843,7 +4843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2976821422807525737}
   - component: {fileID: 818353086696849219}
-  - component: {fileID: 67290777192060495}
+  - component: {fileID: 701231638359418344}
   m_Layer: 0
   m_Name: "\u0421arcass"
   m_TagString: Untagged
@@ -4918,7 +4918,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &67290777192060495
+--- !u!114 &701231638359418344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4930,13 +4930,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01f383cb2122be47b5937cfe3feed77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteArray:
+  _spriteArray:
   - {fileID: -1022227612, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: -1148802932, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: 1843416458, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: -1893286189, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   Lvl: 0
-  _coef: 1
 --- !u!1 &4505178354736395759
 GameObject:
   m_ObjectHideFlags: 0
@@ -4947,7 +4946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228889609367266677}
   - component: {fileID: 6151529719081744050}
-  - component: {fileID: 5577315469580384442}
+  - component: {fileID: 5170789506490061072}
   m_Layer: 0
   m_Name: Engine
   m_TagString: Untagged
@@ -5022,7 +5021,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5577315469580384442
+--- !u!114 &5170789506490061072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5034,13 +5033,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01f383cb2122be47b5937cfe3feed77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteArray:
+  _spriteArray:
   - {fileID: 868559681, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: -428926805, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: 1277251830, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: 792879471, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   Lvl: 0
-  _coef: 1
 --- !u!1 &5571983316509801287
 GameObject:
   m_ObjectHideFlags: 0
@@ -5220,11 +5218,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e08e253e9928a48bf01aadbca204aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipModuls:
-  - {fileID: 5577315469580384442}
-  - {fileID: 2707789037288095197}
-  - {fileID: 67290777192060495}
-  ParticleSystem: {fileID: 9217921831618297490}
+  _shipModuls:
+  - {fileID: 5170789506490061072}
+  - {fileID: 1497616735548711588}
+  - {fileID: 701231638359418344}
+  _particleSystem: {fileID: 9217921831618297490}
+  SaveSystem: {fileID: 0}
+  ShipNumber: 0
 --- !u!1 &8827215477429209515
 GameObject:
   m_ObjectHideFlags: 0
@@ -5235,7 +5235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 974869206755337851}
   - component: {fileID: 2200866842364407534}
-  - component: {fileID: 2707789037288095197}
+  - component: {fileID: 1497616735548711588}
   m_Layer: 0
   m_Name: Deckhouse
   m_TagString: Untagged
@@ -5310,7 +5310,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2707789037288095197
+--- !u!114 &1497616735548711588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5322,10 +5322,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01f383cb2122be47b5937cfe3feed77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteArray:
+  _spriteArray:
   - {fileID: 965050848, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: -608964548, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: 1078578908, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: -1224504225, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   Lvl: 0
-  _coef: 1

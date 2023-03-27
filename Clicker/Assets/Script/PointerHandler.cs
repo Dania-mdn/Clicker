@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class PointerHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public ManagerButton ManagerButton;
+    [SerializeField] private ManagerButton ManagerButton;
     public ParticleSystem Cursor;
     public Slider FuelProgressSlider;
     public Transform TransformFuel;

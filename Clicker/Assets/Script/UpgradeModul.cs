@@ -1,30 +1,32 @@
+using UnityEngine;
+
 public class UpgradeModul: BazeUpdate
 {
-    public ClickAndPassive UpgradeClick;
-    public ClickAndPassive UpgradePassive;
+    [SerializeField] private ClickAndPassive _upgradeClick;
+    [SerializeField] private ClickAndPassive _upgradePassive;
     public override void Start()
     {
         base.Start();
 
-        ChangeValues(UpgradeClick);
-        ChangeValues(UpgradePassive); 
+        ChangeValues(_upgradeClick);
+        ChangeValues(_upgradePassive); 
     }
     public override void ClozeButton(string Pricetext, bool isMaxUpgrade)
     {
         base.ClozeButton(Pricetext, isMaxUpgrade);
         if(isMaxUpgrade)
         {
-            UpgradeClick.Upgrade.text = "MAX".ToString();
-            UpgradePassive.Upgrade.text = "MAX".ToString();
+            _upgradeClick.Upgrade.text = "MAX".ToString();
+            _upgradePassive.Upgrade.text = "MAX".ToString();
         }
     }
     public override void ClickButton()
     {
         base.ClickButton();
-        ChangeValues(UpgradeClick);
-        AddValues(UpgradeClick);
-        ChangeValues(UpgradePassive);
-        AddValues(UpgradePassive);
+        ChangeValues(_upgradeClick);
+        AddValues(_upgradeClick);
+        ChangeValues(_upgradePassive);
+        AddValues(_upgradePassive);
     }
     public void ChangeValues(ClickAndPassive objectUpgrade)
     {
@@ -40,14 +42,14 @@ public class UpgradeModul: BazeUpdate
     {
         base.Save();
         SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
-        SaveContain.SaveClickIncom(IdModul, UpgradeClick.ValueUpgrade);
-        SaveContain.SavePassIncom(IdModul, UpgradePassive.ValueUpgrade);
+        SaveContain.SaveClickIncom(IdModul, _upgradeClick.ValueUpgrade);
+        SaveContain.SavePassIncom(IdModul, _upgradePassive.ValueUpgrade);
     }
     public override void Load()
     {
         base.Load();
         SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
-        UpgradeClick.ValueUpgrade = SaveContain.LoadClickIncom(IdModul);
-        UpgradePassive.ValueUpgrade = SaveContain.LoadlPassIncom(IdModul);
+        _upgradeClick.ValueUpgrade = SaveContain.LoadClickIncom(IdModul);
+        _upgradePassive.ValueUpgrade = SaveContain.LoadlPassIncom(IdModul);
     }
 }

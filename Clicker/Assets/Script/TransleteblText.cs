@@ -3,8 +3,9 @@ using TMPro;
 
 public class TransleteblText : MonoBehaviour
 {
+    [Header("IDInEnum")]
     public int textID;
-    public TextMeshProUGUI UItext;
+    [HideInInspector] public TextMeshProUGUI UItext;
     void Awake()
     {
         UItext = GetComponent<TextMeshProUGUI>();

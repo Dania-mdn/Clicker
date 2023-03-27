@@ -1,28 +1,30 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class UpgradeManey: BazeUpdate
 {
-    public int DefaultMaxMoneyOffline = 1000;
-    public TextMeshProUGUI TextMaxMoneyOffline;
+    [Header("Controllers")]
+    [Range(500, 5000)]
+    [SerializeField] private int _addToMaxMoneyOffline = 1000;
+    [Header("Other Objects")]
+    [SerializeField] private TextMeshProUGUI _textMaxMoneyOffline;
     private float _maxMoneyOffline;
 
     public override void Start()
     {
         base.Start();
-        TextMaxMoneyOffline.text = $"+ {_maxMoneyOffline} ";
+        _textMaxMoneyOffline.text = $"+ {_maxMoneyOffline} ";
     }
     public override void ClozeButton(string Pricetext, bool isMaxUpgrade)
     {
         base.ClozeButton(Pricetext, isMaxUpgrade);
-        if (isMaxUpgrade) TextMaxMoneyOffline.text = "MAX".ToString();
+        if (isMaxUpgrade) _textMaxMoneyOffline.text = "MAX".ToString();
     }
     public override void ClickButton()
     {
         base.ClickButton();
-        _maxMoneyOffline = _maxMoneyOffline + DefaultMaxMoneyOffline;
-        TextMaxMoneyOffline.text = "+ " + _maxMoneyOffline.ToString("0") + "%";
+        _maxMoneyOffline = _maxMoneyOffline + _addToMaxMoneyOffline;
+        _textMaxMoneyOffline.text = "+ " + _maxMoneyOffline.ToString("0") + "%";
         MonneyHandler.singleton.MaxMonneyOfline = _maxMoneyOffline;
     }
     public override void Save()

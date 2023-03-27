@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class ShipModuls : MonoBehaviour
 {
-    private SpriteRenderer _spriteRenderer; 
-    public Sprite[] SpriteArray;
-    public int Lvl;
+    [SerializeField] private Sprite[] _spriteArray = new Sprite[4];
+    [HideInInspector] public int Lvl;
 
-    private Color starColor = new Color(0, 0, 0);
+    private SpriteRenderer _spriteRenderer;
+    private Color _starColor = new Color(0, 0, 0);
     private Color _endColor = new Color(1, 1, 1);
     private void Awake()
     {
@@ -19,13 +19,13 @@ public class ShipModuls : MonoBehaviour
     }
     IEnumerator ColorTransitionCoroutine()
     {
-        _spriteRenderer.sprite = SpriteArray[Lvl];
+        _spriteRenderer.sprite = _spriteArray[Lvl];
         float duration = 3;
         float elapsedTime = 0.0f;
 
         while (elapsedTime < duration)
         {
-            _spriteRenderer.color = Color.Lerp(starColor, _endColor, (elapsedTime / duration));
+            _spriteRenderer.color = Color.Lerp(_starColor, _endColor, (elapsedTime / duration));
             elapsedTime += Time.deltaTime;
             yield return null;
         }

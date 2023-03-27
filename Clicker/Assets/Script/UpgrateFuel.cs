@@ -4,40 +4,43 @@ using TMPro;
 
 public class UpgrateFuel: BazeUpdate
 {
-    public Slider MaxValueSlider;
-    public int Defaul—istern = 1;
-    public TextMeshProUGUI Text—istern;
-    private float _cistern = 3;
+    [Header("Controllers")]
+    [Range(1, 5)]
+    [SerializeField] private int _addToMaxValue = 1;
+    [Header("Other Objects")]
+    [SerializeField] private Slider _slider;
+    [SerializeField] private TextMeshProUGUI _text—istern;
+    private float _maxValue = 3;
 
     public override void Start()
     {
         base.Start();
-        Text—istern.text = $"+ {_cistern} ";
-        MaxValueSlider.maxValue = _cistern;
+        _text—istern.text = $"+ {_maxValue} ";
+        _slider.maxValue = _maxValue;
     }
     public override void ClozeButton(string Pricetext, bool isMaxUpgrade)
     {
         base.ClozeButton(Pricetext, isMaxUpgrade);
-        if (isMaxUpgrade) Text—istern.text = "MAX".ToString();
+        if (isMaxUpgrade) _text—istern.text = "MAX".ToString();
     }
     public override void ClickButton()
     {
         base.ClickButton();
-        _cistern = _cistern + Defaul—istern;
-        Text—istern.text = "+ " + _cistern.ToString("0") + "%";
-        MaxValueSlider.maxValue = _cistern;
-        MonneyHandler.singleton.MaxMonneyOfline = _cistern;
+        _maxValue = _maxValue + _addToMaxValue;
+        _text—istern.text = "+ " + _maxValue.ToString("0") + "%";
+        _slider.maxValue = _maxValue;
+        MonneyHandler.singleton.MaxMonneyOfline = _maxValue;
     }
     public override void Save()
     {
         base.Save();
         SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
-        SaveContain.Cistern = _cistern;
+        SaveContain.Cistern = _maxValue;
     }
     public override void Load()
     {
         base.Load();
         SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
-        _cistern = SaveContain.Cistern;
+        _maxValue = SaveContain.Cistern;
     }
 }

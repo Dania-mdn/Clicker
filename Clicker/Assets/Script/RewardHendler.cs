@@ -1,40 +1,33 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using GoogleMobileAds.Api;
 
 public class RewardHendler : MonoBehaviour
 {
-    public SaveSystem SaveSystem;
-    public AdsManager AdsManager;
-    public AdsManager.RewardName RewardName;
+    [SerializeField] protected AdsManager _adsManager;
+    [SerializeField] protected AdsManager.RewardName _rewardName;
+    [SerializeField] private Image _rewardPanelButton;
 
-    protected new Animation animation;
-
-    public Image RewardPanelButton;
+    protected Animation _animation;
     protected Color _readyForUseColor = new Color(0f, 1f, 0.168f);
     protected bool _ChangeStageOfButton = false;
 
     void Start()
     {
-        animation = GetComponent<Animation>();
+        _animation = GetComponent<Animation>();
     }
 
     void Update()
     {
-        if (AdsManager.RewardedAd.IsLoaded() && _ChangeStageOfButton == false)
+        if (_adsManager.RewardedAd.IsLoaded() && _ChangeStageOfButton == false)
         {
             ReadyForUseButton();
             _ChangeStageOfButton = true;
         }
     }
-    protected void ReadyForUseButton() => RewardPanelButton.color = _readyForUseColor;
+    protected void ReadyForUseButton() => _rewardPanelButton.color = _readyForUseColor;
     public void ActivReward()
     {
-        if (RewardPanelButton.color != _readyForUseColor) return;
-        AdsManager.ActivReward(RewardName);
+        if (_rewardPanelButton.color != _readyForUseColor) return;
+        _adsManager.ActivReward(_rewardName);
     }
 }

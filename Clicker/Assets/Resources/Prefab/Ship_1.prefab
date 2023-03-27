@@ -97,13 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01f383cb2122be47b5937cfe3feed77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteArray:
+  _spriteArray:
   - {fileID: -1050923907, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: -21007883, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: 402047753, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: -92534682, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   Lvl: 0
-  _coef: 1
 --- !u!1 &1580079509547428680
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,13 +200,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01f383cb2122be47b5937cfe3feed77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteArray:
+  _spriteArray:
   - {fileID: 990186259, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: -1939376370, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: 2005976204, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: -1265559257, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   Lvl: 0
-  _coef: 1
 --- !u!1 &5902138407720212236
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,13 +303,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01f383cb2122be47b5937cfe3feed77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteArray:
+  _spriteArray:
   - {fileID: 565359726, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: -1227853420, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: 996644543, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   - {fileID: -140518960, guid: 7a0ed1ae97bb99e46a4f99c6e32dc007, type: 3}
   Lvl: 0
-  _coef: 1
 --- !u!1 &7366661278848116192
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e08e253e9928a48bf01aadbca204aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SaveSystem: {fileID: 0}
+  ShipNumber: 0
   ShipModuls:
   - {fileID: 8403852812253199549}
   - {fileID: 2686749326808709640}
