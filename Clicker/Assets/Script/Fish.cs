@@ -22,9 +22,10 @@ public class Fish : PooledItem
     }
     private void Update()
     {
+        bool isPointerDown = Input.GetMouseButton(0);
         if (IsZone())
         {
-            _boostSpeed = PlayerPrefs.HasKey("_isPointerDown") ? 0.04f : 0;
+            _boostSpeed = isPointerDown ? 0.04f : 0;
 
             Swimm(_boostSpeed, _directionHorizontal, _directionVertical);
 

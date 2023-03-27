@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Muvement : MonoBehaviour
 {
-    public int QueueCount;
-    private Vector2[] position = new Vector2[3];
+    private Vector2 position;
     private void OnEnable()
     {
         EventManager.TakeReward += TakeReward;
@@ -17,18 +16,12 @@ public class Muvement : MonoBehaviour
     }
     private void Start()
     {
-        position[0] = new Vector2(transform.position.x, 2.83f);
-        position[1] = new Vector2(transform.position.x, 1.78f);
-        position[2] = new Vector2(transform.position.x, 0.63f);
-        StartCoroutine(MuveUp(position[QueueCount]));
+        position = new Vector2(transform.position.x, 2.83f);
+        StartCoroutine(MuveUp(position));
     }
     private void TakeReward()
     {
-        if (QueueCount > 0)
-            QueueCount--;
-        else
-            Destroy(gameObject);
-        StartCoroutine(MuveUp(position[QueueCount]));
+        gameObject.SetActive(false);
     }
     IEnumerator MuveUp(Vector2 endPosition)
     {

@@ -58,12 +58,10 @@ public class PointerHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     {
         ManagerButton.CloseAllButton();
         _isPointerDown = true;
-        PlayerPrefs.SetInt("_isPointerDown", 1);
     }
     public void OnPointerUp(PointerEventData pointerEventData)
     {
         _isPointerDown = false;
-        PlayerPrefs.DeleteKey("_isPointerDown");
     }
     private void ScaleFuel(float fuelScale) => TransformFuel.localScale = new Vector2(fuelScale, fuelScale);
     public void Delete_Save() => PlayerPrefs.DeleteAll();

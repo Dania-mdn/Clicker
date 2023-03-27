@@ -41,7 +41,7 @@ public abstract class BazeUpdate : MonoBehaviour
     {
         _price = MonneyHandler.singleton.PriceUpgrade[SaveSystem.SaveContain.ShipNumber];
 
-        LevelUpgrade.text = "lvl " + _levelUpgrade.ToString("0"); //??
+        LevelUpgrade.text = "lvl " + _levelUpgrade.ToString("0");
 
         if (ProgressSlider.value > 0.9)
         {
@@ -109,6 +109,5 @@ public abstract class BazeUpdate : MonoBehaviour
         SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
         _levelUpgrade = SaveContain.LoadlLevelUpgrade(IdModul);
         ProgressSlider.value = SaveContain.LoadlProgressSlider(IdModul);
-        //_shipNumber = SaveContain.ShipNumber;
     }
 }

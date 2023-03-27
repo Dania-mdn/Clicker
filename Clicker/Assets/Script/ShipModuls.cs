@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ShipModuls : MonoBehaviour
@@ -5,18 +6,28 @@ public class ShipModuls : MonoBehaviour
     private SpriteRenderer _spriteRenderer; 
     public Sprite[] SpriteArray;
     public int Lvl;
-    public float _coef = 1;
-    private void Start()
+
+    private Color starColor = new Color(0, 0, 0);
+    private Color _endColor = new Color(1, 1, 1);
+    private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    private void Update()
+    public void SetColor()
     {
-        if (_coef < 1)
+        StartCoroutine(ColorTransitionCoroutine());
+    }
+    IEnumerator ColorTransitionCoroutine()
+    {
+        _spriteRenderer.sprite = SpriteArray[Lvl];
+        float duration = 3;
+        float elapsedTime = 0.0f;
+
+        while (elapsedTime < duration)
         {
-            _coef = _coef + 0.01f; 
-            _spriteRenderer.color = new Color(_coef, _coef, _coef);
-            _spriteRenderer.sprite = SpriteArray[Lvl];
+            _spriteRenderer.color = Color.Lerp(starColor, _endColor, (elapsedTime / duration));
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
     }
 }

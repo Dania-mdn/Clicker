@@ -20,7 +20,9 @@ public class Ship : MonoBehaviour
     }
     private void Update()
     {
-        if (PlayerPrefs.HasKey("_isPointerDown"))
+        bool isPointerDown = Input.GetMouseButton(0);
+
+        if (isPointerDown)
         {
             if(!ParticleSystem.isPlaying)
             {
@@ -55,6 +57,6 @@ public class Ship : MonoBehaviour
     public void Modul(ShipModuls objectModuls, int lvlUpgrade)
     {
         objectModuls.Lvl = lvlUpgrade / 5;
-        objectModuls._coef = 0;
+        objectModuls.SetColor();
     }
 }

@@ -7,7 +7,7 @@ public class UpgrateFuel: BazeUpdate
     public Slider MaxValueSlider;
     public int Defaul—istern = 1;
     public TextMeshProUGUI Text—istern;
-    private float _cistern;
+    private float _cistern = 3;
 
     public override void Start()
     {

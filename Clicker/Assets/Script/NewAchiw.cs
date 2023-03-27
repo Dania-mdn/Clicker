@@ -4,8 +4,8 @@ using TMPro;
 public class NewAchiw : MonoBehaviour
 {
     public TextMeshProUGUI AchivName;
-    public float Prize;
     private TextMeshProUGUI _reward;
+    public float Prize;
     private void Start()
     {
         _reward.text = Prize.ToString("0");

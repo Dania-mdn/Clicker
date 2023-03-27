@@ -24,7 +24,6 @@ public class AchiwmentHandler : MonoBehaviour
     }
     private void Start()
     {
-        //Load();
         _achievementValues = new int[achievementDescriptions.Length];
     }
     private void Update()
@@ -81,7 +80,6 @@ public class AchiwmentHandler : MonoBehaviour
                     break;
                 }
         }
-        //Save();
     }
 
     private void AddToListNewAchiwment(int numberAchiv)

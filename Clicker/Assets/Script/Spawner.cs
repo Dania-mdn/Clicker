@@ -23,9 +23,10 @@ public class Spawner : MonoBehaviour
     }
     void Update()
     {
+        bool isPointerDown = Input.GetMouseButton(0);
         if (Time.time > _cooldownTimer)
         {
-            if (PlayerPrefs.HasKey("_isPointerDown"))
+            if (isPointerDown)
                 _cooldownTimer = Time.time + _spawnCooldown / 4;
             else
                 _cooldownTimer = Time.time + _spawnCooldown;

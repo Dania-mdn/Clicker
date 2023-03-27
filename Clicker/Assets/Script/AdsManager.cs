@@ -45,16 +45,16 @@ public class AdsManager : MonoBehaviour
     }
     public void HandleOnAdLoaded(object sender, EventArgs args)
     {
-        MonoBehaviour.print("HandleAdLoaded event received");
+        //MonoBehaviour.print("HandleAdLoaded event received");
     }
     public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
-        MonoBehaviour.print("HandleFailedToReceiveAd event received with message: "
-                            + args.LoadAdError.GetMessage());
+       //MonoBehaviour.print("HandleFailedToReceiveAd event received with message: "
+                            //+ args.LoadAdError.GetMessage());
     }
     public void HandleOnAdOpened(object sender, EventArgs args)
     {
-        MonoBehaviour.print("HandleAdOpened event received");
+       //MonoBehaviour.print("HandleAdOpened event received");
     }
     private void HandleRewardedAdClosed(object sender, EventArgs e)
     {

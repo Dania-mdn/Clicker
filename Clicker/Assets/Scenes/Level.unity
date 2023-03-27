@@ -232,6 +232,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1907193266}
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1405266627}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &301037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,7 +946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7f9bdce0680754ab8b6e6b808ed938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QueueCount: 0
 --- !u!1 &37835916
 GameObject:
   m_ObjectHideFlags: 0
@@ -6803,18 +6814,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1034813356}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 691825419}
         m_TargetAssemblyTypeName: AdsPool, Assembly-CSharp
         m_MethodName: TakeReward
@@ -10518,7 +10517,7 @@ MonoBehaviour:
   - {fileID: 1034813356}
   - {fileID: 1616803122}
   - {fileID: 37723649}
-  _spawnCooldown: 10
+  _spawnCooldown: 14.1
 --- !u!1 &696475431
 GameObject:
   m_ObjectHideFlags: 0
@@ -19847,7 +19846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7f9bdce0680754ab8b6e6b808ed938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QueueCount: 0
 --- !u!1 &1041181957
 GameObject:
   m_ObjectHideFlags: 0
@@ -20219,18 +20217,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 37723649}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 691825419}
         m_TargetAssemblyTypeName: AdsPool, Assembly-CSharp
         m_MethodName: TakeReward
@@ -20429,6 +20415,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1907193266}
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: CloseButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 935744858}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -21911,7 +21909,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1294758114}
   m_FillRect: {fileID: 1144606317}
   m_HandleRect: {fileID: 1294758113}
@@ -21919,7 +21917,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 3
   m_WholeNumbers: 0
-  m_Value: 3
+  m_Value: 2.04
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -29171,7 +29169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7f9bdce0680754ab8b6e6b808ed938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QueueCount: 0
 --- !u!1 &1621312250
 GameObject:
   m_ObjectHideFlags: 0

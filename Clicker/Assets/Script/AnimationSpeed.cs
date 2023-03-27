@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class AnimationSpeed : MonoBehaviour
 {
+    private const int Speed = 2;
+    private float _currentSpeed = 1;
     private Animator _anim;
-    private int _speed = 2;
+
     private void Start()
     {
         _anim = GetComponent<Animator>();
@@ -11,15 +13,17 @@ public class AnimationSpeed : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerPrefs.HasKey("_isPointerDown"))
+        bool isPointerDown = Input.GetMouseButton(0);
+
+        if (isPointerDown && _currentSpeed < Speed)
         {
-            if(_anim.speed < _speed)
-                _anim.speed = _anim.speed + Time.deltaTime;
+            _currentSpeed += Time.deltaTime;
         }
-        else
+        else if (!isPointerDown && _currentSpeed > 1)
         {
-            if (_anim.speed > 1)
-                _anim.speed = _anim.speed - Time.deltaTime;
+            _currentSpeed -= Time.deltaTime;
         }
+
+        _anim.speed = Mathf.Clamp(_currentSpeed, 1, Speed);
     }
 }

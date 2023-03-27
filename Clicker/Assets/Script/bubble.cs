@@ -19,9 +19,10 @@ public class Bubble : PooledItem
     }
     private void Update()
     {
+        bool isPointerDown = Input.GetMouseButton(0);
         if (IsZone())
         {
-            if (PlayerPrefs.HasKey("_isPointerDown")) Swimm(_swimm);
+            if (isPointerDown) Swimm(_swimm);
             else Swimm(_idl);
         }
         else

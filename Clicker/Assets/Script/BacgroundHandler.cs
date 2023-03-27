@@ -28,9 +28,10 @@ public class BacgroundHandler : PooledItem
     }
     private void Update()
     {
+        bool isPointerDown = Input.GetMouseButton(0);
         if (this.transform.position.x > _leftBorder)
         {
-            if (PlayerPrefs.HasKey("_isPointerDown"))
+            if (isPointerDown)
                 OffsetBacground(_swimm);
             else
                 OffsetBacground(_idl);

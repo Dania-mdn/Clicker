@@ -164,8 +164,5 @@ public class RewardContain
     public float TimeForReward;
     public int _rewardCoeficient;
 
-    public RewardContain(AdsManager.RewardName RewardName)
-    {
-        this.RewardName = RewardName;
-    }
+    public RewardContain(AdsManager.RewardName RewardName) => this.RewardName = RewardName;
 }
