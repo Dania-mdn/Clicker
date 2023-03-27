@@ -1,12 +1,15 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class RaycastHandler : MonoBehaviour
 {
-    public AdsManager AdsManager;
-    public GameObject PrizeForClick;
-    private GameObject _newPrizeForClick;
+    [SerializeField] private AdsManager _adsManager;
+    [SerializeField] private GameObject _prizeForClick;
     [SerializeField] private EventManager.AchiveName _achiveName;
+
+    private GameObject _newPrizeForClick;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -27,19 +30,32 @@ public class RaycastHandler : MonoBehaviour
                 }
             }
         }
-        if(_newPrizeForClick != null)
-        {
-            _newPrizeForClick.transform.position = _newPrizeForClick.transform.position + new Vector3(-0.01f, +0.03f);
-            Destroy(_newPrizeForClick, 1.5f);
-        }
     }
     private void CreatePrizeForClick(RaycastHit2D hit)
     {
-        AdsManager.PlayAudio();
+        _adsManager.PlayAudio();
         MonneyHandler.singleton.TakeGift();
-        _newPrizeForClick = Instantiate(PrizeForClick, hit.transform.position, Quaternion.identity);
+        _newPrizeForClick = Instantiate(_prizeForClick, hit.transform.position, Quaternion.identity);
         _newPrizeForClick.transform.SetParent(MonneyHandler.singleton.transform);
         _newPrizeForClick.GetComponent<TextMeshProUGUI>().text = MonneyHandler.singleton.PrizeMonney.ToString("0");
         hit.transform.GetComponent<PriezeObject>().Pooled();
+        StartCoroutine(MovePrize());
+    }
+    IEnumerator MovePrize()
+    {
+        float duration = 3;
+        float elapsedTime = 0.0f;
+
+        Vector2 _starPosition = _newPrizeForClick.transform.position;
+        Vector2 _endPosition = _starPosition + new Vector2(-3, 3);
+
+        while (elapsedTime < duration)
+        {
+            _newPrizeForClick.transform.position = Vector2.Lerp(_starPosition, _endPosition, (elapsedTime / duration));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        Destroy(_newPrizeForClick);
     }
 }

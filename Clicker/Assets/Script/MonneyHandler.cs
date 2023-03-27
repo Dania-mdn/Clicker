@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using TMPro;
-using System.Collections.Generic;
 
 public class MonneyHandler : MonoBehaviour
 {
@@ -69,7 +68,7 @@ public class MonneyHandler : MonoBehaviour
         MonneyCount = MonneyCount + PassiveIncome + _maneyInSecond * RewardContain[1]._rewardCoeficient * RewardContain[2]._rewardCoeficient;
         ViewMonney();
 
-        if (PointerHandler._isPointerDown == true && PointerHandler.FuelProgressSlider.value > 0)
+        if (PointerHandler.IsPointerDown == true && PointerHandler.FuelProgressSlider.value > 0)
         {
             if (_maneyInSecond < ClickIncome * RewardContain[0]._rewardCoeficient * 2)
                 _maneyInSecond = _maneyInSecond * 1.02f;

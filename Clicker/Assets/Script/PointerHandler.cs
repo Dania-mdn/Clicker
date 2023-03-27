@@ -4,25 +4,28 @@ using UnityEngine.UI;
 
 public class PointerHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    [SerializeField] private ManagerButton ManagerButton;
-    public ParticleSystem Cursor;
+    [Header("Referenses")]
     public Slider FuelProgressSlider;
-    public Transform TransformFuel;
-    public bool _isPointerDown;
+    [SerializeField] private ManagerButton _managerButton;
+    [SerializeField] private ParticleSystem _cursor;
+    [SerializeField] Transform _transformFuel;
+
+    [Header("other Object")]
+    [HideInInspector] public bool IsPointerDown;
+    private Vector2 _inputMousePosition;
     private float _fuelScale;
     private const float _fuelScaleMax = 1.3f;
     private const float _fuelScaleMin = 1f;
-    private Vector2 _inputPosition;
     private void Start()
     {
         _fuelScale = _fuelScaleMin;
     }
     void Update()
     {
-        if (_isPointerDown == true)
+        if (IsPointerDown == true)
         {
-            _inputPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Cursor.transform.position = new Vector2(_inputPosition.x, _inputPosition.y);
+            _inputMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            _cursor.transform.position = new Vector2(_inputMousePosition.x, _inputMousePosition.y);
 
             if (_fuelScale < _fuelScaleMax)
             {
@@ -33,12 +36,12 @@ public class PointerHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHand
             if (FuelProgressSlider.value > 0)
             {
                 FuelProgressSlider.value = FuelProgressSlider.value - 0.005f;
-                if(!Cursor.isPlaying)
-                    Cursor.Play();
+                if(!_cursor.isPlaying)
+                    _cursor.Play();
             }
             else
             {
-                Cursor.Stop();
+                _cursor.Stop();
             }
         }
         else
@@ -51,18 +54,18 @@ public class PointerHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
             FuelProgressSlider.value = FuelProgressSlider.value + 0.01f;
 
-            Cursor.Stop();
+            _cursor.Stop();
         }
     }
     public void OnPointerDown(PointerEventData pointerEventData)
     {
-        ManagerButton.CloseAllButton();
-        _isPointerDown = true;
+        _managerButton.CloseAllButton();
+        IsPointerDown = true;
     }
     public void OnPointerUp(PointerEventData pointerEventData)
     {
-        _isPointerDown = false;
+        IsPointerDown = false;
     }
-    private void ScaleFuel(float fuelScale) => TransformFuel.localScale = new Vector2(fuelScale, fuelScale);
+    private void ScaleFuel(float fuelScale) => _transformFuel.localScale = new Vector2(fuelScale, fuelScale);
     public void Delete_Save() => PlayerPrefs.DeleteAll();
 }

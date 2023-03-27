@@ -8138,8 +8138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec35667fd7150643a23ad12f4ba1a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AdsManager: {fileID: 691825417}
-  PrizeForClick: {fileID: 720176371328302576, guid: d25bf020328c8c54794836377892e6c9, type: 3}
+  _adsManager: {fileID: 691825417}
+  _prizeForClick: {fileID: 720176371328302576, guid: d25bf020328c8c54794836377892e6c9, type: 3}
   _achiveName: 1
 --- !u!1 &523485181
 GameObject:
@@ -29757,11 +29757,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02852c1e920d17d4a83c94a2ebd83702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mixer: {fileID: 24300002, guid: 709b1b0086ae75645b80e6f0ddd4135b, type: 2}
-  Music: {fileID: -3658029276423949746, guid: 709b1b0086ae75645b80e6f0ddd4135b, type: 2}
-  Sound: {fileID: 7102894224358394859, guid: 709b1b0086ae75645b80e6f0ddd4135b, type: 2}
-  ToggleMusic: {fileID: 40290576}
-  ToggleSound: {fileID: 935841208}
+  _mixer: {fileID: 24300002, guid: 709b1b0086ae75645b80e6f0ddd4135b, type: 2}
+  _music: {fileID: -3658029276423949746, guid: 709b1b0086ae75645b80e6f0ddd4135b, type: 2}
+  _sound: {fileID: 7102894224358394859, guid: 709b1b0086ae75645b80e6f0ddd4135b, type: 2}
+  _toggleMusic: {fileID: 40290576}
+  _toggleSound: {fileID: 935841208}
 --- !u!114 &1622417313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31610,11 +31610,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5b82fe38cfe42488051cbf176e5471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManagerButton: {fileID: 1907193266}
-  Cursor: {fileID: 771118613}
   FuelProgressSlider: {fileID: 1228598041}
-  TransformFuel: {fileID: 1012023448}
-  _isPointerDown: 0
+  _managerButton: {fileID: 1907193266}
+  _cursor: {fileID: 771118613}
+  _transformFuel: {fileID: 1012023448}
+  IsPointerDown: 0
 --- !u!1 &1793352918
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,24 +5,24 @@ using UnityEngine.UI;
 
 public class Optiuns : MonoBehaviour
 {
+    [SerializeField] private AudioMixerGroup _mixer;
+    [SerializeField] private AudioMixerGroup _music;
+    [SerializeField] private AudioMixerGroup _sound;
+    [SerializeField] private Toggle _toggleMusic;
+    [SerializeField] private Toggle _toggleSound;
+
     private readonly int _on = 0;
     private readonly int _off = -80;
-
-    public AudioMixerGroup Mixer;
-    public AudioMixerGroup Music;
-    public AudioMixerGroup Sound;
-    public Toggle ToggleMusic;
-    public Toggle ToggleSound;
     private Func<string, float, bool> _mixerSetVolume;
 
     private void Start()
     {
-        _mixerSetVolume = Mixer.audioMixer.SetFloat;
+        _mixerSetVolume = _mixer.audioMixer.SetFloat;
 
-        if (PlayerPrefs.HasKey(Music.name))
-            LoadVoice(Music, ToggleMusic);
-        if (PlayerPrefs.HasKey(Sound.name))
-            LoadVoice(Sound, ToggleSound);
+        if (PlayerPrefs.HasKey(_music.name))
+            LoadVoice(_music, _toggleMusic);
+        if (PlayerPrefs.HasKey(_sound.name))
+            LoadVoice(_sound, _toggleSound);
     }
     public void Enable(Toggle Toggle)
     {
