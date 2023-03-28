@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AdsPool : MonoBehaviour
@@ -7,6 +5,7 @@ public class AdsPool : MonoBehaviour
     [SerializeField] private GameObject[] _arreyReward;
     [Range(10, 60)]
     [SerializeField] private float _spawnCooldown;
+
     private float _cooldownTimer;
     private readonly Vector2 _startPosition = new Vector2(2.07f, -8);
     private bool shouldEnqueue = false;
@@ -29,8 +28,5 @@ public class AdsPool : MonoBehaviour
         gameObject.SetActive(true);
         gameObject.transform.position = _startPosition;
     }
-    public void TakeReward()
-    {
-        EventManager.DoTakeReward();
-    }
+    public void TakeReward() => EventManager.DoTakeReward();
 }

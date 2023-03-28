@@ -7,8 +7,8 @@ public class Snapscrolling : MonoBehaviour
     [Range(0f, 20f)]
     [SerializeField] private float _snapSpeed;
 
-    [Range(1f, 20f)]
     [Header("Other Objects")]
+    [Range(1f, 20f)]
     [SerializeField] private GameObject[] _panPrefab;
     [SerializeField] private ScrollRect _scrollRect;
 

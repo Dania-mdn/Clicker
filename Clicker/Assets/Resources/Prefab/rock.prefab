@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8766506726565041943}
   - component: {fileID: 8766506726565041945}
   m_Layer: 0
-  m_Name: Rock
+  m_Name: rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,14 +100,14 @@ MonoBehaviour:
   IsLeftBorder: 0
   IsRightBorder: 1
   ArrayAbyssalSprite: []
-  ArrayOtherSprite:
+  _otherSprite:
   - {fileID: -1374389670, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -1573287491, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
-  - {fileID: -863316567, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 1665375344, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -496928919, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 1190197513, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -31305989, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
+  - {fileID: -863316567, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 515865950, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   _abyssal: 0
   _isPooled: 1

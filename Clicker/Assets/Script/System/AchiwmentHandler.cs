@@ -1,17 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class AchiwmentHandler : MonoBehaviour
 {
-    public SaveSystem SaveSystem;
-    public GameObject Achiwment;
-    public string[] achievementDescriptions;
+    [SerializeField] private GameObject _achiwmentInstatiateObject;
+    [SerializeField] private string[] _achievementDescriptions;
+
     private int[] _achievementValues;
     List<Dictionary<string, int>> _intermediateAchievementList = new List<Dictionary<string, int>>();
-    private GameObject _newAchiw;
     private bool _isAvailable = false;
+
     private void OnEnable()
     {
         EventManager.SetNewAchive += AchivHandler;
@@ -24,7 +23,7 @@ public class AchiwmentHandler : MonoBehaviour
     }
     private void Start()
     {
-        _achievementValues = new int[achievementDescriptions.Length];
+        _achievementValues = new int[_achievementDescriptions.Length];
     }
     private void Update()
     {
@@ -85,15 +84,16 @@ public class AchiwmentHandler : MonoBehaviour
     private void AddToListNewAchiwment(int numberAchiv)
     {
         Dictionary<string, int> dictionary = new Dictionary<string, int>();
-        dictionary.Add(achievementDescriptions[numberAchiv], _achievementValues[numberAchiv]);
+        dictionary.Add(_achievementDescriptions[numberAchiv], _achievementValues[numberAchiv]);
         _intermediateAchievementList.Add(dictionary);
         EventManager.DoNewAvalable(EventManager.UpgradeName.Achiw);
     }
 
     public void ActiveAchiv()
     {
-        _newAchiw = Instantiate(Achiwment, transform.parent.parent);
-        var NewAchiw = _newAchiw?.GetComponent<NewAchiw>();
+        GameObject newAchiw;
+        newAchiw = Instantiate(_achiwmentInstatiateObject, transform.parent.parent);
+        var NewAchiw = newAchiw?.GetComponent<NewAchiw>();
         var firstPair = _intermediateAchievementList.FirstOrDefault();
         NewAchiw.AchivName.text = $"{firstPair.FirstOrDefault().Key}, {firstPair.FirstOrDefault().Value}".ToString();
         _intermediateAchievementList.Remove(_intermediateAchievementList.First());

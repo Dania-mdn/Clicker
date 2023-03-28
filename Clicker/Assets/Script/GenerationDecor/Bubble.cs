@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class Bubble : PooledItem
 {
+    [SerializeField] private bool _isPooled;
+
     private SpriteRenderer _spriteRenderer;
 
     private const float _lineOfWater = -1.85f;
     private const int _swimm = 2;
     private const float _idl = 0.5f;
-    [SerializeField] private bool _isPooled;
 
     private void Start()
     {

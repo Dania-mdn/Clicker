@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Seagulls : PooledItem
 {
+    [SerializeField] private bool _isPooled;
+
     private const float _scaleMin = 0.1f;
     private const float _scaleMax = 0.5f;
     private float _seagullsScale;
@@ -12,7 +14,6 @@ public class Seagulls : PooledItem
     private float _direction;
     private float _positionx;
     private float _positiony;
-    [SerializeField] private bool _isPooled;
     private void Start()
     {
         _seagullsScale = Random.Range(_scaleMin, _scaleMax);

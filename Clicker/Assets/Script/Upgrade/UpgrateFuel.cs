@@ -34,13 +34,13 @@ public class UpgrateFuel: BazeUpdate
     public override void Save()
     {
         base.Save();
-        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
+        SaveSystem.Reservation SaveContain = _saveSystem.SaveContain;
         SaveContain.Cistern = _maxValue;
     }
     public override void Load()
     {
         base.Load();
-        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
+        SaveSystem.Reservation SaveContain = _saveSystem.SaveContain;
         _maxValue = SaveContain.Cistern;
     }
 }

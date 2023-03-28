@@ -8,8 +8,6 @@ public class RaycastHandler : MonoBehaviour
     [SerializeField] private GameObject _prizeForClick;
     [SerializeField] private EventManager.AchiveName _achiveName;
 
-    private GameObject _newPrizeForClick;
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -33,15 +31,16 @@ public class RaycastHandler : MonoBehaviour
     }
     private void CreatePrizeForClick(RaycastHit2D hit)
     {
+        GameObject _newPrizeForClick;
         _adsManager.PlayAudio();
         MonneyHandler.singleton.TakeGift();
         _newPrizeForClick = Instantiate(_prizeForClick, hit.transform.position, Quaternion.identity);
         _newPrizeForClick.transform.SetParent(MonneyHandler.singleton.transform);
         _newPrizeForClick.GetComponent<TextMeshProUGUI>().text = MonneyHandler.singleton.PrizeMonney.ToString("0");
         hit.transform.GetComponent<PriezeObject>().Pooled();
-        StartCoroutine(MovePrize());
+        StartCoroutine(MovePrize(_newPrizeForClick));
     }
-    IEnumerator MovePrize()
+    IEnumerator MovePrize(GameObject _newPrizeForClick)
     {
         float duration = 3;
         float elapsedTime = 0.0f;

@@ -1,11 +1,9 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Muvement : MonoBehaviour
+public class RewardMuveUp : MonoBehaviour
 {
-    private Vector2 position;
+    private Vector2 _endPosition;
     private void OnEnable()
     {
         EventManager.TakeReward += TakeReward;
@@ -16,8 +14,8 @@ public class Muvement : MonoBehaviour
     }
     private void Start()
     {
-        position = new Vector2(transform.position.x, 2.83f);
-        StartCoroutine(MuveUp(position));
+        _endPosition = new Vector2(transform.position.x, 2.83f);
+        StartCoroutine(MuveUp(_endPosition));
     }
     private void TakeReward()
     {

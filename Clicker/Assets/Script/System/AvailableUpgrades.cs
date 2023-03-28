@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 public class AvailableUpgrades : MonoBehaviour
 {
-    public GameObject[] Available;
+    [SerializeField] private GameObject[] _availableObject;
+
     private Dictionary<GameObject, TextMeshProUGUI> _dictionaryAvailable = new Dictionary<GameObject, TextMeshProUGUI>();
     private int[] _upgradeName;
 
@@ -20,24 +21,24 @@ public class AvailableUpgrades : MonoBehaviour
     }
     private void Start()
     {
-        for (int i = 0; i < Available.Length; i++)
+        for (int i = 0; i < _availableObject.Length; i++)
         {
-            TextMeshProUGUI availableValue = Available[i].GetComponentInChildren(typeof(TextMeshProUGUI)) as TextMeshProUGUI;
-            _dictionaryAvailable.Add(Available[i], availableValue);
+            TextMeshProUGUI availableValue = _availableObject[i].GetComponentInChildren(typeof(TextMeshProUGUI)) as TextMeshProUGUI;
+            _dictionaryAvailable.Add(_availableObject[i], availableValue);
         }
-        _upgradeName = new int[Available.Length];
+        _upgradeName = new int[_availableObject.Length];
     }
     private void SetNewAvalable(int availableNumber)
     {
         _upgradeName[availableNumber] = _upgradeName[availableNumber] + 1;
-        ChangeAvailable(Available[availableNumber], _upgradeName[availableNumber]);
+        ChangeAvailable(_availableObject[availableNumber], _upgradeName[availableNumber]);
     }
     public void BuyEvent()
     {
         for (int i = 0; i < _upgradeName.Length; i++)
         {
             _upgradeName[i] = 0; 
-            ChangeAvailable(Available[i], _upgradeName[i]);
+            ChangeAvailable(_availableObject[i], _upgradeName[i]);
         }
     }
     private void ChangeAvailable(GameObject Available, int i)

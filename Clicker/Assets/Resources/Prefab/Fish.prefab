@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsLeftBorder: 1
   IsRightBorder: 1
-  ArraySprite:
+  _spriteOfFish:
   - {fileID: 41489566, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -254202096, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 1330556235, guid: ae11538e8a19457478901b5f571a9b22, type: 3}

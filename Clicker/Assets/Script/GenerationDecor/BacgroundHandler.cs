@@ -2,26 +2,28 @@ using UnityEngine;
 
 public class BacgroundHandler : PooledItem
 {
-    [SerializeField] private Sprite[] ArrayAbyssalSprite;
-    [SerializeField] private Sprite[] ArrayOtherSprite;
+    [SerializeField] private Sprite[] _abyssalSprite;
+    [SerializeField] private Sprite[] _otherSprite;
+    [SerializeField] private bool _abyssal;
+    [SerializeField] private bool _isPooled;
+
     private SpriteRenderer SpriteRenderer;
     private const int _leftBorder = -6;
     private float _swimm;
     private float _idl;
-    [SerializeField] private bool _abyssal;
-    [SerializeField] private bool _isPooled;
     private void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
+
         if (_abyssal)
         {
-            SpriteRenderer.sprite = ArrayAbyssalSprite[Random.Range(0, ArrayAbyssalSprite.Length)];
+            SpriteRenderer.sprite = _abyssalSprite[Random.Range(0, _abyssalSprite.Length)];
             _swimm = 0.75f;
             _idl = 0.3f;
         }
         else
         {
-            SpriteRenderer.sprite = ArrayOtherSprite[Random.Range(0, ArrayOtherSprite.Length)];
+            SpriteRenderer.sprite = _otherSprite[Random.Range(0, _otherSprite.Length)];
             _swimm = 0.4f;
             _idl = 0.12f;
         }

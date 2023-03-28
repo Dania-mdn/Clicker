@@ -4,33 +4,30 @@ using TMPro;
 
 public class MonneyHandler : MonoBehaviour
 {
-    public static MonneyHandler singleton;
-    public Animation MoneyAnimation;
-    public SaveSystem SaveSystem;
-    public PointerHandler PointerHandler;
-    public float ClickIncome;
-    public float PassiveIncome;
-    public TextMeshProUGUI TextMonneyCount;
-    public TextMeshProUGUI TextMoneyInSecond;
-    public Action[] TakeRewardArrey;
-    public float MonneyCount { get; private set; }
-    public float MaxMonneyOfline;
-    public int PrizeMonney;
-    private float _maneyInSecond = 0.1f;
-    public float MonneyOffline;
-    private float _intermediateValue;
-    Color _defoltMonneyColor = new Color(0.3f, 0.3f, 0.3f);
-    private Color _addMonneyColor = new Color(0.2622374f, 0.6698113f, 0.3052149f);
-    public RewardContain[] RewardContain = new RewardContain[3];
+    [SerializeField] private Animation _moneyAnimation;
+    [SerializeField] private SaveSystem _saveSystem;
+    [SerializeField] private PointerHandler _pointerHandler;
+    [SerializeField] private TextMeshProUGUI _MonneyCountText;
+    [SerializeField] private TextMeshProUGUI _MoneyInSecondText;
+    [SerializeField] private Color _defoltMonneyColor;
+    [SerializeField] private Color _addMonneyColor;
+    [SerializeField] private Price _price;
 
-    public int[] price0;
-    public int[] price1;
-    public int[] price2;
-    public int[] price3;
-    public int[] price4;
-    public int[] price5;
-    public int[] price6;
+    [HideInInspector] public float ClickIncome;
+    [HideInInspector] public float PassiveIncome;
+    [HideInInspector] public float MaxMonneyOfline;
+    [HideInInspector] public int PrizeMonney;
+    [HideInInspector] public float MonneyOffline;
+
+    public float MonneyCount { get; private set; }
+    public static MonneyHandler singleton;
+    public Action[] TakeRewardArrey;
+    public RewardContain[] RewardContain = new RewardContain[3];
     public int[][] PriceUpgrade;
+
+    private float _maneyInSecond = 0.1f;
+    private float _intermediateValue;
+
     private void Awake()
     {
         singleton = this;
@@ -40,15 +37,15 @@ public class MonneyHandler : MonoBehaviour
         TakeRewardArrey = new Action[] { TakeMonneyOffline, TakedoubleMonneyOffline, TakedoubleForClik, TakedoubleForPassiwe, TakeAllInkomeX10, TakeGift, TakerewardGift };
 
         PriceUpgrade = new int[7][];
-        PriceUpgrade[0] = price0;
-        PriceUpgrade[1] = price1;
-        PriceUpgrade[2] = price2;
-        PriceUpgrade[3] = price3;
-        PriceUpgrade[4] = price4;
-        PriceUpgrade[5] = price5;
-        PriceUpgrade[6] = price6;
+        PriceUpgrade[0] = _price.price0;
+        PriceUpgrade[1] = _price.price1;
+        PriceUpgrade[2] = _price.price2;
+        PriceUpgrade[3] = _price.price3;
+        PriceUpgrade[4] = _price.price4;
+        PriceUpgrade[5] = _price.price5;
+        PriceUpgrade[6] = _price.price6;
 
-        if (SaveSystem.SaveContain.MonneyCount != 0)
+        if (_saveSystem.SaveContain.MonneyCount != 0)
             Load();
         else
             Save();
@@ -68,7 +65,7 @@ public class MonneyHandler : MonoBehaviour
         MonneyCount = MonneyCount + PassiveIncome + _maneyInSecond * RewardContain[1]._rewardCoeficient * RewardContain[2]._rewardCoeficient;
         ViewMonney();
 
-        if (PointerHandler.IsPointerDown == true && PointerHandler.FuelProgressSlider.value > 0)
+        if (_pointerHandler.IsPointerDown == true && _pointerHandler.FuelProgressSlider.value > 0)
         {
             if (_maneyInSecond < ClickIncome * RewardContain[0]._rewardCoeficient * 2)
                 _maneyInSecond = _maneyInSecond * 1.02f;
@@ -80,13 +77,13 @@ public class MonneyHandler : MonoBehaviour
 
         if (_intermediateValue > 0)
         {
-            MoneyAnimation.Play();
+            _moneyAnimation.Play();
             _intermediateValue = _intermediateValue - MonneyCount / 4;
-            TextMonneyCount.color = _addMonneyColor;
+            _MonneyCountText.color = _addMonneyColor;
         }
         else
         {
-            TextMonneyCount.color = _defoltMonneyColor;
+            _MonneyCountText.color = _defoltMonneyColor;
         }
 
         Timer(RewardContain[0]);
@@ -97,13 +94,13 @@ public class MonneyHandler : MonoBehaviour
     private void ViewMonney()
     {
         if (MonneyCount < 1000)
-            TextMonneyCount.text = MonneyCount.ToString("0");
+            _MonneyCountText.text = MonneyCount.ToString("0");
         else if (MonneyCount > 1000 && MonneyCount < 1000000)
-            TextMonneyCount.text = (MonneyCount / 1000).ToString("0.00") + "K";
+            _MonneyCountText.text = (MonneyCount / 1000).ToString("0.00") + "K";
         else if (MonneyCount > 1000000)
-            TextMonneyCount.text = (MonneyCount / 1000000).ToString("0.00") + "M";
+            _MonneyCountText.text = (MonneyCount / 1000000).ToString("0.00") + "M";
 
-        TextMoneyInSecond.text = _maneyInSecond.ToString("0.0") + "/s";
+        _MoneyInSecondText.text = _maneyInSecond.ToString("0.0") + "/s";
     }
 
     private void Timer(RewardContain RewardContain, int CoefValue = 2)
@@ -131,14 +128,14 @@ public class MonneyHandler : MonoBehaviour
     }
     public void Load()
     {
-        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
+        SaveSystem.Reservation SaveContain = _saveSystem.SaveContain;
         MonneyCount = SaveContain.MonneyCount;
         _maneyInSecond = SaveContain.ManeyInSecond;
         MaxMonneyOfline = SaveContain.MaxMonneyOfline;
     }
     public void Save()
     {
-        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
+        SaveSystem.Reservation SaveContain = _saveSystem.SaveContain;
         SaveContain.MonneyCount = MonneyCount;
         SaveContain.ManeyInSecond = _maneyInSecond;
         SaveContain.MaxMonneyOfline = MaxMonneyOfline;
@@ -161,4 +158,16 @@ public class RewardContain
     public int _rewardCoeficient;
 
     public RewardContain(AdsManager.RewardName RewardName) => this.RewardName = RewardName;
+}
+[System.Serializable]
+public class Price
+{
+    public int[][] PriceUpgrade;
+    public int[] price0;
+    public int[] price1;
+    public int[] price2;
+    public int[] price3;
+    public int[] price4;
+    public int[] price5;
+    public int[] price6;
 }

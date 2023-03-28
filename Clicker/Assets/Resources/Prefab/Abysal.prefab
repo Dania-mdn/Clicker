@@ -99,12 +99,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsLeftBorder: 0
   IsRightBorder: 1
-  ArrayAbyssalSprite:
+  _abyssalSprite:
   - {fileID: 953766846, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -1596510802, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -1599584502, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -680807575, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 103895100, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
-  ArrayOtherSprite: []
+  _otherSprite: []
   _abyssal: 1
   _isPooled: 1

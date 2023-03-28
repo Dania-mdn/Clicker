@@ -1,13 +1,12 @@
 using UnityEngine;
-using TMPro;
 using System;
 using GoogleMobileAds.Api;
-using UnityEngine.UI;
 
 public class AdsManager : MonoBehaviour
 {
     private BannerView _bannerView;
     public RewardedAd RewardedAd;
+
     //íàñòîÿùèé ca-app-pub-9999092264265801/7556372806
     //òåñò ca-app-pub-3940256099942544/5224354917
     private const string _êewardedUnitID = "ca-app-pub-3940256099942544/5224354917";

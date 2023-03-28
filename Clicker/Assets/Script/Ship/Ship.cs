@@ -7,6 +7,7 @@ public class Ship : MonoBehaviour
 
     [HideInInspector] public SaveSystem SaveSystem;
     [HideInInspector] public int ShipNumber;
+
     private AudioSource AudioSource;
     public static Ship singleton;
 

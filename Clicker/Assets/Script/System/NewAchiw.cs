@@ -3,12 +3,11 @@ using TMPro;
 
 public class NewAchiw : MonoBehaviour
 {
-    public TextMeshProUGUI AchivName;
-    private TextMeshProUGUI _reward;
-    public float Prize;
+    [HideInInspector] public TextMeshProUGUI AchivName;
+    [SerializeField] private TextMeshProUGUI _reward;
     private void Start()
     {
-        _reward.text = Prize.ToString("0");
+        _reward.text = MonneyHandler.singleton.PrizeMonney.ToString("0");
     }
     public void TakeReward()
     {

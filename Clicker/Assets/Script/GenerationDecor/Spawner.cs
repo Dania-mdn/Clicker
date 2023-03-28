@@ -13,6 +13,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _spawnPositionMaxY;
 
     [Header("Speed")]
+    [Range(0, 50)]
     [SerializeField] private float _spawnCooldown;
     private float _cooldownTimer;
 
@@ -27,7 +28,7 @@ public class Spawner : MonoBehaviour
         if (Time.time > _cooldownTimer)
         {
             if (isPointerDown)
-                _cooldownTimer = Time.time + _spawnCooldown / 4;
+                _cooldownTimer = Time.time + _spawnCooldown / 2;
             else
                 _cooldownTimer = Time.time + _spawnCooldown;
 

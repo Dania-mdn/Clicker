@@ -380,13 +380,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e08e253e9928a48bf01aadbca204aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaveSystem: {fileID: 0}
-  ShipNumber: 0
-  ShipModuls:
+  _shipModuls:
   - {fileID: 8403852812253199549}
   - {fileID: 2686749326808709640}
   - {fileID: 1126608546834959300}
-  ParticleSystem: {fileID: 4468333792986318979}
+  _particleSystem: {fileID: 4468333792986318979}
+  SaveSystem: {fileID: 0}
+  ShipNumber: 0
 --- !u!114 &4876218284820455858
 MonoBehaviour:
   m_ObjectHideFlags: 0

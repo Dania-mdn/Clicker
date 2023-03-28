@@ -23,20 +23,23 @@ public class UpgradeManey: BazeUpdate
     public override void ClickButton()
     {
         base.ClickButton();
-        _maxMoneyOffline = _maxMoneyOffline + _addToMaxMoneyOffline;
-        _textMaxMoneyOffline.text = "+ " + _maxMoneyOffline.ToString("0") + "%";
-        MonneyHandler.singleton.MaxMonneyOfline = _maxMoneyOffline;
+        if (_buttonSprite.color == _open)
+        {
+            _maxMoneyOffline = _maxMoneyOffline + _addToMaxMoneyOffline;
+            _textMaxMoneyOffline.text = "+ " + _maxMoneyOffline.ToString("0") + "%";
+            MonneyHandler.singleton.MaxMonneyOfline = _maxMoneyOffline;
+        }
     }
     public override void Save()
     {
         base.Save();
-        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
+        SaveSystem.Reservation SaveContain = _saveSystem.SaveContain;
         SaveContain.MaxMonneyOfline = _maxMoneyOffline;
     }
     public override void Load()
     {
         base.Load();
-        SaveSystem.Reservation SaveContain = SaveSystem.SaveContain;
+        SaveSystem.Reservation SaveContain = _saveSystem.SaveContain;
         _maxMoneyOffline = SaveContain.MaxMonneyOfline;
     }
 }

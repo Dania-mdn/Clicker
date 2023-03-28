@@ -341,8 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AchivName: {fileID: 3723319583206063894}
-  Reward: {fileID: 4133222726526872637}
-  i: 0
+  _reward: {fileID: 384611919244622337}
 --- !u!1 &4133222726526872627
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,19 +2,20 @@ using UnityEngine;
 
 public class Fish : PooledItem
 {
-    [SerializeField] private Sprite[] ArraySprite;
+    [SerializeField] private Sprite[] _spriteOfFish;
+    [SerializeField] private bool _isPooled;
+
     private SpriteRenderer _spriteRenderer;
     private const float _lineOfWater = -2.22f;
 
     private float _directionHorizontal;
     private float _directionVertical;
     private float _boostSpeed;
-    [SerializeField] private bool _isPooled;
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.color = new Color(1, 1, 1, Random.Range(0.25f, 0.85f));
-        _spriteRenderer.sprite = ArraySprite[Random.Range(0, ArraySprite.Length)];
+        _spriteRenderer.sprite = _spriteOfFish[Random.Range(0, _spriteOfFish.Length)];
 
         _directionVertical = Random.Range(0.2f, -0.2f);
 
