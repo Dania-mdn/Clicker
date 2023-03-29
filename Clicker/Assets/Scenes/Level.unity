@@ -931,8 +931,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _adsManager: {fileID: 691825417}
-  _rewardName: 6
   _rewardPanelButton: {fileID: 1066288648}
+  _rewardName: 6
 --- !u!114 &37723656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,9 +990,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &37835919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1607,9 +1607,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b25944365ea914b87f9bf4aca979b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!95 &67817962
 Animator:
   serializedVersion: 4
@@ -2105,9 +2105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &104552577
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2360,9 +2360,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &109415917
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2493,9 +2493,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &120604665
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2630,9 +2630,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b25944365ea914b87f9bf4aca979b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!95 &139082774
 Animator:
   serializedVersion: 4
@@ -2778,9 +2778,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b25944365ea914b87f9bf4aca979b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!95 &147725582
 Animator:
   serializedVersion: 4
@@ -4079,9 +4079,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &258264864
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4847,8 +4847,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _adsManager: {fileID: 691825417}
-  _rewardName: 3
   _rewardPanelButton: {fileID: 1080330938}
+  _rewardName: 3
   _timerRewardActiv: {fileID: 881189956}
   _actiwTimerImage: {fileID: -965496577, guid: 3232307123de4134abb2da5a85d896ee, type: 3}
 --- !u!1 &287285474
@@ -5446,6 +5446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071cac4d62a84db4ca91bc9bbfb74199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
   _spriteOfFish:
@@ -5460,7 +5461,6 @@ MonoBehaviour:
   - {fileID: -101644466, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -4544873, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 290103372, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
-  _isPooled: 0
 --- !u!212 &386586034
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5779,9 +5779,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &411122193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5879,9 +5879,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &411505734
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6653,9 +6653,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &440473448
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6774,7 +6774,7 @@ MonoBehaviour:
   _MonneyCountText: {fileID: 161347835}
   _MoneyInSecondText: {fileID: 22402913}
   _defoltMonneyColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-  _addMonneyColor: {r: 0.2622374, g: 0.6698113, b: 0.3052149, a: 1}
+  _addMonneyColor: {r: 0.21537916, g: 0.8301887, b: 0.28040704, a: 1}
   _price:
     price0: 1e000000320000004b000000640000007d00000096000000af000000c8000000e1000000fa000000130100002c010000450100005e01000077010000
     price1: f40100000d020000260200003f02000058020000710200008a020000a3020000bc020000d5020000ee02000007030000200300003903000052030000
@@ -7652,8 +7652,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _adsManager: {fileID: 691825417}
-  _rewardName: 2
   _rewardPanelButton: {fileID: 301037}
+  _rewardName: 2
   _timerRewardActiv: {fileID: 243487697}
   _actiwTimerImage: {fileID: -193149318, guid: 3232307123de4134abb2da5a85d896ee, type: 3}
 --- !u!1001 &512573116
@@ -7958,9 +7958,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &513375523
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9717,9 +9717,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &636536470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9961,6 +9961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071cac4d62a84db4ca91bc9bbfb74199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
   _spriteOfFish:
@@ -9975,7 +9976,6 @@ MonoBehaviour:
   - {fileID: -101644466, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -4544873, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 290103372, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
-  _isPooled: 0
 --- !u!212 &644274802
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10903,9 +10903,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &696475434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11448,9 +11448,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &742816993
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11847,8 +11847,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _adsManager: {fileID: 691825417}
-  _rewardName: 1
   _rewardPanelButton: {fileID: 1851345655}
+  _rewardName: 1
 --- !u!1 &762865343
 GameObject:
   m_ObjectHideFlags: 0
@@ -11894,9 +11894,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &762865346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17068,9 +17068,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &779442266
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17179,9 +17179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &792396225
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17370,9 +17370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &813770309
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17653,9 +17653,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &827364170
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17980,6 +17980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071cac4d62a84db4ca91bc9bbfb74199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
   _spriteOfFish:
@@ -17994,7 +17995,6 @@ MonoBehaviour:
   - {fileID: -101644466, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -4544873, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 290103372, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
-  _isPooled: 0
 --- !u!212 &844054264
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19149,9 +19149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b25944365ea914b87f9bf4aca979b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!95 &923323055
 Animator:
   serializedVersion: 4
@@ -19862,6 +19862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071cac4d62a84db4ca91bc9bbfb74199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
   _spriteOfFish:
@@ -19876,7 +19877,6 @@ MonoBehaviour:
   - {fileID: -101644466, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -4544873, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 290103372, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
-  _isPooled: 0
 --- !u!212 &982337596
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20306,8 +20306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _adsManager: {fileID: 691825417}
-  _rewardName: 5
   _rewardPanelButton: {fileID: 463793936}
+  _rewardName: 5
 --- !u!114 &1034813363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20527,6 +20527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071cac4d62a84db4ca91bc9bbfb74199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
   _spriteOfFish:
@@ -20541,7 +20542,6 @@ MonoBehaviour:
   - {fileID: -101644466, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -4544873, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 290103372, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
-  _isPooled: 0
 --- !u!212 &1050954344
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21207,9 +21207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1100521282
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21628,9 +21628,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1144998336
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22293,9 +22293,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1221277139
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22484,9 +22484,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1231594219
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23777,6 +23777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071cac4d62a84db4ca91bc9bbfb74199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
   _spriteOfFish:
@@ -23791,7 +23792,6 @@ MonoBehaviour:
   - {fileID: -101644466, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -4544873, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 290103372, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
-  _isPooled: 0
 --- !u!212 &1303185829
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24091,9 +24091,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1340335402
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24776,9 +24776,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1375749440
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25011,6 +25011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071cac4d62a84db4ca91bc9bbfb74199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
   _spriteOfFish:
@@ -25025,7 +25026,6 @@ MonoBehaviour:
   - {fileID: -101644466, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: -4544873, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 290103372, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
-  _isPooled: 0
 --- !u!212 &1390101058
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26065,9 +26065,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1450969517
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26240,9 +26240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1462393580
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26648,9 +26648,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1474578844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27099,7 +27099,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1508021760
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27270,9 +27270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1513731170
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27607,9 +27607,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1535143586
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29040,9 +29040,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b25944365ea914b87f9bf4aca979b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!95 &1589438715
 Animator:
   serializedVersion: 4
@@ -29545,9 +29545,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1607300809
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29721,9 +29721,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1610238546
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29954,8 +29954,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _adsManager: {fileID: 691825417}
-  _rewardName: 4
   _rewardPanelButton: {fileID: 2025524785}
+  _rewardName: 4
   _timerRewardActiv: {fileID: 1381748070}
   _actiwTimerImage: {fileID: -1685614677, guid: 3232307123de4134abb2da5a85d896ee, type: 3}
 --- !u!114 &1616803129
@@ -30538,9 +30538,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1664169014
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31481,9 +31481,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1730491134
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32611,9 +32611,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1820616217
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32861,9 +32861,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1837287914
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34003,9 +34003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1893869955
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34103,9 +34103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1898919969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34701,9 +34701,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1918267025
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35321,9 +35321,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1935190684
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35578,9 +35578,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1958316998
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35936,9 +35936,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &1986340726
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37084,9 +37084,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &2038227237
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37437,9 +37437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &2067096650
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37828,9 +37828,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &2088109583
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38061,9 +38061,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c43e08c126a694c89c283bbaf127c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!212 &2089029964
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38847,9 +38847,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b25944365ea914b87f9bf4aca979b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 0
-  _isPooled: 0
 --- !u!95 &2141463969
 Animator:
   serializedVersion: 4
@@ -41500,6 +41500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b340685da8c4d4aad9742acd905791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPooled: 0
   IsLeftBorder: 0
   IsRightBorder: 1
   _abyssalSprite: []
@@ -41513,7 +41514,6 @@ MonoBehaviour:
   - {fileID: -31305989, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   - {fileID: 515865950, guid: ae11538e8a19457478901b5f571a9b22, type: 3}
   _abyssal: 0
-  _isPooled: 0
 --- !u!222 &8857897375034310755
 CanvasRenderer:
   m_ObjectHideFlags: 0
