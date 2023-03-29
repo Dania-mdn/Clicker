@@ -5,12 +5,14 @@ public class BacgroundHandler : PooledItem
     [SerializeField] private Sprite[] _abyssalSprite;
     [SerializeField] private Sprite[] _otherSprite;
     [SerializeField] private bool _abyssal;
-    [SerializeField] private bool _isPooled;
 
     private SpriteRenderer SpriteRenderer;
     private const int _leftBorder = -6;
-    private float _swimm;
-    private float _idl;
+    private const float _abyssalSwimm = 0.75f;
+    private const float _otherobjectSwimm = 0.4f;
+    private const float _abyssalIdl = 0.3f;
+    private const float _otherobjectIdl = 0.12f;
+
     private void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
@@ -18,21 +20,20 @@ public class BacgroundHandler : PooledItem
         if (_abyssal)
         {
             SpriteRenderer.sprite = _abyssalSprite[Random.Range(0, _abyssalSprite.Length)];
-            _swimm = 0.75f;
-            _idl = 0.3f;
         }
         else
         {
             SpriteRenderer.sprite = _otherSprite[Random.Range(0, _otherSprite.Length)];
-            _swimm = 0.4f;
-            _idl = 0.12f;
         }
     }
     private void Update()
     {
         bool isPointerDown = Input.GetMouseButton(0);
+
         if (this.transform.position.x > _leftBorder)
         {
+            float _swimm = _abyssal ? _abyssalSwimm : _otherobjectSwimm;
+            float _idl = _abyssal ? _abyssalIdl : _otherobjectIdl;
             if (isPointerDown)
                 OffsetBacground(_swimm);
             else

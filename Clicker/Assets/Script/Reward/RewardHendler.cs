@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class RewardHendler : MonoBehaviour
 {
     [SerializeField] protected AdsManager _adsManager;
-    [SerializeField] protected AdsManager.RewardName _rewardName;
     [SerializeField] private Image _rewardPanelButton;
+    [SerializeField] protected AdsManager.RewardName _rewardName;
 
     protected Animation _animation;
     protected Color _readyForUseColor = new Color(0f, 1f, 0.168f);

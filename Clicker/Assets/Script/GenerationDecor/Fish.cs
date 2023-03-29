@@ -3,7 +3,6 @@ using UnityEngine;
 public class Fish : PooledItem
 {
     [SerializeField] private Sprite[] _spriteOfFish;
-    [SerializeField] private bool _isPooled;
 
     private SpriteRenderer _spriteRenderer;
     private const float _lineOfWater = -2.22f;
@@ -14,7 +13,9 @@ public class Fish : PooledItem
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _spriteRenderer.color = new Color(1, 1, 1, Random.Range(0.25f, 0.85f));
+        float transparencyRandomMin = 0.25f;
+        float transparencyRandomMax = 0.85f;
+        _spriteRenderer.color = new Color(1, 1, 1, Random.Range(transparencyRandomMin, transparencyRandomMax));
         _spriteRenderer.sprite = _spriteOfFish[Random.Range(0, _spriteOfFish.Length)];
 
         _directionVertical = Random.Range(0.2f, -0.2f);
@@ -26,7 +27,9 @@ public class Fish : PooledItem
         bool isPointerDown = Input.GetMouseButton(0);
         if (IsZone())
         {
-            _boostSpeed = isPointerDown ? 0.04f : 0;
+            float boostSpeedMin = 0;
+            float boostSpeedMax = 0.04f;
+            _boostSpeed = isPointerDown ? boostSpeedMax : boostSpeedMin;
 
             Swimm(_boostSpeed, _directionHorizontal, _directionVertical);
 

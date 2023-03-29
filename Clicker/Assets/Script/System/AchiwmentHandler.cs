@@ -8,7 +8,7 @@ public class AchiwmentHandler : MonoBehaviour
     [SerializeField] private string[] _achievementDescriptions;
 
     private int[] _achievementValues;
-    List<Dictionary<string, int>> _intermediateAchievementList = new List<Dictionary<string, int>>();
+    private List<Dictionary<string, int>> _intermediateAchievementList = new List<Dictionary<string, int>>();
     private bool _isAvailable = false;
 
     private void OnEnable()

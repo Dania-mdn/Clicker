@@ -12,7 +12,6 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _spawnPositionMinY;
     [SerializeField] private float _spawnPositionMaxY;
 
-    [Header("Speed")]
     [Range(0, 50)]
     [SerializeField] private float _spawnCooldown;
     private float _cooldownTimer;

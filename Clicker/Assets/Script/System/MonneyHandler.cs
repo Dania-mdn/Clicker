@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class MonneyHandler : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class MonneyHandler : MonoBehaviour
     [SerializeField] private PointerHandler _pointerHandler;
     [SerializeField] private TextMeshProUGUI _MonneyCountText;
     [SerializeField] private TextMeshProUGUI _MoneyInSecondText;
+    [Header("Color of Monney")]
     [SerializeField] private Color _defoltMonneyColor;
     [SerializeField] private Color _addMonneyColor;
     [SerializeField] private Price _price;
@@ -75,17 +77,6 @@ public class MonneyHandler : MonoBehaviour
             _maneyInSecond = ClickIncome;
         }
 
-        if (_intermediateValue > 0)
-        {
-            _moneyAnimation.Play();
-            _intermediateValue = _intermediateValue - MonneyCount / 4;
-            _MonneyCountText.color = _addMonneyColor;
-        }
-        else
-        {
-            _MonneyCountText.color = _defoltMonneyColor;
-        }
-
         Timer(RewardContain[0]);
         Timer(RewardContain[1]);
         Timer(RewardContain[2], 10);
@@ -140,15 +131,49 @@ public class MonneyHandler : MonoBehaviour
         SaveContain.ManeyInSecond = _maneyInSecond;
         SaveContain.MaxMonneyOfline = MaxMonneyOfline;
     }
-    public void TakeMonneyOffline() => MonneyCount = MonneyCount + MonneyOffline;
-    public void TakedoubleMonneyOffline() => MonneyCount = MonneyCount + MonneyOffline * 2;
+    public void TakeMonneyOffline()
+    {
+        MonneyCount = MonneyCount + MonneyOffline; 
+        StartCoroutine(ColorTransitionCoroutine());
+        _moneyAnimation.Play();
+    }
+    public void TakedoubleMonneyOffline()
+    {
+        MonneyCount = MonneyCount + MonneyOffline * 2; 
+        StartCoroutine(ColorTransitionCoroutine());
+        _moneyAnimation.Play();
+    }
     public void TakedoubleForClik() => RewardContain[0].TimeForReward = RewardContain[0].TimeForReward + 3600;
     public void TakedoubleForPassiwe() => RewardContain[1].TimeForReward = RewardContain[1].TimeForReward + 3600;
     public void TakeAllInkomeX10() => RewardContain[2].TimeForReward = RewardContain[2].TimeForReward + 10;
-    public void TakeGift() => MonneyCount = MonneyCount + PrizeMonney;
-    public void TakerewardGift() => MonneyCount = MonneyCount + PrizeMonney * 2;
+    public void TakeGift()
+    {
+        MonneyCount = MonneyCount + PrizeMonney;
+        StartCoroutine(ColorTransitionCoroutine());
+        _moneyAnimation.Play();
+    }
+    public void TakerewardGift()
+    {
+        MonneyCount = MonneyCount + PrizeMonney * 2;
+        StartCoroutine(ColorTransitionCoroutine());
+        _moneyAnimation.Play();
+    }
 
+    IEnumerator ColorTransitionCoroutine()
+    {
+        _MonneyCountText.color = _defoltMonneyColor;
+        float duration = 2;
+        float elapsedTime = 0;
 
+        while (elapsedTime < duration)
+        {
+            _MonneyCountText.color = _addMonneyColor;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        _MonneyCountText.color = _defoltMonneyColor;
+    }
     public void AddMonney() => MonneyCount = MonneyCount + 100000;
 }
 public class RewardContain

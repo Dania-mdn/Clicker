@@ -35,8 +35,10 @@ public class Pool<T> where T : PooledItem
 }
 public abstract class PooledItem : MonoBehaviour
 {
+    [SerializeField] protected bool _isPooled;
     public bool IsLeftBorder;
     public bool IsRightBorder;
+    
     public event Action<PooledItem> OnDestroy;
 
     protected void ReturnToPool()

@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Bubble : PooledItem
 {
-    [SerializeField] private bool _isPooled;
-
     private SpriteRenderer _spriteRenderer;
 
     private const float _lineOfWater = -1.85f;
@@ -13,9 +11,13 @@ public class Bubble : PooledItem
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _spriteRenderer.color = new Color(1f, 1f, 1f, Random.Range(0.1f, 0.5f));
+        float _randomtransparencyMinValue = 0.1f;
+        float _randomtransparencyMaxValue = 0.5f;
+        _spriteRenderer.color = new Color(1f, 1f, 1f, Random.Range(_randomtransparencyMinValue, _randomtransparencyMaxValue));
 
-        float random = Random.Range(0.3f, 0.6f);
+        float _randomScaleMinValue = 0.3f;
+        float _randomScaleMaxValue = 0.6f;
+        float random = Random.Range(_randomScaleMinValue, _randomScaleMaxValue);
         transform.localScale = new Vector3(random, random, 1);
     }
     private void Update()
@@ -35,8 +37,10 @@ public class Bubble : PooledItem
     public bool IsZone() => transform.position.y < _lineOfWater && transform.position.x > -4.2f;
     private void Swimm(float speed)
     {
-        float _climb = Random.Range(0.1f, 0.4f);
-        transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y + _climb * Time.deltaTime);
+        float _climbRandomMinValue = 0.1f;
+        float _climbRandomMaxValue = 0.4f;
+        float _climbRandom = Random.Range(_climbRandomMinValue, _climbRandomMaxValue);
+        transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y + _climbRandom * Time.deltaTime);
     }
     private void Regular() => Destroy(gameObject);
     private void Pooled() => ReturnToPool();

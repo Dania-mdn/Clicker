@@ -21,7 +21,7 @@ public class ShipModuls : MonoBehaviour
     {
         _spriteRenderer.sprite = _spriteArray[Lvl];
         float duration = 3;
-        float elapsedTime = 0.0f;
+        float elapsedTime = 0;
 
         while (elapsedTime < duration)
         {

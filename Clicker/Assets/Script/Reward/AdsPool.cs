@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class AdsPool : MonoBehaviour
 {
+    [Tooltip("array of Reward that pop up")]
     [SerializeField] private GameObject[] _arreyReward;
+
     [Range(10, 60)]
     [SerializeField] private float _spawnCooldown;
 

@@ -4,19 +4,19 @@ using GoogleMobileAds.Api;
 
 public class AdsManager : MonoBehaviour
 {
-    private BannerView _bannerView;
     public RewardedAd RewardedAd;
+    private BannerView _bannerView;
 
     //íàñòîÿùèé ca-app-pub-9999092264265801/7556372806
     //òåñò ca-app-pub-3940256099942544/5224354917
-    private const string _êewardedUnitID = "ca-app-pub-3940256099942544/5224354917";
+    private const string _RewardedUnitID = "ca-app-pub-3940256099942544/5224354917";
     private int _numberRevard;
 
     private AudioSource _audio;
     void Awake()
     {
         MobileAds.Initialize(InitStatus => { });
-        RewardedAd = new RewardedAd(_êewardedUnitID);
+        RewardedAd = new RewardedAd(_RewardedUnitID);
         RewardedAd.OnAdClosed += HandleRewardedAdClosed;
         AdRequest Request = new AdRequest.Builder().Build();
         RewardedAd.LoadAd(Request);
