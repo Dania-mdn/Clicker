@@ -2,7 +2,7 @@ using System;
 public class EventManager
 {
     public static event Action SetBuy;
-    public static event Action<int> SetNewAvalable;
+    public static event Action<float> SetNewAvalable;
     public static event Action<int> SetNewAchive;
     public static event Action TakeReward;
 
@@ -12,7 +12,7 @@ public class EventManager
     }
     public static void DoNewAvalable(UpgradeName numberAvalable)
     {
-        SetNewAvalable?.Invoke((int)numberAvalable);
+        SetNewAvalable?.Invoke((float)numberAvalable);
     }
     public static void DoNewAchive(AchiveName numberAchive)
     {
