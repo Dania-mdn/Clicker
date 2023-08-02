@@ -45,7 +45,6 @@ public class SaveSystem: MonoBehaviour
         public Upgrade[] Upgrade = new Upgrade[ShipCount];
 
         public float MonneyCount;
-        public float ManeyInSecond;
         public float MaxMonneyOfline;
         public float Cistern;
         public float TimeBonusForClickIncome;

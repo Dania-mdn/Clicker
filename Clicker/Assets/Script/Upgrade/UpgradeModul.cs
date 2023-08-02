@@ -7,9 +7,6 @@ public class UpgradeModul: BazeUpdate
     public override void Start()
     {
         base.Start();
-
-        ChangeValues(_upgradeClick);
-        ChangeValues(_upgradePassive); 
     }
     public override void ClozeButton(string Pricetext, bool isMaxUpgrade)
     {
@@ -27,14 +24,19 @@ public class UpgradeModul: BazeUpdate
         {
             ChangeValues(_upgradeClick);
             AddValues(_upgradeClick);
-            ChangeValues(_upgradePassive);
+            ChangeValues1(_upgradePassive);
             AddValues(_upgradePassive);
         }
     }
     public void ChangeValues(ClickAndPassive objectUpgrade)
     {
         objectUpgrade.Upgrade.text = $"+ {objectUpgrade.ValueUpgrade} %";
-        MonneyHandler.singleton.ClickIncome = MonneyHandler.singleton.ClickIncome + objectUpgrade.ValueUpgrade;
+        MonneyHandler.singleton.ClickIncome = MonneyHandler.singleton.ClickIncome + (objectUpgrade.DefaultValueUpgrade / 4);
+    }
+    public void ChangeValues1(ClickAndPassive objectUpgrade)
+    {
+        objectUpgrade.Upgrade.text = $"+ {objectUpgrade.ValueUpgrade} %";
+        MonneyHandler.singleton.PassiveIncome = MonneyHandler.singleton.PassiveIncome + (objectUpgrade.DefaultValueUpgrade / 4);
     }
     public void AddValues(ClickAndPassive objectUpgrade)
     {

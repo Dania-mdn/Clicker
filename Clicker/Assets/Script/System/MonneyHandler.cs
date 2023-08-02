@@ -15,13 +15,13 @@ public class MonneyHandler : MonoBehaviour
     [SerializeField] private Color _addMonneyColor;
     [SerializeField] private Price _price;
 
-    [HideInInspector] public float ClickIncome;
-    [HideInInspector] public float PassiveIncome;
+    public float ClickIncome;
+    public float PassiveIncome;
     [HideInInspector] public float MaxMonneyOfline;
     [HideInInspector] public int PrizeMonney;
     [HideInInspector] public float MonneyOffline;
 
-    public float MonneyCount { get; private set; }
+    public float MonneyCount;
     public static MonneyHandler singleton;
     public Action[] TakeRewardArrey;
     public RewardContain[] RewardContain = new RewardContain[3];
@@ -30,6 +30,10 @@ public class MonneyHandler : MonoBehaviour
     private float _maneyInSecond = 0.1f;
     private float _intermediateValue;
 
+    private void OnDisable()
+    {
+        Save();
+    }
     private void Awake()
     {
         singleton = this;
@@ -64,7 +68,7 @@ public class MonneyHandler : MonoBehaviour
     }
     private void Update()
     {
-        MonneyCount = MonneyCount + PassiveIncome + _maneyInSecond * RewardContain[1]._rewardCoeficient * RewardContain[2]._rewardCoeficient;
+        MonneyCount = MonneyCount + (PassiveIncome + _maneyInSecond * RewardContain[1]._rewardCoeficient * RewardContain[2]._rewardCoeficient) * Time.deltaTime;
         ViewMonney();
 
         if (_pointerHandler.IsPointerDown == true && _pointerHandler.FuelProgressSlider.value > 0)
@@ -121,14 +125,12 @@ public class MonneyHandler : MonoBehaviour
     {
         SaveSystem.Reservation SaveContain = _saveSystem.SaveContain;
         MonneyCount = SaveContain.MonneyCount;
-        _maneyInSecond = SaveContain.ManeyInSecond;
         MaxMonneyOfline = SaveContain.MaxMonneyOfline;
     }
     public void Save()
     {
         SaveSystem.Reservation SaveContain = _saveSystem.SaveContain;
         SaveContain.MonneyCount = MonneyCount;
-        SaveContain.ManeyInSecond = _maneyInSecond;
         SaveContain.MaxMonneyOfline = MaxMonneyOfline;
     }
     public void TakeMonneyOffline()
