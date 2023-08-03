@@ -92,7 +92,7 @@ public class AchiwmentHandler : MonoBehaviour
     public void ActiveAchiv()
     {
         GameObject newAchiw;
-        newAchiw = Instantiate(_achiwmentInstatiateObject, transform.parent.parent);
+        newAchiw = Instantiate(_achiwmentInstatiateObject, Vector2.zero, Quaternion.identity, transform.parent.parent);
         var NewAchiw = newAchiw?.GetComponent<NewAchiw>();
         var firstPair = _intermediateAchievementList.FirstOrDefault();
         NewAchiw.AchivName.text = $"{firstPair.FirstOrDefault().Key}, {firstPair.FirstOrDefault().Value}".ToString();

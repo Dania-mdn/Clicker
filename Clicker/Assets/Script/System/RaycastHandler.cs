@@ -4,7 +4,8 @@ using System.Collections;
 
 public class RaycastHandler : MonoBehaviour
 {
-    [SerializeField] private AdsManager _adsManager;
+    public GameManager GameManager;
+    [SerializeField] private AudioSource AudioSource;
     [SerializeField] private GameObject _prizeForClick;
     [SerializeField] private EventManager.AchiveName _achiveName;
 
@@ -31,8 +32,9 @@ public class RaycastHandler : MonoBehaviour
     }
     private void CreatePrizeForClick(RaycastHit2D hit)
     {
+        GameManager.ShowAd();
         GameObject _newPrizeForClick;
-        _adsManager.PlayAudio();
+        AudioSource.Play();
         MonneyHandler.singleton.TakeGift();
         _newPrizeForClick = Instantiate(_prizeForClick, hit.transform.position, Quaternion.identity);
         _newPrizeForClick.transform.SetParent(MonneyHandler.singleton.transform);

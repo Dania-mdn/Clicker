@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
+    public Optiuns Optiuns;
     public Text gameControlText;
     public Text rewardedAdText;
     public Text rewardPlayerText;
@@ -24,14 +24,12 @@ public class GameManager : MonoBehaviour
 
     public void OnResumeGame()
     {
-        // RESUME MY GAME
-        gameControlText.text = "RESUME GAME";
+        Optiuns.SetMute(false);
     }
 
     public void OnPauseGame()
     {
-        // PAUSE MY GAME
-        gameControlText.text = "GAME PAUSED";
+        Optiuns.SetMute(true);
     }
     public void OnRewardGame()
     {

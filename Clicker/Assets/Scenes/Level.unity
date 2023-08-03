@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9dc07588d4bc5043b1747543607cece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _adsManager: {fileID: 691825417}
+  _adsManager: {fileID: 0}
   _rewardPanelButton: {fileID: 1066288648}
   _rewardName: 6
 --- !u!114 &37723656
@@ -1145,18 +1145,6 @@ MonoBehaviour:
       - m_Target: {fileID: 524615100}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 95884448}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2080,6 +2068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e958b46be29401d449627dfba1536309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Optiuns: {fileID: 1622417312}
   gameControlText: {fileID: 0}
   rewardedAdText: {fileID: 0}
   rewardPlayerText: {fileID: 0}
@@ -4763,7 +4752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &285415195
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4919,7 +4908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875eda219231d9246a03b4b2df02679c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _adsManager: {fileID: 691825417}
+  _adsManager: {fileID: 0}
   _rewardPanelButton: {fileID: 1080330938}
   _rewardName: 3
   _timerRewardActiv: {fileID: 881189956}
@@ -7541,7 +7530,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1672883487}
   m_HandleRect: {fileID: 1672883486}
   m_Direction: 2
-  m_Value: -617.6784
+  m_Value: -617.6781
   m_Size: 0.99939245
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -7605,7 +7594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &501694665
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7761,7 +7750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875eda219231d9246a03b4b2df02679c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _adsManager: {fileID: 691825417}
+  _adsManager: {fileID: 0}
   _rewardPanelButton: {fileID: 301037}
   _rewardName: 2
   _timerRewardActiv: {fileID: 243487697}
@@ -8255,7 +8244,7 @@ Camera:
   far clip plane: 5
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.548379
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8410,7 +8399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec35667fd7150643a23ad12f4ba1a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _adsManager: {fileID: 691825417}
+  GameManager: {fileID: 95884448}
+  AudioSource: {fileID: 691825418}
   _prizeForClick: {fileID: 720176371328302576, guid: d25bf020328c8c54794836377892e6c9, type: 3}
   _achiveName: 1
 --- !u!114 &523161417 stripped
@@ -8771,7 +8761,7 @@ RectTransform:
   m_GameObject: {fileID: 524615096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.105, y: 0.05, z: 1}
+  m_LocalScale: {x: 0.117, y: 0.06, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1459474645}
@@ -8784,8 +8774,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1.6, y: 5.700012}
-  m_SizeDelta: {x: 2691.8, y: 1284.1}
+  m_AnchoredPosition: {x: -1.6, y: 3.3999634}
+  m_SizeDelta: {x: 2691.8, y: 1408.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &524615098
 MonoBehaviour:
@@ -10650,7 +10640,7 @@ MonoBehaviour:
   _spawnPositionMaxX: 3.3
   _spawnPositionMinY: 1
   _spawnPositionMaxY: 1
-  _spawnCooldown: 8.1
+  _spawnCooldown: 13
 --- !u!1 &688814425
 GameObject:
   m_ObjectHideFlags: 0
@@ -10818,7 +10808,6 @@ GameObject:
   m_Component:
   - component: {fileID: 691825416}
   - component: {fileID: 691825418}
-  - component: {fileID: 691825417}
   - component: {fileID: 691825419}
   m_Layer: 5
   m_Name: AdsManager
@@ -10826,7 +10815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &691825416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10854,18 +10843,6 @@ RectTransform:
   m_AnchoredPosition: {x: 7.199999, y: -4024.0012}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &691825417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691825415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c899bbcdf5c47e41aaa00e794ce6d9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &691825418
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10969,7 +10946,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691825415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1a745cb3b1fc68409dc1e759cdcdc01, type: 3}
   m_Name: 
@@ -11926,7 +11903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &756986571
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11967,7 +11944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9dc07588d4bc5043b1747543607cece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _adsManager: {fileID: 691825417}
+  _adsManager: {fileID: 0}
   _rewardPanelButton: {fileID: 1851345655}
   _rewardName: 1
 --- !u!1 &762865343
@@ -18988,7 +18965,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -16}
+  m_AnchoredPosition: {x: 0, y: -15.999939}
   m_SizeDelta: {x: 0, y: 4026.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &900490134
@@ -19483,18 +19460,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 95884448}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ShowAd
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   m_IsOn: 0
 --- !u!114 &936941903 stripped
 MonoBehaviour:
@@ -19887,7 +19852,7 @@ MonoBehaviour:
   _spawnPositionMaxX: 3.3
   _spawnPositionMinY: 1
   _spawnPositionMaxY: 1
-  _spawnCooldown: 11
+  _spawnCooldown: 15
 --- !u!1 &982326228
 GameObject:
   m_ObjectHideFlags: 0
@@ -20438,7 +20403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9dc07588d4bc5043b1747543607cece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _adsManager: {fileID: 691825417}
+  _adsManager: {fileID: 0}
   _rewardPanelButton: {fileID: 463793936}
   _rewardName: 5
 --- !u!114 &1034813363
@@ -21852,7 +21817,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152851826}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.031641338, y: -1.7620631, z: -5.8916364}
+  m_LocalPosition: {x: 0.031641338, y: -1.93, z: -5.8916364}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21879,7 +21844,7 @@ MonoBehaviour:
   _spawnPositionMaxX: 7
   _spawnPositionMinY: -2
   _spawnPositionMaxY: -2
-  _spawnCooldown: 30
+  _spawnCooldown: 43
 --- !u!1 &1156139221
 GameObject:
   m_ObjectHideFlags: 0
@@ -23531,7 +23496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -264.1, y: 256}
+  m_AnchoredPosition: {x: -264.1, y: 320.99982}
   m_SizeDelta: {x: 188.2, y: 41.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285934189
@@ -24328,7 +24293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 818.5, y: 256}
+  m_AnchoredPosition: {x: 818.5, y: 320.99982}
   m_SizeDelta: {x: 188.2, y: 41.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344452257
@@ -25250,7 +25215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1402879234
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25398,8 +25363,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -4.7, y: 2.600006}
-  m_SizeDelta: {x: 2691.8, y: 1532.1}
+  m_AnchoredPosition: {x: -4.31, y: 2.6000366}
+  m_SizeDelta: {x: 2773.07, y: 1532.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415060380
 MonoBehaviour:
@@ -26324,7 +26289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -842.1, y: 1386}
+  m_AnchoredPosition: {x: -842.1, y: 1450.9999}
   m_SizeDelta: {x: 116.2, y: 53.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1459474646
@@ -26349,9 +26314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _achiwmentInstatiateObject: {fileID: 3635541061465781216, guid: 02c255940ef3811479c27b8096ca9f4e, type: 3}
   _achievementDescriptions:
-  - "\u0417\u0456\u0456\u0431\u0440\u0430\u043D\u043E \u0434\u0435\u043B\u044C\u0444\u0456\u043D\u0456\u0432"
-  - "\u041A\u0443\u043F\u043B\u0435\u043D\u043E \u043A\u043E\u0440\u0430\u0431\u043B\u0456\u0432"
-  - '***'
+  - Ships purchased
+  - Gathered from the ocean
 --- !u!1 &1462393577
 GameObject:
   m_ObjectHideFlags: 0
@@ -30171,7 +30135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875eda219231d9246a03b4b2df02679c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _adsManager: {fileID: 691825417}
+  _adsManager: {fileID: 0}
   _rewardPanelButton: {fileID: 2025524785}
   _rewardName: 4
   _timerRewardActiv: {fileID: 1381748070}
@@ -30303,7 +30267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -434.70032, y: -1181.6991}
+  m_AnchoredPosition: {x: -353, y: -1181.6991}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1622417308
@@ -32138,7 +32102,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761808637}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.046, y: 0.9847, z: 0}
+  m_LocalPosition: {x: 0.046, y: 0.78, z: 0}
   m_LocalScale: {x: 0.5391668, y: 0.47543693, z: 0.92552936}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33170,7 +33134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 339.4, y: -1195}
+  m_AnchoredPosition: {x: 384, y: -1195}
   m_SizeDelta: {x: 3096.4, y: 1332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1844500834
@@ -34560,7 +34524,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 450, y: 450}
+  m_ReferenceResolution: {x: 500, y: 450}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -35110,7 +35074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 276.2, y: 256}
+  m_AnchoredPosition: {x: 276.2, y: 320.99982}
   m_SizeDelta: {x: 188.2, y: 41.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1926804138
@@ -35900,7 +35864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -800.3, y: 256}
+  m_AnchoredPosition: {x: -800.3, y: 321}
   m_SizeDelta: {x: 188.2, y: 41.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1958434353
@@ -37945,7 +37909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -556.5001, y: -1192.6993}
+  m_AnchoredPosition: {x: -616, y: -1192.6993}
   m_SizeDelta: {x: 3300.9, y: 1332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073683098

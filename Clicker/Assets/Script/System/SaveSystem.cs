@@ -5,35 +5,15 @@ public class SaveSystem: MonoBehaviour
 {
     [Header("Reservation")]
     public Reservation SaveContain;
-    private string _path;
 
     private void OnDisable()
     {
-        DateAndTime.SetDateTime("lastSaveTime", System.DateTime.UtcNow);
+        //DateAndTime.SetDateTime("lastSaveTime", System.DateTime.UtcNow);
         SaveField();
     }
     private void Awake()
     {
-#if UNITY_ANDROID && !UNITY_EDITOR
-        path = Path.Combine(Application.persistentDataPath, "JSON.json");
-#else
-        _path = Path.Combine(Application.dataPath + "JSON.json");
-#endif
-        //if(JsonUtility.FromJson<Reservation>(File.ReadAllText(path)) != null)  ??
         LoadField();
-    }
-
-    public void LoadField()
-    {
-        SaveContain = JsonUtility.FromJson<Reservation>(File.ReadAllText(_path));
-    }
-
-    public void SaveField()
-    {
-#if UNITY_ANDROID && !UNITY_EDITOR
-        if (pause) File.WriteAllText(path, JsonUtility.ToJson(item));
-#endif
-        File.WriteAllText(_path, JsonUtility.ToJson(SaveContain));
     }
 
     [System.Serializable]
@@ -66,6 +46,15 @@ public class SaveSystem: MonoBehaviour
             AvailableShipNumber = AvailableShipNumber < ShipNumber ? ShipNumber : AvailableShipNumber;
         }
         public bool GetAvailable(int Update) => Upgrade[AvailableShipNumber].LevelUpgrade[Update] == 15;
+    }
+    public void LoadField()
+    {
+
+    }
+
+    public void SaveField()
+    {
+
     }
 }
 

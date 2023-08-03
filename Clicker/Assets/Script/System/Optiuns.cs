@@ -33,6 +33,19 @@ public class Optiuns : MonoBehaviour
 
         _mixerSetVolume(Toggle.name, PlayerPrefs.GetInt(Toggle.name));
     }
+    public void SetMute(bool isMute)
+    {
+        if (isMute)
+        {
+            _mixerSetVolume(_toggleMusic.name, _off);
+            _mixerSetVolume(_toggleSound.name, _off);
+        }
+        else
+        {
+            _mixerSetVolume(_toggleMusic.name, PlayerPrefs.GetInt(_toggleMusic.name));
+            _mixerSetVolume(_toggleSound.name, PlayerPrefs.GetInt(_toggleSound.name));
+        }
+    }
     private void LoadVoice(AudioMixerGroup AudioMixer, Toggle toggle)
     {
         _mixerSetVolume(AudioMixer.name, PlayerPrefs.GetInt(AudioMixer.name));
