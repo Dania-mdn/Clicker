@@ -24,15 +24,13 @@ public abstract class BazeUpdate : MonoBehaviour
     private void OnDisable()
     {
         EventManager.SetBuy -= SetAvalable;
+        Save();
     }
     public virtual void Start()
     {
         _audioSource = GetComponent<AudioSource>();
 
-        if (_saveSystem.SaveContain.LoadlLevelUpgrade(IdModul) != 0)
-            Load();
-        else
-            Save();
+        Load();
     }
     public void SetAvalable()
     {

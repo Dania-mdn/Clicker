@@ -49,12 +49,51 @@ public class SaveSystem: MonoBehaviour
     }
     public void LoadField()
     {
+        SaveContain.AvailableShipNumber = PlayerPrefs.GetInt("AvailableShipNumber");
+        SaveContain.ShipNumber = PlayerPrefs.GetInt("ShipNumber");
+        SaveContain.MonneyCount = PlayerPrefs.GetFloat("MonneyCount");
+        SaveContain.MaxMonneyOfline = PlayerPrefs.GetFloat("MaxMonneyOfline");
+        SaveContain.Cistern = PlayerPrefs.GetFloat("Cistern");
+        SaveContain.TimeBonusForClickIncome = PlayerPrefs.GetFloat("TimeBonusForClickIncome");
+        SaveContain.TimeBonusforPassiveIncome = PlayerPrefs.GetFloat("TimeBonusforPassiveIncome");
+        SaveContain.TimeBonusforAllIncome = PlayerPrefs.GetFloat("TimeBonusforAllIncome");
+        SaveContain.DolfyCount = PlayerPrefs.GetInt("DolfyCount");
 
+        for (int i = 0; i <= SaveContain.ShipNumber; i++)
+        {
+            for (int j = 0; j < 14; j++)
+            {
+                SaveContain.Upgrade[i].LevelUpgrade[j] = PlayerPrefs.GetInt("SaveContain" + i + "SaveContain.LevelUpgrade" + j);
+                SaveContain.Upgrade[i].ClickIncom[j] = PlayerPrefs.GetInt("SaveContain" + i + "SaveContain.ClickIncom" + j);
+                SaveContain.Upgrade[i].PassIncom[j] = PlayerPrefs.GetInt("SaveContain" + i + "SaveContain.PassIncom" + j);
+                SaveContain.Upgrade[i].ProgressSlider[j] = PlayerPrefs.GetFloat("SaveContain" + i + "SaveContain.ProgressSlider" + j);
+                Debug.Log(SaveContain.Upgrade[0].LevelUpgrade[2]);
+            }
+        }
     }
 
     public void SaveField()
     {
+        PlayerPrefs.SetInt("AvailableShipNumber", SaveContain.AvailableShipNumber);
+        PlayerPrefs.SetInt("ShipNumber", SaveContain.ShipNumber);
+        PlayerPrefs.SetFloat("MonneyCount", SaveContain.MonneyCount);
+        PlayerPrefs.SetFloat("MaxMonneyOfline", SaveContain.MaxMonneyOfline);
+        PlayerPrefs.SetFloat("Cistern", SaveContain.Cistern);
+        PlayerPrefs.SetFloat("TimeBonusForClickIncome", SaveContain.TimeBonusForClickIncome);
+        PlayerPrefs.SetFloat("TimeBonusforPassiveIncome", SaveContain.TimeBonusforPassiveIncome);
+        PlayerPrefs.SetFloat("TimeBonusforAllIncome", SaveContain.TimeBonusforAllIncome);
+        PlayerPrefs.SetInt("DolfyCount", SaveContain.DolfyCount);
 
+        for(int i = 0; i <= SaveContain.ShipNumber; i++)
+        {
+            for (int j = 0; j < 14; j++)
+            {
+                PlayerPrefs.SetInt("SaveContain" + i + "SaveContain.LevelUpgrade" + j, SaveContain.Upgrade[i].LevelUpgrade[j]);
+                PlayerPrefs.SetInt("SaveContain" + i + "SaveContain.ClickIncom" + j, SaveContain.Upgrade[i].ClickIncom[j]);
+                PlayerPrefs.SetInt("SaveContain" + i + "SaveContain.PassIncom" + j, SaveContain.Upgrade[i].PassIncom[j]);
+                PlayerPrefs.SetFloat("SaveContain" + i + "SaveContain.ProgressSlider" + j, SaveContain.Upgrade[i].ProgressSlider[j]);
+            }
+        }
     }
 }
 
