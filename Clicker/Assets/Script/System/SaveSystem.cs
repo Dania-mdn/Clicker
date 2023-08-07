@@ -67,7 +67,6 @@ public class SaveSystem: MonoBehaviour
                 SaveContain.Upgrade[i].ClickIncom[j] = PlayerPrefs.GetInt("SaveContain" + i + "SaveContain.ClickIncom" + j);
                 SaveContain.Upgrade[i].PassIncom[j] = PlayerPrefs.GetInt("SaveContain" + i + "SaveContain.PassIncom" + j);
                 SaveContain.Upgrade[i].ProgressSlider[j] = PlayerPrefs.GetFloat("SaveContain" + i + "SaveContain.ProgressSlider" + j);
-                Debug.Log(SaveContain.Upgrade[0].LevelUpgrade[2]);
             }
         }
     }

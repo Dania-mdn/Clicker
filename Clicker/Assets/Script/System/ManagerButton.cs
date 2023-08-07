@@ -26,6 +26,7 @@ public class ManagerButton : MonoBehaviour
                 _buttonUpgrade[i].transform.position = new Vector3(0.1f, 0.07f, 0);
             }
         }
+        EventManager.DoValue();
     }
     public void CloseAllButton()
     {

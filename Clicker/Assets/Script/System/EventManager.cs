@@ -1,6 +1,7 @@
 using System;
 public class EventManager
 {
+    public static event Action Value;
     public static event Action SetBuy;
     public static event Action<int> SetNewAvalable;
     public static event Action<int> SetNewAchive;
@@ -9,6 +10,10 @@ public class EventManager
     public static void DoBuy()
     {
         SetBuy?.Invoke();
+    }
+    public static void DoValue()
+    {
+        Value?.Invoke();
     }
     public static void DoNewAvalable(UpgradeName numberAvalable)
     {

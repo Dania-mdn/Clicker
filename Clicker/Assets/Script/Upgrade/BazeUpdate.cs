@@ -20,17 +20,18 @@ public abstract class BazeUpdate : MonoBehaviour
     private void OnEnable()
     {
         EventManager.SetBuy += SetAvalable;
+        EventManager.Value += Load;
     }
     private void OnDisable()
     {
         EventManager.SetBuy -= SetAvalable;
+        EventManager.Value -= Load;
         Save();
     }
     public virtual void Start()
     {
         _audioSource = GetComponent<AudioSource>();
 
-        Load();
     }
     public void SetAvalable()
     {
@@ -108,5 +109,6 @@ public abstract class BazeUpdate : MonoBehaviour
         SaveSystem.Reservation SaveContain = _saveSystem.SaveContain;
         _levelUpgrade = SaveContain.LoadlLevelUpgrade(IdModul);
         _progressSlider.value = SaveContain.LoadlProgressSlider(IdModul);
+        _buttonPriceText.text = _priceForUpgrade[_levelUpgrade].ToString("0");
     }
 }
