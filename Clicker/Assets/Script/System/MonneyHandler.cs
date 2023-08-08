@@ -51,11 +51,6 @@ public class MonneyHandler : MonoBehaviour
         PriceUpgrade[5] = _price.price5;
         PriceUpgrade[6] = _price.price6;
 
-        if (_saveSystem.SaveContain.MonneyCount != 0)
-            Load();
-        else
-            Save();
-
         MonneyOffline = GetManneyOffline();
         if (MonneyOffline > MaxMonneyOfline)
         {
@@ -68,6 +63,12 @@ public class MonneyHandler : MonoBehaviour
     }
     private void Update()
     {
+        if(_saveSystem.SaveContain.MonneyCount != 0)
+        {
+            MonneyCount = _saveSystem.SaveContain.MonneyCount;
+            _saveSystem.SaveContain.MonneyCount = 0;
+        }
+
         MonneyCount = MonneyCount + (PassiveIncome + _maneyInSecond * RewardContain[1]._rewardCoeficient * RewardContain[2]._rewardCoeficient) * Time.deltaTime;
         ViewMonney();
 
