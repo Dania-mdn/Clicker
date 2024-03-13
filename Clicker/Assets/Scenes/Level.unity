@@ -7530,8 +7530,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1672883487}
   m_HandleRect: {fileID: 1672883486}
   m_Direction: 2
-  m_Value: -617.6781
-  m_Size: 0.99939245
+  m_Value: -617.67865
+  m_Size: 0.9993923
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8202,6 +8202,7 @@ GameObject:
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
   - component: {fileID: 519420035}
+  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8403,6 +8404,18 @@ MonoBehaviour:
   AudioSource: {fileID: 691825418}
   _prizeForClick: {fileID: 720176371328302576, guid: d25bf020328c8c54794836377892e6c9, type: 3}
   _achiveName: 1
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c899bbcdf5c47e41aaa00e794ce6d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &523161417 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3186203724031622242, guid: 4efaf78ae2e55834c90a53f391c6472d, type: 3}
@@ -30971,8 +30984,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 334477131}
   m_HandleRect: {fileID: 334477130}
   m_Direction: 2
-  m_Value: 0.99998474
-  m_Size: 0.994599
+  m_Value: 0.9999542
+  m_Size: 0.9945988
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -31597,7 +31610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 556.75}
+  m_AnchoredPosition: {x: 0, y: 556.90094}
   m_SizeDelta: {x: 0, y: 1481.2}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1730374608
@@ -36537,7 +36550,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 821136859}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9977721
+  m_Size: 0.99777204
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
